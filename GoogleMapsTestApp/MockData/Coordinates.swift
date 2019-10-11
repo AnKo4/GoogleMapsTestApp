@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MockCoordinates {
+struct MockCoordinates {
     
     let data = [MapPoint(lat: 54.3143937208559, long: 48.39280074899831,  name: "Моя хата", snippet: "Дом с Итальянскими колготками"),
                 MapPoint(lat: 54.31453453751755, long: 48.39399189846714, name: "Ленина 79", snippet: "Магазин Юничел"),

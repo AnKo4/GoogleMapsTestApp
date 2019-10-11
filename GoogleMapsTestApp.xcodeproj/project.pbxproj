@@ -44,6 +44,8 @@
 		557933FA2350640500BFAA8E /* ClusterItemsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933F92350640500BFAA8E /* ClusterItemsGenerator.swift */; };
 		557933FD2350676400BFAA8E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* Coordinates.swift */; };
 		5579340023507C3500BFAA8E /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FF23507C3500BFAA8E /* MapPoint.swift */; };
+		557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557934012350A6EE00BFAA8E /* StartPoint.swift */; };
+		55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E63EA72350B6A2001882F8 /* MapZoom.swift */; };
 		83D362FD4235044B907BCA17 /* Pods_GoogleMapsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,8 @@
 		557933F92350640500BFAA8E /* ClusterItemsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterItemsGenerator.swift; sourceTree = "<group>"; };
 		557933FC2350676400BFAA8E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		557933FF23507C3500BFAA8E /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
+		557934012350A6EE00BFAA8E /* StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPoint.swift; sourceTree = "<group>"; };
+		55E63EA72350B6A2001882F8 /* MapZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapZoom.swift; sourceTree = "<group>"; };
 		BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A471C461DB421CB3CA01B3 /* Pods-GoogleMapsTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.debug.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA6FBF6FD5838CF85A4F54A /* Pods-GoogleMapsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.release.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				55E63EA62350B688001882F8 /* Enums */,
 				557933FE23507C1C00BFAA8E /* Struct */,
 				557933FB2350675100BFAA8E /* MockData */,
 				557933F8235063B500BFAA8E /* ClusterTasks */,
@@ -351,8 +356,17 @@
 			isa = PBXGroup;
 			children = (
 				557933FF23507C3500BFAA8E /* MapPoint.swift */,
+				557934012350A6EE00BFAA8E /* StartPoint.swift */,
 			);
 			path = Struct;
+			sourceTree = "<group>";
+		};
+		55E63EA62350B688001882F8 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				55E63EA72350B6A2001882F8 /* MapZoom.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		7FBCBD39EB05E03D807B3EE5 /* Pods */ = {
@@ -510,6 +524,7 @@
 				552A535A234F54320056A6BD /* GMUGroundOverlay.m in Sources */,
 				552A5366234F54330056A6BD /* GMUDefaultClusterIconGenerator.m in Sources */,
 				552A535B234F54320056A6BD /* GMUStyle.m in Sources */,
+				55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */,
 				552A5362234F54330056A6BD /* GMUWrappingDictionaryKey.m in Sources */,
 				552A5359234F54320056A6BD /* GMUFeature.m in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
@@ -519,6 +534,7 @@
 				552A5368234F54330056A6BD /* GMUWeightedLatLng.m in Sources */,
 				552A536A234F54330056A6BD /* GMUHeatmapTileLayer.m in Sources */,
 				552A5360234F54330056A6BD /* GMUClusterManager.m in Sources */,
+				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
 				552A5353234F54320056A6BD /* GMUKMLParser.m in Sources */,
 				552A5364234F54330056A6BD /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 			);
