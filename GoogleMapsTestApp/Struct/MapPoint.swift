@@ -12,4 +12,5 @@ struct MapPoint {
     var lat = 0.0
     var long = 0.0
     var name = ""
+    var snippet = ""
 }
