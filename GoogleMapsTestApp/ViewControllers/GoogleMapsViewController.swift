@@ -14,14 +14,33 @@ class GoogleMapsViewController: UIViewController {
     @IBOutlet private weak var mapView: GMSMapView!
     private var clusterManager: GMUClusterManager!
     
+    private let clusterItemGenerator = ClusterItemGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setupClusterManager()
     }
 
     private func setupClusterManager() {
+        let iconGenerator = GMUDefaultClusterIconGenerator()
+        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
+        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         
+        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
+        
+        clusterItemGenerator.prepareItems(clusterManager: clusterManager)
+        
+        clusterManager.cluster()
     }
+    
+}
+
+extension GoogleMapsViewController: GMSMapViewDelegate {
+    
+}
+
+extension GoogleMapsViewController: GMUClusterManagerDelegate {
     
 }
 
