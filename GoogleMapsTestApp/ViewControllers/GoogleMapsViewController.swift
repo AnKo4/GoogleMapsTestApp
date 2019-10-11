@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class ViewController: UIViewController {
+class GoogleMapsViewController: UIViewController {
 
+    @IBOutlet private weak var mapView: GMSMapView!
+    private var clusterManager: GMUClusterManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    private func setupClusterManager() {
+        
+    }
+    
 }
 
