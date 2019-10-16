@@ -13,10 +13,12 @@ class MapItem: NSObject, GMUClusterItem {
     var position: CLLocationCoordinate2D
     var name: String!
     var snippet: String
+    var category: MarkerCategory
 
-    init(position: CLLocationCoordinate2D, name: String, snippet: String) {
+    init(position: CLLocationCoordinate2D, name: String, snippet: String, category: MarkerCategory) {
         self.position = position
         self.name = name
         self.snippet = snippet
+        self.category = category
     }
 }

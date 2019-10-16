@@ -20,7 +20,7 @@ class GoogleMapsViewController: UIViewController {
     private var mapMarker = GMSMarker()
     
     private var infoMarkerDidAdd = false
-    var currentZoom = Float()
+    private var currentZoom = Float()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class GoogleMapsViewController: UIViewController {
         let iconGenerator = GMUDefaultClusterIconGenerator()
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+        renderer.delegate = self
         
         clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
         
@@ -97,6 +98,7 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         
         removeInfoMarker()
         mapMarker = GMSMarker(position: mapPoint.position)
+//        mapMarker.icon = UIImage(named: "Body")
         mapMarker.title = mapPoint.name
         mapMarker.snippet = mapPoint.snippet
         mapMarker.map = mapView
@@ -125,11 +127,23 @@ extension GoogleMapsViewController: GMUClusterManagerDelegate {
     
     func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
         let camera = GMSCameraPosition.camera(withTarget: cluster.position, zoom: mapView.camera.zoom + 1)
-        currentZoom = mapView.camera.zoom + 1
         mapView.animate(to: camera)
+        currentZoom = mapView.camera.zoom
         print("cluster delegate")
         return false
     }
 
+}
+
+extension GoogleMapsViewController: GMUClusterRendererDelegate {
+    func renderer(_ renderer: GMUClusterRenderer, willRenderMarker marker: GMSMarker) {
+        guard let mapPoint = marker.userData as? MapItem else {
+            return
+        }
+        switch mapPoint.category {
+        case .human: marker.icon = UIImage(named: "Body")
+        case .ufo: marker.icon = UIImage(named: "Reproductive")
+        }
+    }
 }
 
