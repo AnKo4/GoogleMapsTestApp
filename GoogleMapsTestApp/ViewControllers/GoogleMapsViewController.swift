@@ -15,24 +15,25 @@ class GoogleMapsViewController: UIViewController {
     @IBOutlet private weak var zoomInButton: UIButton!
     @IBOutlet private weak var zoomOutButton: UIButton!
     
-    
     private var clusterManager: GMUClusterManager!
-    
     private let clusterItemGenerator = ClusterItemGenerator()
-    
     private var mapMarker = GMSMarker()
+    
+    private var infoMarkerDidAdd = false
+    var currentZoom = Float()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupClusterManager()
         setupMapView()
-        setupButtons()
+        setupButtons()        
     }
 
     private func setupMapView() {
         let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
         mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
+        currentZoom = StartPoint.zoom
     }
     
     private func setupClusterManager() {
@@ -57,10 +58,22 @@ class GoogleMapsViewController: UIViewController {
     
     private func changeMapZoom(action: MapZoom) {
         mapMarker.map = nil
+        removeInfoMarker()
         let zoom = mapView.camera.zoom
         switch action {
-        case .zoomIn: mapView.animate(toZoom: zoom + 1)
+        case .zoomIn:
+            mapView.animate(toZoom: zoom + 1)
+            currentZoom = zoom + 1
         case .zoomOut: mapView.animate(toZoom: zoom - 1)
+            currentZoom = zoom - 1
+        }
+    }
+    
+    private func removeInfoMarker() {
+        if infoMarkerDidAdd {
+            print("removing marker")
+            mapMarker.map = nil
+            infoMarkerDidAdd = false
         }
     }
     
@@ -80,13 +93,23 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         guard let mapPoint = marker.userData as? MapItem else {
             return false
         }
+        print("map delegate")
         
-        mapMarker.map = nil
-        /*let*/ mapMarker = GMSMarker(position: mapPoint.position)
+        removeInfoMarker()
+        mapMarker = GMSMarker(position: mapPoint.position)
         mapMarker.title = mapPoint.name
         mapMarker.snippet = mapPoint.snippet
         mapMarker.map = mapView
+        infoMarkerDidAdd = true
         return false
+    }
+    
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        print("camera didChangePosition")
+        if position.zoom != currentZoom {
+            removeInfoMarker()
+            currentZoom = position.zoom
+        }
     }
     
 }
@@ -102,9 +125,9 @@ extension GoogleMapsViewController: GMUClusterManagerDelegate {
     
     func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
         let camera = GMSCameraPosition.camera(withTarget: cluster.position, zoom: mapView.camera.zoom + 1)
-//        let update = GMSCameraUpdate.setCamera(camera)
+        currentZoom = mapView.camera.zoom + 1
         mapView.animate(to: camera)
-//        mapView.moveCamera(update)
+        print("cluster delegate")
         return false
     }
 
