@@ -37,7 +37,7 @@ class GoogleMapsViewController: UIViewController {
     }
     
     private func setupClusterManager() {
-        let iconGenerator = GMUDefaultClusterIconGenerator()
+        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.gray, .green, .blue, .cyan, .red])
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         renderer.delegate = self
@@ -94,11 +94,14 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         guard let mapPoint = marker.userData as? MapItem else {
             return false
         }
-        print("map delegate")
+        print("map delegate - didTap marker")
         
         removeInfoMarker()
         mapMarker = GMSMarker(position: mapPoint.position)
-//        mapMarker.icon = UIImage(named: "Body")
+        switch mapPoint.category {
+        case .human: mapMarker.icon = UIImage(named: "Body_selected")
+        case .ufo: mapMarker.icon = UIImage(named: "Reproductive_selected")
+        }
         mapMarker.title = mapPoint.name
         mapMarker.snippet = mapPoint.snippet
         mapMarker.map = mapView
@@ -118,18 +121,11 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
 
 extension GoogleMapsViewController: GMUClusterManagerDelegate {
     
-//    func clusterManager(_ clusterManager: GMUClusterManager, didTap clusterItem: GMUClusterItem) -> Bool {
-//        let camera = GMSCameraPosition.camera(withTarget: clusterItem.position, zoom: mapView.camera.zoom)
-//        let update = GMSCameraUpdate.setCamera(camera)
-//        mapView.moveCamera(update)
-//        return false
-//    }
-    
     func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
         let camera = GMSCameraPosition.camera(withTarget: cluster.position, zoom: mapView.camera.zoom + 1)
         mapView.animate(to: camera)
         currentZoom = mapView.camera.zoom
-        print("cluster delegate")
+        print("cluster delegate - didTap cluster")
         return false
     }
 
@@ -146,4 +142,3 @@ extension GoogleMapsViewController: GMUClusterRendererDelegate {
         }
     }
 }
-
