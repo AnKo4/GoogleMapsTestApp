@@ -8,4 +8,5 @@ target 'GoogleMapsTestApp' do
 
   # Pods for GoogleMapsTestApp
   pod 'GoogleMaps', '~> 3.5'
+  pod 'Moya', '14.0.0-beta.4'
 end

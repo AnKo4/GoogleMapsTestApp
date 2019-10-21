@@ -16,6 +16,7 @@
 		555C00A2234F3E34000E2496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A0234F3E34000E2496 /* Main.storyboard */; };
 		555C00A4234F3E35000E2496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A3234F3E35000E2496 /* Assets.xcassets */; };
 		555C00A7234F3E35000E2496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A5234F3E35000E2496 /* LaunchScreen.storyboard */; };
+		556B9CA5235DA92C00AB713B /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA4235DA92C00AB713B /* MoyaService.swift */; };
 		557933FA2350640500BFAA8E /* ClusterItemsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933F92350640500BFAA8E /* ClusterItemsGenerator.swift */; };
 		557933FD2350676400BFAA8E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* Coordinates.swift */; };
 		5579340023507C3500BFAA8E /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FF23507C3500BFAA8E /* MapPoint.swift */; };
@@ -64,6 +65,7 @@
 		555C00A3234F3E35000E2496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555C00A6234F3E35000E2496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		555C00A8234F3E35000E2496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		556B9CA4235DA92C00AB713B /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		557933F92350640500BFAA8E /* ClusterItemsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterItemsGenerator.swift; sourceTree = "<group>"; };
 		557933FC2350676400BFAA8E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		557933FF23507C3500BFAA8E /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				556B9CA3235DA90A00AB713B /* MoyaService */,
 				55E63EA62350B688001882F8 /* Enums */,
 				557933FE23507C1C00BFAA8E /* Struct */,
 				557933FB2350675100BFAA8E /* MockData */,
@@ -217,6 +220,14 @@
 				552A5306234F4DCF0056A6BD /* APIKey.swift */,
 			);
 			path = GoogleMapsTestApp;
+			sourceTree = "<group>";
+		};
+		556B9CA3235DA90A00AB713B /* MoyaService */ = {
+			isa = PBXGroup;
+			children = (
+				556B9CA4235DA92C00AB713B /* MoyaService.swift */,
+			);
+			path = MoyaService;
 			sourceTree = "<group>";
 		};
 		557933F8235063B500BFAA8E /* ClusterTasks */ = {
@@ -401,6 +412,7 @@
 				555C0094234F3E34000E2496 /* Frameworks */,
 				555C0095234F3E34000E2496 /* Resources */,
 				2D566A7E114A7F1AA966075C /* [CP] Copy Pods Resources */,
+				0D807213B43B54B57D6B2AEE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -458,6 +470,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D807213B43B54B57D6B2AEE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D566A7E114A7F1AA966075C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,6 +570,7 @@
 				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
 				55AFFBBC2356F7B40011273F /* GMUDefaultClusterIconGenerator.m in Sources */,
 				55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */,
+				556B9CA5235DA92C00AB713B /* MoyaService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
