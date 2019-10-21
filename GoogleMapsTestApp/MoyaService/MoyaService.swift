@@ -14,28 +14,41 @@ enum MoyaService {
 }
 
 extension MoyaService: TargetType {
+    
     var baseURL: URL {
-        <#code#>
+        return URL(string: "https://www.mocky.io/v2")!
     }
     
     var path: String {
-        <#code#>
+        switch self {
+        case .getPOIData:
+            return "/5dadadbc2d0000c33fe4bbe8"
+        }
     }
     
     var method: Moya.Method {
-        <#code#>
+        switch self {
+        case .getPOIData:
+            return .get
+        }
     }
     
     var sampleData: Data {
-        <#code#>
+        switch self {
+        case .getPOIData:
+            return Data()
+        }
     }
     
     var task: Task {
-        <#code#>
+        switch self {
+        case .getPOIData:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
-        <#code#>
+        return [:]
     }
     
     

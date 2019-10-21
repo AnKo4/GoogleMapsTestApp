@@ -21,13 +21,22 @@ class GoogleMapsViewController: UIViewController {
     
     private var infoMarkerDidAdd = false
     private var currentZoom = Float()
+
+    let networkManager = NetworkManager()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         setupClusterManager()
         setupMapView()
-        setupButtons()        
+        setupButtons()
+        
+        networkManager.getPOIData() { response in
+//            DispatchQueue.main.async {
+                print(response)
+//            }
+        }
     }
 
     private func setupMapView() {
