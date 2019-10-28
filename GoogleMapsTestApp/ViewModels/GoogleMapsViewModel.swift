@@ -19,7 +19,7 @@ struct GoogleMapsViewModel {
         mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
     }
 
-    func generateClusterManager(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
+    func configureClusterManager(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
         let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.gray, .green, .blue, .cyan, .red])
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
@@ -31,5 +31,19 @@ struct GoogleMapsViewModel {
         
         return (clusterManager, renderer)
     }
+    
+      func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
+           let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.red, .blue, .cyan, .gray, .green])
+           let algorithm = GMUGridBasedClusterAlgorithm()
+           let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+           
+           let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
+           
+           clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
+           clusterManager.cluster()
+           
+           return (clusterManager, renderer)
+       }
+    
     
 }

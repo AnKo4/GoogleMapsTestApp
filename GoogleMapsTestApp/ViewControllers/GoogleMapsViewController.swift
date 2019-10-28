@@ -16,14 +16,15 @@ class GoogleMapsViewController: UIViewController {
     @IBOutlet private weak var zoomOutButton: UIButton!
     
     private var clusterManager: GMUClusterManager!
+    private var clusterManagerFromNetwork: GMUClusterManager!
     private var renderer: GMUDefaultClusterRenderer!
+    private var rendererFromNetwork: GMUDefaultClusterRenderer!
     private var mapMarker = GMSMarker()
     
     private var infoMarkerDidAdd = false
     private var currentZoom = StartPoint.zoom
 
     private let viewModel = GoogleMapsViewModel()
-    private let networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +32,18 @@ class GoogleMapsViewController: UIViewController {
         setupView()
         setupButtons()
         
-        networkManager.getPOIData() { response in
-//            DispatchQueue.main.async {
-                print(response)
-//            }
-        }
     }
 
     private func setupView() {
         viewModel.setupMapView(mapView)
-        (clusterManager, renderer) = viewModel.generateClusterManager(for: mapView)
+        
+        (clusterManager, renderer) = viewModel.configureClusterManager(for: mapView)
         renderer.delegate = self
         clusterManager.setDelegate(self, mapDelegate: self)
+        
+        (clusterManagerFromNetwork, rendererFromNetwork) = viewModel.configureClusterManagerFromNetwork(for: mapView)
+        rendererFromNetwork.delegate = self
+        clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
     }
     
     private func setupButtons() {
@@ -121,7 +122,6 @@ extension GoogleMapsViewController: GMUClusterManagerDelegate {
         let camera = GMSCameraPosition.camera(withTarget: cluster.position, zoom: mapView.camera.zoom + 1)
         mapView.animate(to: camera)
         currentZoom = mapView.camera.zoom
-        print("cluster delegate - didTap cluster")
         return false
     }
 

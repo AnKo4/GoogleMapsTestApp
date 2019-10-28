@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MarkerCategory {
-    case human
-    case ufo
+enum MarkerCategory: String {
+    case human = "human"
+    case ufo = "ufo"
 }
