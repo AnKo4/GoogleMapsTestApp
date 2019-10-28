@@ -16,20 +16,19 @@ class GoogleMapsViewController: UIViewController {
     @IBOutlet private weak var zoomOutButton: UIButton!
     
     private var clusterManager: GMUClusterManager!
-    private let clusterItemGenerator = ClusterItemGenerator()
+    private var renderer: GMUDefaultClusterRenderer!
     private var mapMarker = GMSMarker()
     
     private var infoMarkerDidAdd = false
-    private var currentZoom = Float()
+    private var currentZoom = StartPoint.zoom
 
-    let networkManager = NetworkManager()
-
+    private let viewModel = GoogleMapsViewModel()
+    private let networkManager = NetworkManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        setupClusterManager()
-        setupMapView()
+
+        setupView()
         setupButtons()
         
         networkManager.getPOIData() { response in
@@ -39,22 +38,10 @@ class GoogleMapsViewController: UIViewController {
         }
     }
 
-    private func setupMapView() {
-        let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
-        currentZoom = StartPoint.zoom
-    }
-    
-    private func setupClusterManager() {
-        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.gray, .green, .blue, .cyan, .red])
-        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+    private func setupView() {
+        viewModel.setupMapView(mapView)
+        (clusterManager, renderer) = viewModel.generateClusterManager(for: mapView)
         renderer.delegate = self
-        
-        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        
-        clusterItemGenerator.prepareItems(clusterManager: clusterManager)
-        clusterManager.cluster()
         clusterManager.setDelegate(self, mapDelegate: self)
     }
     
@@ -66,7 +53,7 @@ class GoogleMapsViewController: UIViewController {
         zoomOutButton.backgroundColor = .white
     }
     
-    private func changeMapZoom(action: MapZoom) {
+    private func changeMapZoom(action: MapZoomAction) {
         mapMarker.map = nil
         removeInfoMarker()
         let zoom = mapView.camera.zoom

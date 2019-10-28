@@ -22,6 +22,7 @@ struct Feature: Codable {
 struct Properties: Codable {
     var title: String
     var snippet: String
+    var category: String
 }
 
 struct Geometry: Codable {

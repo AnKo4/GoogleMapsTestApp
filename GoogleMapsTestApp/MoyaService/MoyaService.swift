@@ -22,7 +22,7 @@ extension MoyaService: TargetType {
     var path: String {
         switch self {
         case .getPOIData:
-            return "/5dadadbc2d0000c33fe4bbe8"
+            return "/5db6d4782f0000a1b37fea9d"
         }
     }
     

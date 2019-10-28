@@ -19,6 +19,7 @@
 		556B9CA5235DA92C00AB713B /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA4235DA92C00AB713B /* MoyaService.swift */; };
 		556B9CA8235DCB9500AB713B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA7235DCB9500AB713B /* NetworkManager.swift */; };
 		556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CAA235DCCEF00AB713B /* Geodata.swift */; };
+		5575845F2366CA11008A3841 /* GoogleMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */; };
 		557933FA2350640500BFAA8E /* ClusterItemsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933F92350640500BFAA8E /* ClusterItemsGenerator.swift */; };
 		557933FD2350676400BFAA8E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* Coordinates.swift */; };
 		5579340023507C3500BFAA8E /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FF23507C3500BFAA8E /* MapPoint.swift */; };
@@ -70,6 +71,7 @@
 		556B9CA4235DA92C00AB713B /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		556B9CA7235DCB9500AB713B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		556B9CAA235DCCEF00AB713B /* Geodata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geodata.swift; sourceTree = "<group>"; };
+		5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewModel.swift; sourceTree = "<group>"; };
 		557933F92350640500BFAA8E /* ClusterItemsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterItemsGenerator.swift; sourceTree = "<group>"; };
 		557933FC2350676400BFAA8E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		557933FF23507C3500BFAA8E /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				556B9CAC235DEA3400AB713B /* ViewModels */,
 				556B9CA6235DCB7200AB713B /* Networking */,
 				556B9CA3235DA90A00AB713B /* MoyaService */,
 				55E63EA62350B688001882F8 /* Enums */,
@@ -241,6 +244,14 @@
 				556B9CA7235DCB9500AB713B /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		556B9CAC235DEA3400AB713B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		557933F8235063B500BFAA8E /* ClusterTasks */ = {
@@ -568,6 +579,7 @@
 				55AFFBBA2356F7B40011273F /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */,
 				55AFFBC32356F7B40011273F /* GMUGeometryCollection.m in Sources */,
+				5575845F2366CA11008A3841 /* GoogleMapsViewModel.swift in Sources */,
 				55AFFBCA2356F7B40011273F /* GMUPoint.m in Sources */,
 				557933FD2350676400BFAA8E /* Coordinates.swift in Sources */,
 				55AFFBC22356F7B40011273F /* GMUGeometryRenderer.m in Sources */,
