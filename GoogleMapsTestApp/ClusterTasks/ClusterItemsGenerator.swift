@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import GoogleMaps
 
 class ClusterItemGenerator {
     private let mapPoints = MockCoordinates().data
@@ -20,6 +19,7 @@ class ClusterItemGenerator {
             let mapItem = MapItem(position: position, name: item.name, snippet: item.snippet, category: item.category)
             clusterManager.add(mapItem)
         }
+        clusterManager.cluster()
     }
     
     func prepareItemsFromNetwork(for clusterManager: GMUClusterManager) {
@@ -31,6 +31,7 @@ class ClusterItemGenerator {
                 let mapItem = MapItem(position: position, name: item.properties.title, snippet: item.properties.snippet, category: category ?? MarkerCategory.human)
                 clusterManager.add(mapItem)
             }
+            clusterManager.cluster()
         }
     }
     

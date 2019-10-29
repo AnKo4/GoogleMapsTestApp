@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import GoogleMaps
 
 struct GoogleMapsViewModel {
     
@@ -27,23 +26,22 @@ struct GoogleMapsViewModel {
         let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
         
         clusterItemGenerator.prepareItems(clusterManager: clusterManager)
-        clusterManager.cluster()
         
         return (clusterManager, renderer)
     }
     
-      func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
-           let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.red, .blue, .cyan, .gray, .green])
-           let algorithm = GMUGridBasedClusterAlgorithm()
-           let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+    func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
+        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.red, .blue, .cyan, .gray, .green])
+        let algorithm = GMUGridBasedClusterAlgorithm()
+        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
            
-           let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
+        let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
            
-           clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
-           clusterManager.cluster()
+        clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
+//        clusterManager.cluster()
            
-           return (clusterManager, renderer)
-       }
+        return (clusterManager, renderer)
+    }
     
     
 }

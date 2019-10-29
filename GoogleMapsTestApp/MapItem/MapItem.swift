@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import GoogleMaps
 
 class MapItem: NSObject, GMUClusterItem {
     var position: CLLocationCoordinate2D
