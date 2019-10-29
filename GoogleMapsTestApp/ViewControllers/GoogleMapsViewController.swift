@@ -44,7 +44,6 @@ class GoogleMapsViewController: UIViewController {
         (clusterManagerFromNetwork, rendererFromNetwork) = viewModel.configureClusterManagerFromNetwork(for: mapView)
         rendererFromNetwork.delegate = self
         clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
-//        mapView.setNeedsDisplay()
     }
     
     private func setupButtons() {
