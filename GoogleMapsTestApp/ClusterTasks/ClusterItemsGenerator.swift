@@ -24,7 +24,6 @@ class ClusterItemGenerator {
     
     func prepareItemsFromNetwork(for clusterManager: GMUClusterManager) {
         networkManager.getPOIData() { data in
-            print("got data...")
             for item in data {
                 let position = CLLocationCoordinate2DMake(item.geometry.coordinates[1], item.geometry.coordinates[0])
                 let category = MarkerCategory(rawValue: item.properties.category)

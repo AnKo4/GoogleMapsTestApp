@@ -44,7 +44,7 @@ class GoogleMapsViewController: UIViewController {
         (clusterManagerFromNetwork, rendererFromNetwork) = viewModel.configureClusterManagerFromNetwork(for: mapView)
         rendererFromNetwork.delegate = self
         clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
-        mapView.setNeedsDisplay()
+//        mapView.setNeedsDisplay()
     }
     
     private func setupButtons() {
@@ -70,7 +70,6 @@ class GoogleMapsViewController: UIViewController {
     
     private func removeInfoMarker() {
         if infoMarkerDidAdd {
-            print("removing marker")
             mapMarker.map = nil
             infoMarkerDidAdd = false
         }
@@ -92,8 +91,6 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         guard let mapPoint = marker.userData as? MapItem else {
             return false
         }
-        print("map delegate - didTap marker")
-        
         removeInfoMarker()
         mapMarker = GMSMarker(position: mapPoint.position)
         switch mapPoint.category {
@@ -108,7 +105,6 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        print("camera didChangePosition")
         if position.zoom != currentZoom {
             removeInfoMarker()
             currentZoom = position.zoom
