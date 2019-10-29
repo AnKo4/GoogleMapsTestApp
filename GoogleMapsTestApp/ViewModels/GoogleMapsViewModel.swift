@@ -24,7 +24,6 @@ struct GoogleMapsViewModel {
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         
         let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        
         clusterItemGenerator.prepareItems(clusterManager: clusterManager)
         
         return (clusterManager, renderer)
@@ -36,12 +35,9 @@ struct GoogleMapsViewModel {
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
            
         let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-           
         clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
-//        clusterManager.cluster()
            
         return (clusterManager, renderer)
     }
-    
     
 }
