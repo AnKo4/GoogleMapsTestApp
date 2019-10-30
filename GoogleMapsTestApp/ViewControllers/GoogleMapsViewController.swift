@@ -18,20 +18,17 @@ class GoogleMapsViewController: UIViewController {
     private var clusterManagerFromNetwork: GMUClusterManager!
     private var renderer: GMUDefaultClusterRenderer!
     private var rendererFromNetwork: GMUDefaultClusterRenderer!
-    private var mapMarker = GMSMarker()
+    private var selectedMarker: GMSMarker!
     
-    private var infoMarkerDidAdd = false
-    private var currentZoom = StartPoint.zoom
+    private var markerDidSelected = false
 
     private let viewModel = GoogleMapsViewModel()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
         setupButtons()
-        
     }
 
     private func setupView() {
@@ -55,23 +52,24 @@ class GoogleMapsViewController: UIViewController {
     }
     
     private func changeMapZoom(action: MapZoomAction) {
-        mapMarker.map = nil
-        removeInfoMarker()
         let zoom = mapView.camera.zoom
         switch action {
-        case .zoomIn:
-            mapView.animate(toZoom: zoom + 1)
-            currentZoom = zoom + 1
+        case .zoomIn: mapView.animate(toZoom: zoom + 1)
         case .zoomOut: mapView.animate(toZoom: zoom - 1)
-            currentZoom = zoom - 1
         }
     }
     
-    private func removeInfoMarker() {
-        if infoMarkerDidAdd {
-            mapMarker.map = nil
-            infoMarkerDidAdd = false
+    private func redrawMarker(_ marker: GMSMarker) {
+        guard let markerInfo = marker.userData as? MapItem else {
+            return
         }
+
+        switch markerInfo.category {
+        case .human: marker.icon = UIImage(named: "Body")
+        case .ufo: marker.icon = UIImage(named: "Reproductive")
+        }
+        marker.title = nil
+        marker.snippet = nil
     }
     
     @IBAction private func zoomInButtonTapped(_ sender: UIButton) {
@@ -85,39 +83,36 @@ class GoogleMapsViewController: UIViewController {
 }
 
 extension GoogleMapsViewController: GMSMapViewDelegate {
-    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        guard let mapPoint = marker.userData as? MapItem else {
+        guard let markerInfo = marker.userData as? MapItem else {
             return false
         }
-        removeInfoMarker()
-        mapMarker = GMSMarker(position: mapPoint.position)
-        switch mapPoint.category {
-        case .human: mapMarker.icon = UIImage(named: "Body_selected")
-        case .ufo: mapMarker.icon = UIImage(named: "Reproductive_selected")
+        
+        if markerDidSelected {
+            redrawMarker(selectedMarker)
         }
-        mapMarker.title = mapPoint.name
-        mapMarker.snippet = mapPoint.snippet
-        mapMarker.map = mapView
-        infoMarkerDidAdd = true
+        
+        switch markerInfo.category {
+        case .human: marker.icon = UIImage(named: "Body_selected")
+        case .ufo: marker.icon = UIImage(named: "Reproductive_selected")
+        }
+        marker.title = markerInfo.name
+        marker.snippet = markerInfo.snippet
+        
+        selectedMarker = marker
+        if !markerDidSelected {
+            markerDidSelected = true
+        }
+        
         return false
     }
-    
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        if position.zoom != currentZoom {
-            removeInfoMarker()
-            currentZoom = position.zoom
-        }
-    }
-    
+
 }
 
 extension GoogleMapsViewController: GMUClusterManagerDelegate {
-    
     func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
         let camera = GMSCameraPosition.camera(withTarget: cluster.position, zoom: mapView.camera.zoom + 1)
         mapView.animate(to: camera)
-        currentZoom = mapView.camera.zoom
         return false
     }
 
@@ -125,10 +120,10 @@ extension GoogleMapsViewController: GMUClusterManagerDelegate {
 
 extension GoogleMapsViewController: GMUClusterRendererDelegate {
     func renderer(_ renderer: GMUClusterRenderer, willRenderMarker marker: GMSMarker) {
-        guard let mapPoint = marker.userData as? MapItem else {
+        guard let markerInfo = marker.userData as? MapItem else {
             return
         }
-        switch mapPoint.category {
+        switch markerInfo.category {
         case .human: marker.icon = UIImage(named: "Body")
         case .ufo: marker.icon = UIImage(named: "Reproductive")
         }
