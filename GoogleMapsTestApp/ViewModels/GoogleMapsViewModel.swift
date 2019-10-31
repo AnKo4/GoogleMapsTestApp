@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct GoogleMapsViewModel {
+struct GoogleMapsViewModel: MapViewControllerViewModel {
     
     private let clusterItemGenerator = ClusterItemGenerator()
     
     
-    func setupMapView(_ mapView: GMSMapView ) {
+    func setupMapView(_ mapView: GMSMapView) {
         let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
         mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
     }

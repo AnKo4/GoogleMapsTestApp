@@ -8,7 +8,9 @@
 
 import UIKit
 
-class GoogleMapsViewController: UIViewController {
+class GoogleMapsViewController: GoogleMapViewController {
+    var viewModel: MapViewControllerViewModel!
+    
 
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var zoomInButton: UIButton!
@@ -22,11 +24,12 @@ class GoogleMapsViewController: UIViewController {
     
     private var markerDidSelected = false
 
-    private let viewModel = GoogleMapsViewModel()
+//    var viewModel: GoogleMapsViewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel = GoogleMapsViewModel()
         setupView()
         setupButtons()
     }

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="2Ys-TB-ipG">
             <objects>
-                <viewController id="WLw-qo-Tgf" sceneMemberID="viewController">
+                <viewController id="WLw-qo-Tgf" customClass="StartViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OSm-e8-XUH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,9 @@
                                 <rect key="frame" x="157" y="350" width="100" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Click me :)"/>
+                                <connections>
+                                    <action selector="buttonDidTap:" destination="WLw-qo-Tgf" eventType="touchUpInside" id="n1G-EA-Umi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -32,12 +35,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azs-jb-Roa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="148"/>
+            <point key="canvasLocation" x="-183" y="148"/>
         </scene>
         <!--Google Maps View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GoogleMapsViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" id="BYZ-38-t0r" customClass="GoogleMapsViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="149"/>
+            <point key="canvasLocation" x="686" y="148"/>
         </scene>
     </scenes>
 </document>
