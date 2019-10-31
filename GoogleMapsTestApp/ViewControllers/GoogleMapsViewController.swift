@@ -9,9 +9,7 @@
 import UIKit
 
 class GoogleMapsViewController: GoogleMapViewController {
-    var viewModel: MapViewControllerViewModel!
     
-
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var zoomInButton: UIButton!
     @IBOutlet private weak var zoomOutButton: UIButton!
@@ -22,14 +20,14 @@ class GoogleMapsViewController: GoogleMapViewController {
     private var rendererFromNetwork: GMUDefaultClusterRenderer!
     private var selectedMarker: GMSMarker!
     
-    private var markerDidSelected = false
-
-//    var viewModel: GoogleMapsViewModel
+    private var markerIsSelected = false
     
+    var viewModel: MapViewControllerViewModel!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = GoogleMapsViewModel()
         setupView()
         setupButtons()
     }
@@ -62,17 +60,24 @@ class GoogleMapsViewController: GoogleMapViewController {
         }
     }
     
-    private func redrawMarker(_ marker: GMSMarker) {
-        guard let markerInfo = marker.userData as? MapItem else {
+    private func MarkerIcon(category: MarkerCategory) -> UIImage? {
+        switch category {
+        case .human: return UIImage(named: "Body")
+        case .ufo: return UIImage(named: "Reproductive")
+        }
+    }
+    
+    private func redrawDeselectedMarker() {
+        guard markerIsSelected,
+            let markerInfo = selectedMarker.userData as? MapItem else {
             return
         }
 
-        switch markerInfo.category {
-        case .human: marker.icon = UIImage(named: "Body")
-        case .ufo: marker.icon = UIImage(named: "Reproductive")
-        }
-        marker.title = nil
-        marker.snippet = nil
+        selectedMarker.icon = MarkerIcon(category: markerInfo.category)
+        selectedMarker.title = nil
+        selectedMarker.snippet = nil
+        
+        markerIsSelected = false
     }
     
     @IBAction private func zoomInButtonTapped(_ sender: UIButton) {
@@ -86,14 +91,16 @@ class GoogleMapsViewController: GoogleMapViewController {
 }
 
 extension GoogleMapsViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        redrawDeselectedMarker()
+    }
+    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         guard let markerInfo = marker.userData as? MapItem else {
             return false
         }
         
-        if markerDidSelected {
-            redrawMarker(selectedMarker)
-        }
+        redrawDeselectedMarker()
         
         switch markerInfo.category {
         case .human: marker.icon = UIImage(named: "Body_selected")
@@ -103,9 +110,7 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         marker.snippet = markerInfo.snippet
         
         selectedMarker = marker
-        if !markerDidSelected {
-            markerDidSelected = true
-        }
+        markerIsSelected = true
         
         return false
     }
@@ -126,9 +131,6 @@ extension GoogleMapsViewController: GMUClusterRendererDelegate {
         guard let markerInfo = marker.userData as? MapItem else {
             return
         }
-        switch markerInfo.category {
-        case .human: marker.icon = UIImage(named: "Body")
-        case .ufo: marker.icon = UIImage(named: "Reproductive")
-        }
+        marker.icon = MarkerIcon(category: markerInfo.category)
     }
 }

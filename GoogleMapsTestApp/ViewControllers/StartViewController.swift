@@ -16,8 +16,13 @@ class StartViewController: UIViewController {
     }
     
     @IBAction func buttonDidTap(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let controller = storyboard.instantiateViewController(withIdentifier: "MapVC") as
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(withIdentifier: "MapVC") as? GoogleMapViewController else {
+            return
+        }
+        let viewModel = GoogleMapsViewModel()
+        controller.viewModel = viewModel
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
   

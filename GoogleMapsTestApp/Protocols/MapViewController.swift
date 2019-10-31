@@ -9,6 +9,6 @@
 import Foundation
 
 protocol MapViewController: class {
-    var viewModel: MapViewControllerViewModel! { get }
+    var viewModel: MapViewControllerViewModel! { get set }
 }
 
