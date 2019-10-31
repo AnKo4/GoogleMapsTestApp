@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MapZoom {
+enum MapZoomAction {
     case zoomIn
     case zoomOut
 }

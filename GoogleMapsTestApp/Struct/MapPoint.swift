@@ -13,4 +13,5 @@ struct MapPoint {
     var long = 0.0
     var name = ""
     var snippet = ""
+    var category: MarkerCategory
 }

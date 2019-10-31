@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GoogleMaps
 
 class GoogleMapsViewController: UIViewController {
 
@@ -15,34 +14,33 @@ class GoogleMapsViewController: UIViewController {
     @IBOutlet private weak var zoomInButton: UIButton!
     @IBOutlet private weak var zoomOutButton: UIButton!
     
-    
     private var clusterManager: GMUClusterManager!
+    private var clusterManagerFromNetwork: GMUClusterManager!
+    private var renderer: GMUDefaultClusterRenderer!
+    private var rendererFromNetwork: GMUDefaultClusterRenderer!
+    private var selectedMarker: GMSMarker!
     
-    private let clusterItemGenerator = ClusterItemGenerator()
+    private var markerDidSelected = false
+
+    private let viewModel = GoogleMapsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupClusterManager()
-        setupMapView()
+
+        setupView()
         setupButtons()
     }
 
-    private func setupMapView() {
-        let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
-    }
-    
-    private func setupClusterManager() {
-        let iconGenerator = GMUDefaultClusterIconGenerator()
-        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+    private func setupView() {
+        viewModel.setupMapView(mapView)
         
-        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        
-        clusterItemGenerator.prepareItems(clusterManager: clusterManager)
-        clusterManager.cluster()
+        (clusterManager, renderer) = viewModel.configureClusterManager(for: mapView)
+        renderer.delegate = self
         clusterManager.setDelegate(self, mapDelegate: self)
+        
+        (clusterManagerFromNetwork, rendererFromNetwork) = viewModel.configureClusterManagerFromNetwork(for: mapView)
+        rendererFromNetwork.delegate = self
+        clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
     }
     
     private func setupButtons() {
@@ -53,7 +51,7 @@ class GoogleMapsViewController: UIViewController {
         zoomOutButton.backgroundColor = .white
     }
     
-    private func changeMapZoom(action: MapZoom) {
+    private func changeMapZoom(action: MapZoomAction) {
         let zoom = mapView.camera.zoom
         switch action {
         case .zoomIn: mapView.animate(toZoom: zoom + 1)
@@ -61,48 +59,73 @@ class GoogleMapsViewController: UIViewController {
         }
     }
     
-    @IBAction func zoomInButtonTapped(_ sender: UIButton) {
+    private func redrawMarker(_ marker: GMSMarker) {
+        guard let markerInfo = marker.userData as? MapItem else {
+            return
+        }
+
+        switch markerInfo.category {
+        case .human: marker.icon = UIImage(named: "Body")
+        case .ufo: marker.icon = UIImage(named: "Reproductive")
+        }
+        marker.title = nil
+        marker.snippet = nil
+    }
+    
+    @IBAction private func zoomInButtonTapped(_ sender: UIButton) {
         changeMapZoom(action: .zoomIn)
     }
     
-    @IBAction func zoomOutButtonTapped(_ sender: UIButton) {
+    @IBAction private func zoomOutButtonTapped(_ sender: UIButton) {
         changeMapZoom(action: .zoomOut)
     }
     
 }
 
 extension GoogleMapsViewController: GMSMapViewDelegate {
-    
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        guard let mapPoint = marker.userData as? MapItem else {
-            let mapMarker = GMSMarker()
-            mapMarker.map = mapView
+        guard let markerInfo = marker.userData as? MapItem else {
             return false
         }
-        let mapMarker = GMSMarker(position: mapPoint.position)
-        mapMarker.title = mapPoint.name
-        mapMarker.snippet = mapPoint.snippet
-        mapMarker.map = mapView
+        
+        if markerDidSelected {
+            redrawMarker(selectedMarker)
+        }
+        
+        switch markerInfo.category {
+        case .human: marker.icon = UIImage(named: "Body_selected")
+        case .ufo: marker.icon = UIImage(named: "Reproductive_selected")
+        }
+        marker.title = markerInfo.name
+        marker.snippet = markerInfo.snippet
+        
+        selectedMarker = marker
+        if !markerDidSelected {
+            markerDidSelected = true
+        }
+        
         return false
     }
-    
+
 }
 
 extension GoogleMapsViewController: GMUClusterManagerDelegate {
-    
-    func clusterManager(_ clusterManager: GMUClusterManager, didTap clusterItem: GMUClusterItem) -> Bool {
-        let camera = GMSCameraPosition.camera(withTarget: clusterItem.position, zoom: mapView.camera.zoom)
-        let update = GMSCameraUpdate.setCamera(camera)
-        mapView.moveCamera(update)
-        return false
-    }
-    
     func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
         let camera = GMSCameraPosition.camera(withTarget: cluster.position, zoom: mapView.camera.zoom + 1)
-        let update = GMSCameraUpdate.setCamera(camera)
-        mapView.moveCamera(update)
+        mapView.animate(to: camera)
         return false
     }
 
 }
 
+extension GoogleMapsViewController: GMUClusterRendererDelegate {
+    func renderer(_ renderer: GMUClusterRenderer, willRenderMarker marker: GMSMarker) {
+        guard let markerInfo = marker.userData as? MapItem else {
+            return
+        }
+        switch markerInfo.category {
+        case .human: marker.icon = UIImage(named: "Body")
+        case .ufo: marker.icon = UIImage(named: "Reproductive")
+        }
+    }
+}
