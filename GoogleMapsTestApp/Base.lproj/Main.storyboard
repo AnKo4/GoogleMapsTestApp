@@ -8,6 +8,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="2Ys-TB-ipG">
+            <objects>
+                <viewController id="WLw-qo-Tgf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OSm-e8-XUH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHm-zp-j02">
+                                <rect key="frame" x="157" y="350" width="100" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Click me :)"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dHm-zp-j02" firstAttribute="centerX" secondItem="OSm-e8-XUH" secondAttribute="centerX" id="1TM-g1-CjA"/>
+                            <constraint firstItem="dHm-zp-j02" firstAttribute="centerY" secondItem="OSm-e8-XUH" secondAttribute="centerY" id="kzw-s3-ix2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nk6-Ge-9oq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Azs-jb-Roa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191" y="148"/>
+        </scene>
         <!--Google Maps View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -80,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="138"/>
+            <point key="canvasLocation" x="551" y="149"/>
         </scene>
     </scenes>
 </document>
