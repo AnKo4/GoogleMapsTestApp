@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ClusterGenerator: class {
-    var localData: [MapPoint] { get set }
+    var dataSource: ClusterConfiguratorDataSource { get set }
     var networkManager: NetworkDataProvider { get set }
     
     func prepareItems(for clusterManager: GMUClusterManager)

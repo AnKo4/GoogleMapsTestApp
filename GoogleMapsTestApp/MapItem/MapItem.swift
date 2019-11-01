@@ -10,7 +10,7 @@ import Foundation
 
 class MapItem: NSObject, GMUClusterItem {
     var position: CLLocationCoordinate2D
-    var name: String!
+    var name: String
     var snippet: String
     var category: MarkerCategory
 

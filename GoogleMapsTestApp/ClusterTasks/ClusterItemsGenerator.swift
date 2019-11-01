@@ -8,22 +8,25 @@
 
 import Foundation
 
+///  datasource (хранилище)
+///  configurator (не создает ничего только конфигурирует)
+///
+
+
 class ClusterItemsGenerator: ClusterGenerator {
     
-    var localData: [MapPoint]
+    var dataSource: ClusterConfiguratorDataSource
+    
     var networkManager: NetworkDataProvider
 
     
-//    private let mapPoints = MockCoordinates.data
-//    private let networkManager = NetworkManager()
- 
-    init(localData: [MapPoint], networkManager: NetworkDataProvider) {
-        self.localData = localData
+    init(networkManager: NetworkDataProvider, dataSource: ClusterConfiguratorDataSource) {
         self.networkManager = networkManager
+        self.dataSource = dataSource
     }
     
     func prepareItems(for clusterManager: GMUClusterManager) {
-        for item in localData {
+        for item in dataSource.mapPoints {
             let position = CLLocationCoordinate2DMake(item.lat, item.long)
             let mapItem = MapItem(position: position, name: item.name, snippet: item.snippet, category: item.category)
             clusterManager.add(mapItem)
