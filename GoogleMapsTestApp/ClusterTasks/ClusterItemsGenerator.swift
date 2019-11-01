@@ -8,13 +8,22 @@
 
 import Foundation
 
-class ClusterItemGenerator {
-    private let mapPoints = MockCoordinates().data
-    private let networkManager = NetworkManager()
+class ClusterItemsGenerator: ClusterGenerator {
+    
+    var localData: [MapPoint]
+    var networkManager: NetworkDataProvider
 
     
-    func prepareItems(clusterManager: GMUClusterManager) {
-        for item in mapPoints {
+//    private let mapPoints = MockCoordinates.data
+//    private let networkManager = NetworkManager()
+ 
+    init(localData: [MapPoint], networkManager: NetworkDataProvider) {
+        self.localData = localData
+        self.networkManager = networkManager
+    }
+    
+    func prepareItems(for clusterManager: GMUClusterManager) {
+        for item in localData {
             let position = CLLocationCoordinate2DMake(item.lat, item.long)
             let mapItem = MapItem(position: position, name: item.name, snippet: item.snippet, category: item.category)
             clusterManager.add(mapItem)

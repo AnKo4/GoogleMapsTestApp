@@ -10,7 +10,7 @@ import Foundation
 
 struct MockCoordinates {
     
-    let data = [MapPoint(lat: 54.3143937208559, long: 48.39280074899831,  name: "Моя хата", snippet: "Дом с Итальянскими колготками", category: .human),
+    static let data = [MapPoint(lat: 54.3143937208559, long: 48.39280074899831,  name: "Моя хата", snippet: "Дом с Итальянскими колготками", category: .human),
                 MapPoint(lat: 54.31453453751755, long: 48.39399189846714, name: "Ленина 79", snippet: "Магазин Юничел", category: .human),
                 MapPoint(lat: 54.31705446310348, long: 48.395396352981145, name: "Обитель ада, билет в один конец", snippet: "Кафе Пещера", category: .ufo),
                 MapPoint(lat: 54.316864201016855, long: 48.39530404778977, name: "Опыты над молодыми", snippet: "Студ поликлиника", category: .ufo),

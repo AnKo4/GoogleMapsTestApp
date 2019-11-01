@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A5306234F4DCF0056A6BD /* APIKey.swift */; };
 		554CC8B7234F702B00E95117 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC8B6234F702B00E95117 /* MapItem.swift */; };
+		554FCB1A236C0DEC005BC258 /* ClusterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554FCB19236C0DEC005BC258 /* ClusterGenerator.swift */; };
 		5550952F236AFEC6009EB330 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550952E236AFEC6009EB330 /* StartViewController.swift */; };
 		55509532236B075F009EB330 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509531236B075F009EB330 /* MapViewController.swift */; };
 		55509534236B07F0009EB330 /* MapViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509533236B07F0009EB330 /* MapViewControllerViewModel.swift */; };
@@ -55,6 +56,7 @@
 		55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBAF2356F7B40011273F /* GQTPointQuadTree.m */; };
 		55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBB12356F7B40011273F /* GQTPointQuadTreeChild.m */; };
 		55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E63EA72350B6A2001882F8 /* MapZoom.swift */; };
+		55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */; };
 		83D362FD4235044B907BCA17 /* Pods_GoogleMapsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,7 @@
 		552A532B234F54320056A6BD /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMUMarkerClustering.h; path = ../GMUMarkerClustering.h; sourceTree = "<group>"; };
 		552A536D234F55060056A6BD /* GoogleMapsTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		554CC8B6234F702B00E95117 /* MapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
+		554FCB19236C0DEC005BC258 /* ClusterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterGenerator.swift; sourceTree = "<group>"; };
 		5550952E236AFEC6009EB330 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		55509531236B075F009EB330 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		55509533236B07F0009EB330 /* MapViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		55AFFBB42356F7B40011273F /* GQTPointQuadTreeChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeChild.h; sourceTree = "<group>"; };
 		55AFFBB52356F7B40011273F /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
 		55E63EA72350B6A2001882F8 /* MapZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapZoom.swift; sourceTree = "<group>"; };
+		55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
 		BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A471C461DB421CB3CA01B3 /* Pods-GoogleMapsTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.debug.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA6FBF6FD5838CF85A4F54A /* Pods-GoogleMapsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.release.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			children = (
 				55509531236B075F009EB330 /* MapViewController.swift */,
 				55509533236B07F0009EB330 /* MapViewControllerViewModel.swift */,
+				554FCB19236C0DEC005BC258 /* ClusterGenerator.swift */,
+				55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -622,11 +628,13 @@
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
 				5579340023507C3500BFAA8E /* MapPoint.swift in Sources */,
 				55AFFBCB2356F7B40011273F /* GMUPair.m in Sources */,
+				554FCB1A236C0DEC005BC258 /* ClusterGenerator.swift in Sources */,
 				55AFFBC42356F7B40011273F /* GMUPlacemark.m in Sources */,
 				55AFFBBB2356F7B40011273F /* GMUDefaultClusterRenderer.m in Sources */,
 				55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */,
 				55AFFBC02356F7B40011273F /* GMUHeatmapTileLayer.m in Sources */,
 				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
+				55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */,
 				55AFFBBC2356F7B40011273F /* GMUDefaultClusterIconGenerator.m in Sources */,
 				556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */,
 				55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */,

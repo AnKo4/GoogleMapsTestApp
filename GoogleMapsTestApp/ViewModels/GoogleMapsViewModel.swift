@@ -10,8 +10,11 @@ import Foundation
 
 struct GoogleMapsViewModel: MapViewControllerViewModel {
     
-    private let clusterItemGenerator = ClusterItemGenerator()
+    private var clusterItemGenerator: ClusterGenerator
     
+    init(clusterGenerator: ClusterGenerator) {
+        self.clusterItemGenerator = clusterGenerator
+    }
     
     func setupMapView(_ mapView: GMSMapView) {
         let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
@@ -25,7 +28,7 @@ struct GoogleMapsViewModel: MapViewControllerViewModel {
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         
         let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        clusterItemGenerator.prepareItems(clusterManager: clusterManager)
+        clusterItemGenerator.prepareItems(for: clusterManager)
         
         return (clusterManager, renderer)
     }

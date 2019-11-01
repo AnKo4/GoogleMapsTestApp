@@ -20,7 +20,9 @@ class StartViewController: UIViewController {
         guard let controller = storyboard.instantiateViewController(withIdentifier: "MapVC") as? GoogleMapViewController else {
             return
         }
-        let viewModel = GoogleMapsViewModel()
+        let networkManager = NetworkManager()
+        let clusterGenerator = ClusterItemsGenerator(localData: MockCoordinates.data, networkManager: networkManager)
+        let viewModel = GoogleMapsViewModel(clusterGenerator: clusterGenerator)
         controller.viewModel = viewModel
         self.navigationController?.pushViewController(controller, animated: true)
     }

@@ -9,9 +9,10 @@
 import Foundation
 import Moya
 
-class NetworkManager {
+class NetworkManager: NetworkDataProvider {
     
     private let provider = MoyaProvider<MoyaService>()
+    
     
     func getPOIData(completion: @escaping ([Feature]) -> Void) {
         provider.request(.getPOIData) { [weak self] result in
