@@ -23,25 +23,37 @@ class GoogleMapsViewController: GoogleMapViewController {
     private var markerIsSelected = false
     
     var viewModel: MapViewControllerViewModel!
-    
+    var clusterConfigurator: ClusterConfigurator!
+
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupMapView()
         setupView()
         setupButtons()
     }
+    
+    private func setupMapView() {
+        let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
+        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
+    }
+
 
     private func setupView() {
-        viewModel.setupMapView(mapView)
         
-        (clusterManager, renderer) = viewModel.configureClusterManager(for: mapView)
+        let localMapPoints = viewModel.fetchLocalData()
+        
+        
+        (clusterManager, renderer) = clusterConfigurator.configureClusterManager(for: mapView, buckets: [], colors: [], algorithm: .distanceBased, mapPoints: localMapPoints)
         renderer.delegate = self
         clusterManager.setDelegate(self, mapDelegate: self)
         
-        (clusterManagerFromNetwork, rendererFromNetwork) = viewModel.configureClusterManagerFromNetwork(for: mapView)
-        rendererFromNetwork.delegate = self
-        clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
+        
+        
+//        (clusterManagerFromNetwork, rendererFromNetwork) = viewModel.configureClusterManagerFromNetwork(for: mapView)
+//        rendererFromNetwork.delegate = self
+//        clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
     }
     
     private func setupButtons() {

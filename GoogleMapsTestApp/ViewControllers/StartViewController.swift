@@ -22,9 +22,10 @@ class StartViewController: UIViewController {
         }
         let networkManager = NetworkManager()
         let dataSource = MockCoordinates()
-        let clusterGenerator = ClusterItemsGenerator(networkManager: networkManager, dataSource: dataSource)
-        let viewModel = GoogleMapsViewModel(clusterGenerator: clusterGenerator)
+        let viewModel = GoogleMapsViewModel(localDataSource: dataSource, networkManager: networkManager)
         controller.viewModel = viewModel
+        let clusterConfigurator = ClusterManagerConfigurator()
+        controller.clusterConfigurator = clusterConfigurator
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

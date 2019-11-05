@@ -9,8 +9,6 @@
 import Foundation
 
 protocol  MapViewControllerViewModel {
-    func setupMapView(_ mapView: GMSMapView)
-    func configureClusterManager(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer)
-    func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer)
-    
+    func fetchLocalData() -> [MapPointType]
+    func fetchServerData(completion: @escaping ([MapPointType]) -> Void)
 }

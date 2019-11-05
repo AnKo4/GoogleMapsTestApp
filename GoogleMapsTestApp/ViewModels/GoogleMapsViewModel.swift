@@ -9,39 +9,56 @@
 import Foundation
 
 struct GoogleMapsViewModel: MapViewControllerViewModel {
+        
+    private var networkManager: NetworkDataProvider
+    private var localDataSource: ClusterConfiguratorDataSource
     
-    private var clusterItemGenerator: ClusterGenerator
-    
-    init(clusterGenerator: ClusterGenerator) {
-        self.clusterItemGenerator = clusterGenerator
+    init(localDataSource: ClusterConfiguratorDataSource, networkManager: NetworkDataProvider) {
+        self.localDataSource = localDataSource
+        self.networkManager = networkManager
     }
     
-    func setupMapView(_ mapView: GMSMapView) {
-        let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
+    
+    func fetchLocalData() -> [MapPointType] {
+        return localDataSource.mapPoints
+    }
+    
+    func fetchServerData(completion: @escaping ([MapPointType]) -> Void) {
+        networkManager.getPOIData() {data in
+            let convertedData = self.convertToMapPoinType(data: data)
+            completion(convertedData)
+        }
+    }
+ 
+    
+    private func convertToMapPoinType(data: [Feature]) -> [MapPointType] {
+        var convertedData: [MapPointType] = []
+        
+        for item in data {
+            let mapPoint = MapPoint(lat: item.geometry.coordinates[1], long: item.geometry.coordinates[0], name: item.properties.title, snippet: item.properties.snippet, category: MarkerCategory(rawValue: item.properties.category) ?? MarkerCategory.human)
+            convertedData.append(mapPoint)
+        }
+        return convertedData
     }
 
-    func configureClusterManager(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
-//        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.gray, .green, .blue, .cyan, .red])
-        let iconGenerator = GMUDefaultClusterIconGenerator()
-        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
-        
-        let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        clusterItemGenerator.prepareItems(for: clusterManager)
-        
-        return (clusterManager, renderer)
-    }
+
     
-    func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
-        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.red, .blue, .cyan, .gray, .green])
-        let algorithm = GMUGridBasedClusterAlgorithm()
-        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
-           
-        let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-        clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
-           
-        return (clusterManager, renderer)
-    }
+    
+    
+    
+    
+
+ 
+    
+//    func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
+//        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.red, .blue, .cyan, .gray, .green])
+//        let algorithm = GMUGridBasedClusterAlgorithm()
+//        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+//        
+//        let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
+//        clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
+//           
+//        return (clusterManager, renderer)
+//    }
     
 }
