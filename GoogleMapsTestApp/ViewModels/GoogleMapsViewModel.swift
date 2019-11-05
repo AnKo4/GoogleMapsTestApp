@@ -13,23 +13,22 @@ struct GoogleMapsViewModel: MapViewControllerViewModel {
     private var networkManager: NetworkDataProvider
     private var localDataSource: ClusterConfiguratorDataSource
     
+    
     init(localDataSource: ClusterConfiguratorDataSource, networkManager: NetworkDataProvider) {
         self.localDataSource = localDataSource
         self.networkManager = networkManager
     }
     
-    
-    func fetchLocalData() -> [MapPointType] {
-        return localDataSource.mapPoints
+    func fetchLocalData() -> ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm){
+        return (localDataSource.mapPoints, nil, nil, .distanceBased)
     }
     
-    func fetchServerData(completion: @escaping ([MapPointType]) -> Void) {
+    func fetchServerData(completion: @escaping ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm) -> Void) {
         networkManager.getPOIData() {data in
             let convertedData = self.convertToMapPoinType(data: data)
-            completion(convertedData)
+            completion(convertedData, [4, 5, 6, 8, 10], [.red, .blue, .cyan, .gray, .green], .gridBased)
         }
     }
- 
     
     private func convertToMapPoinType(data: [Feature]) -> [MapPointType] {
         var convertedData: [MapPointType] = []
@@ -40,25 +39,5 @@ struct GoogleMapsViewModel: MapViewControllerViewModel {
         }
         return convertedData
     }
-
-
-    
-    
-    
-    
-    
-
- 
-    
-//    func configureClusterManagerFromNetwork(for mapView: GMSMapView) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
-//        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: [4, 5, 6, 8, 10], backgroundColors: [.red, .blue, .cyan, .gray, .green])
-//        let algorithm = GMUGridBasedClusterAlgorithm()
-//        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
-//        
-//        let clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
-//        clusterItemGenerator.prepareItemsFromNetwork(for: clusterManager)
-//           
-//        return (clusterManager, renderer)
-//    }
     
 }

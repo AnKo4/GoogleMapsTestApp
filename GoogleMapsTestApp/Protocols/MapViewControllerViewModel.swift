@@ -9,6 +9,6 @@
 import Foundation
 
 protocol  MapViewControllerViewModel {
-    func fetchLocalData() -> [MapPointType]
-    func fetchServerData(completion: @escaping ([MapPointType]) -> Void)
+    func fetchLocalData() -> ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm)
+    func fetchServerData(completion: @escaping ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm) -> Void)
 }
