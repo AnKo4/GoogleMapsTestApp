@@ -8,27 +8,18 @@
 
 import UIKit
 
-class StartViewController: UIViewController {
-
+class StartViewController: UIViewController, HasRouter {
+ 
+    var router: Router!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        router = RouterToGoogleMapsViewController()
     }
     
     @IBAction func buttonDidTap(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let controller = storyboard.instantiateViewController(withIdentifier: "MapVC") as? GoogleMapViewController else {
-            return
-        }
-        let networkManager = NetworkManager()
-        let dataSource = MockCoordinates()
-        let viewModel = GoogleMapsViewModel(localDataSource: dataSource, networkManager: networkManager)
-        controller.viewModel = viewModel
-        let clusterConfigurator = ClusterManagerConfigurator()
-        controller.clusterConfigurator = clusterConfigurator
-        self.navigationController?.pushViewController(controller, animated: true)
+        router.route(from: self)
     }
-    
-  
-
 }
+

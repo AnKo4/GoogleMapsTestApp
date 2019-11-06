@@ -25,7 +25,7 @@ struct GoogleMapsViewModel: MapViewControllerViewModel {
     
     func fetchServerData(completion: @escaping ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm) -> Void) {
         networkManager.getPOIData(output: Geodata.self) {data in
-            completion(data.features, [4, 5, 6, 8, 10], [.red, .blue, .cyan, .gray, .green], .gridBased)
+            completion(data.features, Constants.buckets, Constants.colors, .gridBased)
         }
     }
     
