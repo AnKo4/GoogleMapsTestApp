@@ -81,7 +81,7 @@ class GoogleMapsViewController: GoogleMapViewController {
     
     private func redrawDeselectedMarker() {
         guard markerIsSelected,
-            let markerInfo = selectedMarker.userData as? MapItem else {
+            let markerInfo = selectedMarker.userData as? POIItem else {
             return
         }
 
@@ -108,7 +108,7 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        guard let markerInfo = marker.userData as? MapItem else {
+        guard let markerInfo = marker.userData as? POIItem else {
             return false
         }
         
@@ -140,7 +140,7 @@ extension GoogleMapsViewController: GMUClusterManagerDelegate {
 
 extension GoogleMapsViewController: GMUClusterRendererDelegate {
     func renderer(_ renderer: GMUClusterRenderer, willRenderMarker marker: GMSMarker) {
-        guard let markerInfo = marker.userData as? MapItem else {
+        guard let markerInfo = marker.userData as? POIItem else {
             return
         }
         marker.icon = MarkerIcon(category: markerInfo.category)

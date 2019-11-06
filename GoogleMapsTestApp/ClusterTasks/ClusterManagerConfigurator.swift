@@ -9,13 +9,7 @@
 import Foundation
 
 class ClusterManagerConfigurator: ClusterConfigurator {
-    
-//    var converter:
-//    
-//    init(converter:) {
-//        self.converter = converter
-//    }
-    
+        
     func configureClusterManager(for mapView: GMSMapView, buckets: [NSNumber]?, colors: [UIColor]?, algorithm: ClusterAlgorithm, mapPoints: [MapPointType]) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
         let iconGenerator = makeIconGenerator(buckets: buckets, colors: colors)
         let clusterAlgorithm = makeAlgorithm(algorithm: algorithm)
@@ -49,7 +43,7 @@ class ClusterManagerConfigurator: ClusterConfigurator {
     private func makeCluster(for clusterManager: GMUClusterManager, from mapPoints: [MapPointType]) {
         for item in mapPoints {
             let position = CLLocationCoordinate2DMake(item.lat, item.long)
-            let mapItem = MapItem(position: position, name: item.name, snippet: item.snippet, category: item.category)
+            let mapItem = POIItem(position: position, name: item.name, snippet: item.snippet, category: item.category)
             clusterManager.add(mapItem)
         }
         clusterManager.cluster()
