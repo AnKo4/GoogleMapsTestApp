@@ -9,5 +9,5 @@
 import Foundation
 
 protocol NetworkDataProvider: class {
-    func getPOIData(completion: @escaping ([Feature]) -> Void)
+    func getPOIData<T: Codable>(output structure: T.Type, completion: @escaping (T) -> Void)
 }

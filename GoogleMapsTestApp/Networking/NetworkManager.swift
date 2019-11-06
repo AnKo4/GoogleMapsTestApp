@@ -14,13 +14,13 @@ class NetworkManager: NetworkDataProvider {
     private let provider = MoyaProvider<MoyaService>()
     
     
-    func getPOIData(completion: @escaping ([Feature]) -> Void) {
+    func getPOIData<T: Codable>(output structure: T.Type, completion: @escaping (T) -> Void) {
         provider.request(.getPOIData) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                guard let decodedData = self.decodeData(data: response.data, to: Geodata.self) else { return }
-                completion(decodedData.features)
+                guard let decodedData = self.decodeData(data: response.data, to: structure.self) else { return }
+                completion(decodedData)
             case.failure(let error):
                 print(error.errorDescription ?? "Can't get data from server")
             }
