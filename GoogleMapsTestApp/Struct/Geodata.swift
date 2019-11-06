@@ -28,3 +28,28 @@ struct Properties: Codable {
 struct Geometry: Codable {
     var coordinates: [Double]
 }
+
+
+extension Feature: MapPointType {
+    var lat: Double {
+        return self.geometry.coordinates[1]
+    }
+    
+    var long: Double {
+        return self.geometry.coordinates[0]
+    }
+    
+    var name: String {
+        return self.properties.title
+    }
+    
+    var snippet: String {
+        return self.properties.snippet
+    }
+    
+    var category: MarkerCategory {
+        return MarkerCategory(rawValue: self.properties.category) ?? .human
+    }
+    
+    
+}
