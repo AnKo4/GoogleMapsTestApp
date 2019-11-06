@@ -21,13 +21,13 @@ class ClusterManagerConfigurator: ClusterConfigurator {
     
     private func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator {
         guard
-            buckets != nil && colors != nil,
-            buckets?.count != 0,
-            buckets?.count == colors?.count
+            let buckets = buckets, let colors = colors,
+            buckets.count != 0,
+            buckets.count == colors.count
             else {
                 return GMUDefaultClusterIconGenerator()
         }
-        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: buckets!, backgroundColors: colors!)
+        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: buckets, backgroundColors: colors)
         return iconGenerator
     }
     
