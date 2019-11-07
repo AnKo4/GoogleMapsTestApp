@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5504E3322373124D00815131 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504E3312373124D00815131 /* Viewable.swift */; };
 		552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A5306234F4DCF0056A6BD /* APIKey.swift */; };
 		554CC8B7234F702B00E95117 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC8B6234F702B00E95117 /* MapItem.swift */; };
 		5550952F236AFEC6009EB330 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550952E236AFEC6009EB330 /* StartViewController.swift */; };
@@ -23,6 +24,8 @@
 		555C00A2234F3E34000E2496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A0234F3E34000E2496 /* Main.storyboard */; };
 		555C00A4234F3E35000E2496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A3234F3E35000E2496 /* Assets.xcassets */; };
 		555C00A7234F3E35000E2496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A5234F3E35000E2496 /* LaunchScreen.storyboard */; };
+		5565FA1B2374376A00ED769A /* ClusterConfiguratorParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */; };
+		5565FA1D23743A2B00ED769A /* DataForClusterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */; };
 		556B9CA5235DA92C00AB713B /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA4235DA92C00AB713B /* MoyaService.swift */; };
 		556B9CA8235DCB9500AB713B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA7235DCB9500AB713B /* NetworkManager.swift */; };
 		556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CAA235DCCEF00AB713B /* Geodata.swift */; };
@@ -59,7 +62,7 @@
 		55B617D12372BCAD00AAC6BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D02372BCAD00AAC6BA /* Constants.swift */; };
 		55B617D32372BEC800AAC6BA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D22372BEC800AAC6BA /* Router.swift */; };
 		55B617D82372C33000AAC6BA /* RouterToGoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D72372C33000AAC6BA /* RouterToGoogleMapsViewController.swift */; };
-		55B617DA2372DB7100AAC6BA /* HasRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D92372DB7100AAC6BA /* HasRouter.swift */; };
+		55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D92372DB7100AAC6BA /* Routable.swift */; };
 		55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E63EA72350B6A2001882F8 /* MapZoom.swift */; };
 		55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */; };
 		55E80739236C497B00EFBA3D /* MapPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80738236C497B00EFBA3D /* MapPointType.swift */; };
@@ -69,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5504E3312373124D00815131 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
 		552A5306234F4DCF0056A6BD /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		552A532B234F54320056A6BD /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMUMarkerClustering.h; path = ../GMUMarkerClustering.h; sourceTree = "<group>"; };
 		552A536D234F55060056A6BD /* GoogleMapsTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		555C00A3234F3E35000E2496 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		555C00A6234F3E35000E2496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		555C00A8234F3E35000E2496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorParameters.swift; sourceTree = "<group>"; };
+		5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForClusterConfigurator.swift; sourceTree = "<group>"; };
 		556B9CA4235DA92C00AB713B /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		556B9CA7235DCB9500AB713B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		556B9CAA235DCCEF00AB713B /* Geodata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geodata.swift; sourceTree = "<group>"; };
@@ -165,7 +171,7 @@
 		55B617D02372BCAD00AAC6BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55B617D22372BEC800AAC6BA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		55B617D72372C33000AAC6BA /* RouterToGoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterToGoogleMapsViewController.swift; sourceTree = "<group>"; };
-		55B617D92372DB7100AAC6BA /* HasRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasRouter.swift; sourceTree = "<group>"; };
+		55B617D92372DB7100AAC6BA /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		55E63EA72350B6A2001882F8 /* MapZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapZoom.swift; sourceTree = "<group>"; };
 		55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
 		55E80738236C497B00EFBA3D /* MapPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointType.swift; sourceTree = "<group>"; };
@@ -227,7 +233,9 @@
 				55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */,
 				5553427523719629004558A4 /* ClusterConfigurator.swift */,
 				55B617D22372BEC800AAC6BA /* Router.swift */,
-				55B617D92372DB7100AAC6BA /* HasRouter.swift */,
+				55B617D92372DB7100AAC6BA /* Routable.swift */,
+				5504E3312373124D00815131 /* Viewable.swift */,
+				5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 				557934012350A6EE00BFAA8E /* StartPoint.swift */,
 				556B9CAA235DCCEF00AB713B /* Geodata.swift */,
 				55B617D02372BCAD00AAC6BA /* Constants.swift */,
+				5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -646,6 +655,7 @@
 				554CC8B7234F702B00E95117 /* MapItem.swift in Sources */,
 				55AFFBC72356F7B40011273F /* GMUFeature.m in Sources */,
 				55AFFBB72356F7B40011273F /* GMUGridBasedClusterAlgorithm.m in Sources */,
+				5565FA1D23743A2B00ED769A /* DataForClusterConfigurator.swift in Sources */,
 				55AFFBBF2356F7B40011273F /* GMUGradient.m in Sources */,
 				55AFFBBA2356F7B40011273F /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */,
@@ -653,7 +663,7 @@
 				5575845F2366CA11008A3841 /* GoogleMapsViewModel.swift in Sources */,
 				55E8073D236C4D2C00EFBA3D /* MapPointTypeProtocol.swift in Sources */,
 				55B617D82372C33000AAC6BA /* RouterToGoogleMapsViewController.swift in Sources */,
-				55B617DA2372DB7100AAC6BA /* HasRouter.swift in Sources */,
+				55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */,
 				55AFFBCA2356F7B40011273F /* GMUPoint.m in Sources */,
 				557933FD2350676400BFAA8E /* Coordinates.swift in Sources */,
 				55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift in Sources */,
@@ -664,6 +674,7 @@
 				55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */,
 				5550952F236AFEC6009EB330 /* StartViewController.swift in Sources */,
 				5553427A23719AE1004558A4 /* ClusterAlgorithms.swift in Sources */,
+				5504E3322373124D00815131 /* Viewable.swift in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
 				5579340023507C3500BFAA8E /* MapPoint.swift in Sources */,
 				55AFFBCB2356F7B40011273F /* GMUPair.m in Sources */,
@@ -673,6 +684,7 @@
 				55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */,
 				55AFFBC02356F7B40011273F /* GMUHeatmapTileLayer.m in Sources */,
 				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
+				5565FA1B2374376A00ED769A /* ClusterConfiguratorParameters.swift in Sources */,
 				5553427623719629004558A4 /* ClusterConfigurator.swift in Sources */,
 				55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */,
 				55AFFBBC2356F7B40011273F /* GMUDefaultClusterIconGenerator.m in Sources */,

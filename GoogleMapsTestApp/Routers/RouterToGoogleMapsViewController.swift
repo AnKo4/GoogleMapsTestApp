@@ -16,17 +16,30 @@ class RouterToGoogleMapsViewController: Router {
             return
         }
         
-        injectDependencies(to: destinationController)
+//        injectDependencies(to: destinationController)
         
         controller.navigationController?.pushViewController(destinationController, animated: true)
     }
-
-    private func injectDependencies(to controller: GoogleMapViewController) {
-        let networkManager = NetworkManager()
-        let dataSource = MockCoordinates()
-        let viewModel = GoogleMapsViewModel(localDataSource: dataSource, networkManager: networkManager)
-        controller.viewModel = viewModel
-        let clusterConfigurator = ClusterManagerConfigurator()
-        controller.clusterConfigurator = clusterConfigurator
-    }
+/// move to di
+//    private func injectDependencies(to controller: GoogleMapViewController) {
+//        let networkManager = NetworkManager()
+//        let dataSource = MockCoordinates()
+//        let viewModel = GoogleMapsViewModel(localDataSource: dataSource, networkManager: networkManager)
+//        controller.viewModel = viewModel
+//        let clusterConfigurator = ClusterManagerConfigurator()
+//        controller.clusterConfigurator = clusterConfigurator
+//    }
 }
+
+
+/// di
+//class GoogleMapsModule {
+//    var networkDataProvider: NetworkDataProvider
+//    var dataSource: ClusterConfiguratorDataSource
+//    var viewModel: MapViewControllerViewModel
+//    var clusterManagerConfigurator: ClusterConfigurator
+//    
+//    var view: UIViewController
+//}
+
+

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol HasRouter: class {
+protocol Routable: class {
     var router: Router! { get set }
 }

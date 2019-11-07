@@ -39,11 +39,11 @@ extension Feature: MapPointType {
         return self.geometry.coordinates[0]
     }
     
-    var name: String {
+    var name: String? {
         return self.properties.title
     }
     
-    var snippet: String {
+    var snippet: String? {
         return self.properties.snippet
     }
     

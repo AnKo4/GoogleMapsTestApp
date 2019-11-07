@@ -12,8 +12,8 @@ protocol MapPointPositionable {
     var lat: Double { get }
     var long: Double { get }
     
-    var name: String { get }
-    var snippet: String { get }
+    var name: String? { get }
+    var snippet: String? { get }
 }
 
 protocol MapPointCategoryContainerType {

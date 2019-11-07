@@ -42,15 +42,15 @@ class GoogleMapsViewController: GoogleMapViewController {
 
     private func setupView() {
         
-        let (localMapPoints, localBuckets, localColors, localAlgorithm) = viewModel.fetchLocalData()
-        (clusterManager, renderer) = clusterConfigurator.configureClusterManager(for: mapView, buckets: localBuckets, colors: localColors, algorithm: localAlgorithm, mapPoints: localMapPoints)
+        let localResponse = viewModel.fetchLocalData()
+        (clusterManager, renderer) = clusterConfigurator.configureClusterManager(for: mapView, buckets: localResponse.buckets, colors: localResponse.colors, algorithm: localResponse.algorithm, mapPoints: localResponse.mapPoints)
         renderer.delegate = self
         clusterManager.setDelegate(self, mapDelegate: self)
         
         viewModel.fetchServerData() { [weak self]
-            (serverMapPoints, serverBuckets, serverColors, serverAlgorithm) in
+            response in
             guard let self = self else { return }
-            (self.clusterManagerFromNetwork, self.rendererFromNetwork) = self.clusterConfigurator.configureClusterManager(for: self.mapView, buckets: serverBuckets, colors: serverColors, algorithm: serverAlgorithm, mapPoints: serverMapPoints)
+            (self.clusterManagerFromNetwork, self.rendererFromNetwork) = self.clusterConfigurator.configureClusterManager(for: self.mapView, buckets: response.buckets, colors: response.colors, algorithm: response.algorithm, mapPoints: response.mapPoints)
             self.rendererFromNetwork.delegate = self
             self.clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
         }

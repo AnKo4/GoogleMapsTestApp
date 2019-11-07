@@ -43,7 +43,7 @@ class ClusterManagerConfigurator: ClusterConfigurator {
     private func makeCluster(for clusterManager: GMUClusterManager, from mapPoints: [MapPointType]) {
         for item in mapPoints {
             let position = CLLocationCoordinate2DMake(item.lat, item.long)
-            let mapItem = POIItem(position: position, name: item.name, snippet: item.snippet, category: item.category)
+            let mapItem = POIItem(position: position, name: item.name ?? "", snippet: item.snippet ?? "", category: item.category)
             clusterManager.add(mapItem)
         }
         clusterManager.cluster()

@@ -19,13 +19,15 @@ struct GoogleMapsViewModel: MapViewControllerViewModel {
         self.networkManager = networkManager
     }
     
-    func fetchLocalData() -> ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm) {
-        return (localDataSource.mapPoints, nil, nil, .distanceBased)
+    func fetchLocalData() -> ClusterConfiguratorParameters {
+        let outputData = DataForClusterConfigurator(mapPoints: localDataSource.mapPoints, buckets: nil, colors: nil, algorithm: ClusterAlgorithm(rawValue: "distanceBased") ?? .distanceBased)
+        return outputData
     }
     
-    func fetchServerData(completion: @escaping ([MapPointType], [NSNumber]?, [UIColor]?, ClusterAlgorithm) -> Void) {
+    func fetchServerData(completion: @escaping (ClusterConfiguratorParameters) -> Void) {
         networkManager.getPOIData(output: Geodata.self) {data in
-            completion(data.features, Constants.buckets, Constants.colors, .gridBased)
+            let outputData = DataForClusterConfigurator(mapPoints: data.features, buckets: Constants.buckets, colors: Constants.colors, algorithm: ClusterAlgorithm(rawValue: "gridBased") ?? .gridBased)
+            completion(outputData)
         }
     }
     

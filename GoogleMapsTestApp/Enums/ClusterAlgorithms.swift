@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ClusterAlgorithm {
-    case distanceBased
-    case gridBased
+enum ClusterAlgorithm: String {
+    case distanceBased = "distanceBased"
+    case gridBased = "gridBased"
 }

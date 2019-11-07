@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartViewController: UIViewController, HasRouter {
+class StartViewController: UIViewController, Routable {
  
     var router: Router!
     
@@ -22,4 +22,3 @@ class StartViewController: UIViewController, HasRouter {
         router.route(from: self)
     }
 }
-
