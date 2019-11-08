@@ -8,15 +8,14 @@
 
 import Foundation
 
-struct GoogleMapsViewModel: MapViewControllerViewModel {
-        
-    private var networkManager: NetworkDataProvider
-    private var localDataSource: ClusterConfiguratorDataSource
+struct GoogleMapsViewModel: MapViewControllerViewModel{
+            
+    private var networkManager: NetworkDataProvider!
+    private var localDataSource: ClusterConfiguratorDataSourceProtocol!
     
-    
-    init(localDataSource: ClusterConfiguratorDataSource, networkManager: NetworkDataProvider) {
-        self.localDataSource = localDataSource
+    init(networkManager: NetworkDataProvider, localDataSource: ClusterConfiguratorDataSourceProtocol) {
         self.networkManager = networkManager
+        self.localDataSource = localDataSource
     }
     
     func fetchLocalData() -> ClusterConfiguratorParameters {

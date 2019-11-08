@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ClusterConfiguratorDataSource: class {
+protocol ClusterConfiguratorDataSourceProtocol: class {
     var mapPoints: [MapPointType] { get set }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MockCoordinates: ClusterConfiguratorDataSource {
+class MockCoordinates: ClusterConfiguratorDataSourceProtocol {
     var mapPoints: [MapPointType]
     
     init() {

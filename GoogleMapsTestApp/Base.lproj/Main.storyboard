@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K5b-PB-zyU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K5b-PB-zyU">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-687" y="148"/>
         </scene>
-        <!--Start View Controller-->
+        <!--Button View Controller-->
         <scene sceneID="2Ys-TB-ipG">
             <objects>
-                <viewController id="WLw-qo-Tgf" customClass="StartViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WLw-qo-Tgf" customClass="ButtonViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OSm-e8-XUH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,9 @@
                     <navigationItem key="navigationItem" id="A24-1o-5rh">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="fgK-iK-AiL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="button" destination="dHm-zp-j02" id="Aft-bp-wL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azs-jb-Roa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

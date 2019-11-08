@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class RouterToGoogleMapsViewController: Router {
     
     func route(from controller: UIViewController) {
@@ -31,15 +32,24 @@ class RouterToGoogleMapsViewController: Router {
 //    }
 }
 
+typealias ViewControllerType = UIViewController & ViewModelHolder
 
-/// di
-//class GoogleMapsModule {
-//    var networkDataProvider: NetworkDataProvider
-//    var dataSource: ClusterConfiguratorDataSource
-//    var viewModel: MapViewControllerViewModel
-//    var clusterManagerConfigurator: ClusterConfigurator
+/// конкртеная реализация
+//struct GoogleMapsModule: BaseModuleProtocol {
 //    
-//    var view: UIViewController
+//    var view: ViewControllerType
+//    
+//    init() {
+//        self.view = GoogleMapsViewController()
+//        let router = MapsRouter(navController: self.view.navigationController)
+//        let viewModel = GoogleMapsViewModel(router: router)
+//        self.view.viewModel = viewModel
+//    }
 //}
+
+
+
+
+
 
 

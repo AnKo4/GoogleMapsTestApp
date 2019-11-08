@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoogleMapsViewController: GoogleMapViewController {
+class GoogleMapsViewController: GoogleMapViewController  {
     
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var zoomInButton: UIButton!
