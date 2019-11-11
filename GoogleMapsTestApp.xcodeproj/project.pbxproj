@@ -38,7 +38,6 @@
 		557766DE23759173004592F1 /* BaseModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766DD23759173004592F1 /* BaseModuleProtocol.swift */; };
 		557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766DF23759213004592F1 /* ButtonSceneViewModel.swift */; };
 		557766E2237593CF004592F1 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766E1237593CF004592F1 /* ViewModelProtocol.swift */; };
-		557766E423759AEB004592F1 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766E323759AEB004592F1 /* Launcher.swift */; };
 		557933FD2350676400BFAA8E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* Coordinates.swift */; };
 		5579340023507C3500BFAA8E /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FF23507C3500BFAA8E /* MapPoint.swift */; };
 		557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557934012350A6EE00BFAA8E /* StartPoint.swift */; };
@@ -116,7 +115,6 @@
 		557766DD23759173004592F1 /* BaseModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModuleProtocol.swift; sourceTree = "<group>"; };
 		557766DF23759213004592F1 /* ButtonSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneViewModel.swift; sourceTree = "<group>"; };
 		557766E1237593CF004592F1 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
-		557766E323759AEB004592F1 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		557933FC2350676400BFAA8E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		557933FF23507C3500BFAA8E /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		557934012350A6EE00BFAA8E /* StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPoint.swift; sourceTree = "<group>"; };
@@ -310,7 +308,6 @@
 				555C00A5234F3E35000E2496 /* LaunchScreen.storyboard */,
 				555C00A8234F3E35000E2496 /* Info.plist */,
 				552A5306234F4DCF0056A6BD /* APIKey.swift */,
-				557766E323759AEB004592F1 /* Launcher.swift */,
 			);
 			path = GoogleMapsTestApp;
 			sourceTree = "<group>";
@@ -769,7 +766,6 @@
 				557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */,
 				5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */,
 				5553427A23719AE1004558A4 /* ClusterAlgorithms.swift in Sources */,
-				557766E423759AEB004592F1 /* Launcher.swift in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
 				5579340023507C3500BFAA8E /* MapPoint.swift in Sources */,
 				55AFFBCB2356F7B40011273F /* GMUPair.m in Sources */,
