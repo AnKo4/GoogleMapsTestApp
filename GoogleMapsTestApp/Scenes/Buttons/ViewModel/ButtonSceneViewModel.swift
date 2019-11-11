@@ -21,7 +21,6 @@ class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
     init(router: ButtonRouterPorotocol, buttonText: String) {
         self.router = router
         self.buttonText = buttonText
-        print("inited")
     }
 
     

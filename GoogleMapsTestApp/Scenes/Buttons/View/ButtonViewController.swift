@@ -10,7 +10,6 @@ import UIKit
 
 protocol ButtonViewControllerProtocol: class {
     var viewModel: ButtonSceneViewModelProtocol! { get set }
-    func setButtonText()
 }
 
 class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
@@ -22,16 +21,19 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-    }
-
-    
-    func setButtonText() {
         button.titleLabel?.text = viewModel.buttonText
     }
-    
     
     @IBAction func buttonDidTap(_ sender: UIButton) {
         viewModel.route()
     }
 }
+
+
+//extension ButtonViewController: ViewControllerMakable {
+//    
+//    func make() -> Self {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        return storyboard.instantiateViewController(withIdentifier: "ButtonViewController") as! ButtonViewController
+//    }
+//}

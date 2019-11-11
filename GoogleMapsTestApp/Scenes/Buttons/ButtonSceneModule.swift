@@ -12,11 +12,19 @@ struct ButtonSceneModule: BaseModuleProtocol {
 
     var view: UIViewController & ButtonViewControllerProtocol
     
-    init(buttonText: String) {
+    init(buttonText: String, navController: UINavigationController) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         self.view = storyboard.instantiateViewController(withIdentifier: "ButtonViewController") as! ButtonViewController
-        let router = ButtonRouter(navigationController: self.view.navigationController)
+        /// self.view = ButtonViewController.makeSelf()
+        let router = ButtonRouter(navigationController: navController)
         let viewModel = ButtonSceneViewModel(router: router, buttonText: buttonText)
         self.view.viewModel = viewModel
     }
+}
+
+// factory method for create
+protocol ViewControllerMakable {
+    
+    
+    
 }

@@ -33,9 +33,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHm-zp-j02">
-                                <rect key="frame" x="157" y="350" width="100" height="36"/>
+                                <rect key="frame" x="192" y="350" width="30" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Click me :)"/>
                                 <connections>
                                     <action selector="buttonDidTap:" destination="WLw-qo-Tgf" eventType="touchUpInside" id="n1G-EA-Umi"/>
                                 </connections>
