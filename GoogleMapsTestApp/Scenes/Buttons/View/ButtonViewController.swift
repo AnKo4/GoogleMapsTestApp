@@ -13,27 +13,25 @@ protocol ButtonViewControllerProtocol: class {
     func setButtonText()
 }
 
-class ButtonViewController: UIViewController/*, ButtonViewControllerProtocol*/ {
+class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     @IBOutlet weak var button: UIButton!
     
-//    var viewModel: ButtonSceneViewModelProtocol!
-    var router: ButtonRouterPorotocol!
+    var viewModel: ButtonSceneViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        router = ButtonRouter(navigationController: self.navigationController)
 
     }
+
     
-//    func setButtonText() {
-//        button.titleLabel?.text = viewModel.buttonText
-//    }
+    func setButtonText() {
+        button.titleLabel?.text = viewModel.buttonText
+    }
     
     
     @IBAction func buttonDidTap(_ sender: UIButton) {
-        router.route()
-//        viewModel.route()
+        viewModel.route()
     }
 }

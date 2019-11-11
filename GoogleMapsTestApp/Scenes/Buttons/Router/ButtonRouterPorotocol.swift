@@ -10,5 +10,5 @@ import Foundation
 
 protocol ButtonRouterPorotocol: Routable {
     var navController: UINavigationController? { get set }
-    func route()
+//    func route()
 }

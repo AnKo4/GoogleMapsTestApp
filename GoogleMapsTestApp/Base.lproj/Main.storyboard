@@ -11,6 +11,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qGS-QH-Dt5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50W-b7-dan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="K5b-PB-zyU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FJ4-v6-mcN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -20,14 +21,13 @@
                         <segue destination="WLw-qo-Tgf" kind="relationship" relationship="rootViewController" id="KH3-c5-daK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="50W-b7-dan" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="148"/>
         </scene>
         <!--Button View Controller-->
         <scene sceneID="2Ys-TB-ipG">
             <objects>
-                <viewController id="WLw-qo-Tgf" customClass="ButtonViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ButtonViewController" id="WLw-qo-Tgf" customClass="ButtonViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OSm-e8-XUH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
         <!--Google Maps View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MapVC" id="BYZ-38-t0r" customClass="GoogleMapsViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoogleMapsViewController" id="BYZ-38-t0r" customClass="GoogleMapsViewController" customModule="GoogleMapsTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

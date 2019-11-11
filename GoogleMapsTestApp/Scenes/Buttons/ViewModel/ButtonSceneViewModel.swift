@@ -13,7 +13,7 @@ protocol ButtonSceneViewModelProtocol: class {
     func route()
 }
 
-class ButtonSceneViewModel: ButtonSceneViewModelProtocol /*, RouterHolder*/ {
+class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
 
     var buttonText: String
     var router: ButtonRouterPorotocol

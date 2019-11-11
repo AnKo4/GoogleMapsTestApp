@@ -34,12 +34,6 @@ class GoogleMapsViewController: GoogleMapViewController  {
         setupButtons()
     }
     
-//    func launch() {
-//        setupMapView()
-//        setupView()
-//        setupButtons()
-//
-//    }
     
     private func setupMapView() {
         let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
