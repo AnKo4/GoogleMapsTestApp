@@ -13,11 +13,12 @@ struct GoogleMapsSceneModule: BaseModuleProtocol {
     var view: GoogleMapsViewController
     
     init() {
-        self.view = GoogleMapsViewController()
         let networkManager = NetworkManager()
         let localDataSource = MockCoordinates()
         let viewModel = GoogleMapsViewModel(networkManager: networkManager, localDataSource: localDataSource)
+        self.view = GoogleMapsViewController()
         self.view.viewModel = viewModel
+//        self.view.launch()
     }
 }
 

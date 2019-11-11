@@ -20,6 +20,7 @@ class ButtonRouter: ButtonRouterPorotocol {
     func route() {
         let module = GoogleMapsSceneModule()
         navController?.pushViewController(module.view, animated: true)
+        module.view.launch()
     }
     
 }

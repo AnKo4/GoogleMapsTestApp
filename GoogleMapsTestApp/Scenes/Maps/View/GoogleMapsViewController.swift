@@ -26,12 +26,19 @@ class GoogleMapsViewController: GoogleMapViewController  {
     var clusterConfigurator: ClusterConfigurator!
 
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        setupMapView()
+//        setupView()
+//        setupButtons()
+//    }
+    
+    func launch() {
         setupMapView()
         setupView()
         setupButtons()
+
     }
     
     private func setupMapView() {

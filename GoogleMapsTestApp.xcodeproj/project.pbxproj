@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5502F73C23794DF6001003C9 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73B23794DF6001003C9 /* Launcher.swift */; };
 		552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A5306234F4DCF0056A6BD /* APIKey.swift */; };
 		554CC8B7234F702B00E95117 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC8B6234F702B00E95117 /* MapItem.swift */; };
 		5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550952E236AFEC6009EB330 /* ButtonViewController.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5502F73B23794DF6001003C9 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		552A5306234F4DCF0056A6BD /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		552A532B234F54320056A6BD /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMUMarkerClustering.h; path = ../GMUMarkerClustering.h; sourceTree = "<group>"; };
 		552A536D234F55060056A6BD /* GoogleMapsTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				555C00A5234F3E35000E2496 /* LaunchScreen.storyboard */,
 				555C00A8234F3E35000E2496 /* Info.plist */,
 				552A5306234F4DCF0056A6BD /* APIKey.swift */,
+				5502F73B23794DF6001003C9 /* Launcher.swift */,
 			);
 			path = GoogleMapsTestApp;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */,
 				5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */,
 				5553427A23719AE1004558A4 /* ClusterAlgorithms.swift in Sources */,
+				5502F73C23794DF6001003C9 /* Launcher.swift in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
 				5579340023507C3500BFAA8E /* MapPoint.swift in Sources */,
 				55AFFBCB2356F7B40011273F /* GMUPair.m in Sources */,
