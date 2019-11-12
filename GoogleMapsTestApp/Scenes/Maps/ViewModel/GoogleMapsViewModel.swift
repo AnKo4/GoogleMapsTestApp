@@ -29,5 +29,4 @@ struct GoogleMapsViewModel: MapViewControllerViewModel{
             completion(outputData)
         }
     }
-    
 }

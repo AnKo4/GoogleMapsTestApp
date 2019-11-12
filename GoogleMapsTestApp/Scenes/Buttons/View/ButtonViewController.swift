@@ -29,11 +29,3 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
     }
 }
 
-
-//extension ButtonViewController: ViewControllerMakable {
-//    
-//    func make() -> Self {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        return storyboard.instantiateViewController(withIdentifier: "ButtonViewController") as! ButtonViewController
-//    }
-//}
