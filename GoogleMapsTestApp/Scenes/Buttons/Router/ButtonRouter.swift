@@ -17,14 +17,12 @@ class ButtonRouter: ButtonRouterPorotocol {
         self.navController = navigationController
     }
     
-    func route() {
-        let module = GoogleMapsSceneModule()
+    func goToMapsViewController() {
+        let networkManager = NetworkManager()
+        let localDataSource = MockCoordinates()
+        let clusterConfigurator = ClusterManagerConfigurator()
+        let module = GoogleMapsSceneModule(networkManager: networkManager, localDataSource: localDataSource, clusterConfigurator: clusterConfigurator)
         navController?.pushViewController(module.view, animated: true)
     }
-    
-}
-
-
-class GoogleMapsFactory {
     
 }

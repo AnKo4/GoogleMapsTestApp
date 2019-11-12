@@ -12,8 +12,12 @@ class Launcher {
     static func launch(with window: UIWindow?) {
         
         let navController = UINavigationController()
-        let module = ButtonSceneModule(buttonText: "Click me", navController: navController)
+        let module = ButtonSceneModule(buttonText: "Click me :)", navController: navController)
         navController.setViewControllers([module.view], animated: true)
+        
+        // MARK: - Для красоты
+        navController.navigationBar.isTranslucent = true
+        navController.navigationBar.backgroundColor = module.view.view.backgroundColor
 
         window?.rootViewController = navController
     }

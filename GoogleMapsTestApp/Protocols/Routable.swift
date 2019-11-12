@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Routable: class {
-    func route()
+    var navController: UINavigationController? { get set }
 }

@@ -20,10 +20,10 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        button.titleLabel?.text = viewModel.buttonText
+
+        button.setTitle(viewModel.buttonText, for: .normal)
     }
-    
+
     @IBAction func buttonDidTap(_ sender: UIButton) {
         viewModel.route()
     }

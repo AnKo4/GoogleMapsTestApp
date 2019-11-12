@@ -25,6 +25,6 @@ class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
 
     
     func route() {
-        router.route()
+        router.goToMapsViewController()
     }
 }
