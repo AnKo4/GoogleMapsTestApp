@@ -34,6 +34,9 @@ class GoogleMapsViewController: GoogleMapViewController  {
         setupButtons()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
     private func setupMapView() {
         let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)

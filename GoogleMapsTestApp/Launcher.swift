@@ -16,9 +16,8 @@ class Launcher {
         navController.setViewControllers([module.view], animated: true)
         
         // MARK: - Для красоты
-        navController.navigationBar.isTranslucent = true
-        navController.navigationBar.backgroundColor = module.view.view.backgroundColor
-
+        navController.isNavigationBarHidden = true
+        
         window?.rootViewController = navController
     }
 }
