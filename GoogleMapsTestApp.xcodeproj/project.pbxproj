@@ -271,17 +271,13 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				5561BCD0237AD91E00073CF1 /* Reusables */,
+				556B9CAC235DEA3400AB713B /* Extensions */,
 				557766D5237581D3004592F1 /* Scenes */,
 				55509535236B0895009EB330 /* TypeAliases */,
 				55509530236B071F009EB330 /* Protocols */,
-				556B9CAC235DEA3400AB713B /* Extensions */,
-				556B9CA6235DCB7200AB713B /* Networking */,
-				556B9CA3235DA90A00AB713B /* MoyaService */,
 				55E63EA62350B688001882F8 /* Enums */,
-				557933FE23507C1C00BFAA8E /* Struct */,
 				557933FB2350675100BFAA8E /* MockData */,
-				557933F8235063B500BFAA8E /* ClusterConfigurator */,
-				554CC8B5234F700E00E95117 /* MapItem */,
 				555C009A234F3E34000E2496 /* AppDelegate.swift */,
 				555C009C234F3E34000E2496 /* SceneDelegate.swift */,
 				555C00A0234F3E34000E2496 /* Main.storyboard */,
@@ -292,6 +288,18 @@
 				5502F73B23794DF6001003C9 /* Launcher.swift */,
 			);
 			path = GoogleMapsTestApp;
+			sourceTree = "<group>";
+		};
+		5561BCD0237AD91E00073CF1 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				557933FE23507C1C00BFAA8E /* Struct */,
+				554CC8B5234F700E00E95117 /* MapItem */,
+				556B9CA3235DA90A00AB713B /* MoyaService */,
+				556B9CA6235DCB7200AB713B /* Networking */,
+				557933F8235063B500BFAA8E /* ClusterConfigurator */,
+			);
+			path = Reusables;
 			sourceTree = "<group>";
 		};
 		556B9CA3235DA90A00AB713B /* MoyaService */ = {
