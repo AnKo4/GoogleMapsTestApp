@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct MockCoordinates {
+class MockCoordinates: ClusterConfiguratorDataSource {
+    var mapPoints: [MapPointType]
     
-    let data = [MapPoint(lat: 54.3143937208559, long: 48.39280074899831,  name: "Моя хата", snippet: "Дом с Итальянскими колготками", category: .human),
+    init() {
+        self.mapPoints = [MapPoint(lat: 54.3143937208559, long: 48.39280074899831,  name: "Моя хата", snippet: "Дом с Итальянскими колготками", category: .human),
                 MapPoint(lat: 54.31453453751755, long: 48.39399189846714, name: "Ленина 79", snippet: "Магазин Юничел", category: .human),
                 MapPoint(lat: 54.31705446310348, long: 48.395396352981145, name: "Обитель ада, билет в один конец", snippet: "Кафе Пещера", category: .ufo),
                 MapPoint(lat: 54.316864201016855, long: 48.39530404778977, name: "Опыты над молодыми", snippet: "Студ поликлиника", category: .ufo),
@@ -22,6 +24,6 @@ struct MockCoordinates {
                 MapPoint(lat: 54.31979318138892, long: 48.39654719352636, name: "Дом пристарелых танцоров и пИвцов", snippet: "Шипр", category: .ufo),
                 MapPoint(lat: 54.32226112530237, long: 48.396030879905155, name: "Обитель ЗОЖа", snippet: "Клуб БКХ", category: .human),
                 MapPoint(lat: 54.32044643444846, long: 48.39911144545132, name: "Отель имени гламурной алкашки", snippet:  "Отель Хилтон", category: .ufo),
-                MapPoint(lat: 54.32234573363721, long: 48.39969400466119, name: "Колыбель мобильной разработки", snippet: "Контора Лучших Программистов", category: .human)
-]
+                MapPoint(lat: 54.32234573363721, long: 48.39969400466119, name: "Колыбель мобильной разработки", snippet: "Контора Лучших Программистов", category: .human)]
+    }
 }
