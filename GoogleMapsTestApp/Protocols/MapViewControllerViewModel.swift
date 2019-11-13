@@ -8,7 +8,14 @@
 
 import Foundation
 
+protocol GoogleMapsViewModelOutput: class {
+    func showLocalData(data: ClusterConfiguratorParameters)
+    func showNetworkData(data: ClusterConfiguratorParameters)
+}
+
 protocol  MapViewControllerViewModel {
-    func fetchLocalData() -> ClusterConfiguratorParameters
-    func fetchServerData(completion: @escaping (ClusterConfiguratorParameters) -> Void)
+    var view: GoogleMapsViewModelOutput? { get set }
+    
+    func fetchLocalData()
+    func fetchServerData()
 }

@@ -13,9 +13,9 @@ class Launcher {
         
         let navController = UINavigationController()
         let module = ButtonSceneModule(buttonText: "Click me :)", navController: navController)
-        navController.setViewControllers([module.view], animated: true)
+        guard let view = module.view else { return }
+        navController.setViewControllers([view], animated: true)
         
-        // MARK: - Для красоты
         navController.isNavigationBarHidden = true
         
         window?.rootViewController = navController

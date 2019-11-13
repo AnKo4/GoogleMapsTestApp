@@ -22,7 +22,7 @@ struct Feature: Codable {
 struct Properties: Codable {
     var title: String
     var snippet: String
-    var category: String
+    var category: MarkerCategory
 }
 
 struct Geometry: Codable {
@@ -31,6 +31,7 @@ struct Geometry: Codable {
 
 
 extension Feature: MapPointType {
+    
     var lat: Double {
         return self.geometry.coordinates[1]
     }
@@ -48,7 +49,7 @@ extension Feature: MapPointType {
     }
     
     var category: MarkerCategory {
-        return MarkerCategory(rawValue: self.properties.category) ?? .human
+        return self.properties.category
     }
     
     

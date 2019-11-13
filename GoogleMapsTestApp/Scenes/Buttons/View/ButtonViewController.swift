@@ -15,12 +15,16 @@ protocol ButtonViewControllerProtocol: class {
 class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     @IBOutlet weak var button: UIButton!
-    
+
     var viewModel: ButtonSceneViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureButton()
+    }
+
+    private func configureButton() {
         button.setTitle(viewModel.buttonText, for: .normal)
     }
 
@@ -28,4 +32,3 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
         viewModel.route()
     }
 }
-

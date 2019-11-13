@@ -13,7 +13,6 @@ class NetworkManager: NetworkDataProvider {
     
     private let provider = MoyaProvider<MoyaService>()
     
-    
     func getPOIData<T: Codable>(output structure: T.Type, completion: @escaping (T) -> Void) {
         provider.request(.getPOIData) { [weak self] result in
             guard let self = self else { return }

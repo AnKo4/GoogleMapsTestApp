@@ -10,7 +10,11 @@ import Foundation
 
 class ClusterManagerConfigurator: ClusterConfigurator {
         
-    func configureClusterManager(for mapView: GMSMapView, buckets: [NSNumber]?, colors: [UIColor]?, algorithm: ClusterAlgorithm, mapPoints: [MapPointType]) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
+    func configureClusterManager(for mapView: GMSMapView,
+                                 buckets: [NSNumber]?,
+                                 colors: [UIColor]?,
+                                 algorithm: ClusterAlgorithm,
+                                 mapPoints: [MapPointType]) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
         let iconGenerator = makeIconGenerator(buckets: buckets, colors: colors)
         let clusterAlgorithm = makeAlgorithm(algorithm: algorithm)
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)

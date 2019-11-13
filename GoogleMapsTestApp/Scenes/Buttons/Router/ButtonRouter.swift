@@ -22,7 +22,8 @@ class ButtonRouter: ButtonRouterPorotocol {
         let localDataSource = MockCoordinates()
         let clusterConfigurator = ClusterManagerConfigurator()
         let module = GoogleMapsSceneModule(networkManager: networkManager, localDataSource: localDataSource, clusterConfigurator: clusterConfigurator)
-        navController?.pushViewController(module.view, animated: true)
+        guard let view = module.view else { return }
+        navController?.pushViewController(view, animated: true)
         navController?.isNavigationBarHidden = false
     }
     

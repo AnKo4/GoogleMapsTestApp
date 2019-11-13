@@ -9,13 +9,17 @@
 import Foundation
 
 struct GoogleMapsSceneModule: BaseModuleProtocol {
-    
-    var view: GoogleMapsViewController
-    
+
+    var view: GoogleMapsViewController?
+
     init(networkManager: NetworkDataProvider, localDataSource: ClusterConfiguratorDataSourceProtocol, clusterConfigurator: ClusterConfigurator) {
         self.view = GoogleMapsViewController.make()
-        let viewModel = GoogleMapsViewModel(networkManager: networkManager, localDataSource: localDataSource)
-        self.view.viewModel = viewModel
-        self.view.clusterConfigurator = clusterConfigurator
+        
+        guard self.view != nil else { return }
+        let viewModel = GoogleMapsViewModel(networkManager: networkManager,
+                                            localDataSource: localDataSource,
+                                            view: self.view)
+        self.view?.viewModel = viewModel
+        self.view?.clusterConfigurator = clusterConfigurator
     }
 }

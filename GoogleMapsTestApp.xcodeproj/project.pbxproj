@@ -329,8 +329,8 @@
 		557766C723755E91004592F1 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				557766CA23755EB7004592F1 /* View */,
 				557766C923755EAE004592F1 /* ViewModel */,
+				557766CA23755EB7004592F1 /* View */,
 				557766CF237579AF004592F1 /* GoogleMapsModule.swift */,
 			);
 			path = Maps;
@@ -364,9 +364,9 @@
 		557766D123757EC6004592F1 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				557766D223757ED7004592F1 /* View */,
-				557766D323757EE2004592F1 /* ViewModel */,
 				557766C823755EA5004592F1 /* Router */,
+				557766D323757EE2004592F1 /* ViewModel */,
+				557766D223757ED7004592F1 /* View */,
 				557766D623758DEB004592F1 /* ButtonSceneModule.swift */,
 			);
 			path = Buttons;
@@ -584,6 +584,7 @@
 				555C0095234F3E34000E2496 /* Resources */,
 				2D566A7E114A7F1AA966075C /* [CP] Copy Pods Resources */,
 				0D807213B43B54B57D6B2AEE /* [CP] Embed Pods Frameworks */,
+				55CA38A9237AF8AD008DDC12 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -674,6 +675,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		55CA38A9237AF8AD008DDC12 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		BC40E2ADDA8371608F6FF098 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

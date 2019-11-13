@@ -10,13 +10,15 @@ import Foundation
 
 struct ButtonSceneModule: BaseModuleProtocol {
 
-    var view: UIViewController & ButtonViewControllerProtocol
-    
+    var view: (UIViewController & ButtonViewControllerProtocol)?
+
     init(buttonText: String, navController: UINavigationController) {
+
         self.view = ButtonViewController.make()
-        
+
+        guard self.view != nil else { return }
         let router = ButtonRouter(navigationController: navController)
         let viewModel = ButtonSceneViewModel(router: router, buttonText: buttonText)
-        self.view.viewModel = viewModel
+        self.view?.viewModel = viewModel
     }
 }

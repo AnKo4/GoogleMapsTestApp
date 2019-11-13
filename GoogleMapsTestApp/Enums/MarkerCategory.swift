@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MarkerCategory: String {
-    case human = "human"
-    case ufo = "ufo"
+enum MarkerCategory: String, Codable {
+    case human
+    case ufo
 }

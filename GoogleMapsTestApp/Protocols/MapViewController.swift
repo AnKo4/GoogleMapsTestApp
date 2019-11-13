@@ -12,4 +12,3 @@ protocol MapViewController: class {
     var viewModel: MapViewControllerViewModel! { get set }
     var clusterConfigurator: ClusterConfigurator! { get set }
 }
-

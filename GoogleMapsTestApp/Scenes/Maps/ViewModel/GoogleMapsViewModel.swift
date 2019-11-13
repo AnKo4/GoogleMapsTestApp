@@ -8,25 +8,36 @@
 
 import Foundation
 
-struct GoogleMapsViewModel: MapViewControllerViewModel{
-            
+struct GoogleMapsViewModel: MapViewControllerViewModel {
+
+    var view: GoogleMapsViewModelOutput?
+    
     private var networkManager: NetworkDataProvider!
     private var localDataSource: ClusterConfiguratorDataSourceProtocol!
-    
-    init(networkManager: NetworkDataProvider, localDataSource: ClusterConfiguratorDataSourceProtocol) {
+
+    init(networkManager: NetworkDataProvider,
+         localDataSource: ClusterConfiguratorDataSourceProtocol,
+         view: GoogleMapsViewModelOutput?) {
         self.networkManager = networkManager
         self.localDataSource = localDataSource
+        self.view = view
     }
-    
-    func fetchLocalData() -> ClusterConfiguratorParameters {
-        let outputData = DataForClusterConfigurator(mapPoints: localDataSource.mapPoints, buckets: nil, colors: nil, algorithm: ClusterAlgorithm(rawValue: "distanceBased") ?? .distanceBased)
-        return outputData
+
+    func fetchLocalData() {
+        let outputData = DataForClusterConfigurator(mapPoints: localDataSource.mapPoints,
+                                                    buckets: nil,
+                                                    colors: nil,
+                                                    algorithm: .distanceBased)
+        view?.showLocalData(data: outputData)
     }
-    
-    func fetchServerData(completion: @escaping (ClusterConfiguratorParameters) -> Void) {
-        networkManager.getPOIData(output: Geodata.self) {data in
-            let outputData = DataForClusterConfigurator(mapPoints: data.features, buckets: Constants.buckets, colors: Constants.colors, algorithm: ClusterAlgorithm(rawValue: "gridBased") ?? .gridBased)
-            completion(outputData)
+
+    func fetchServerData() {
+        networkManager.getPOIData(output: Geodata.self) { data in
+            let outputData = DataForClusterConfigurator(mapPoints: data.features,
+                                                        buckets: Constants.buckets,
+                                                        colors: Constants.colors,
+                                                        algorithm: .gridBased)
+            self.view?.showNetworkData(data: outputData)
         }
     }
 }

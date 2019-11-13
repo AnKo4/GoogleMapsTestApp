@@ -22,7 +22,7 @@ class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
         self.router = router
         self.buttonText = buttonText
     }
-    
+
     func route() {
         router.goToMapsViewController()
     }

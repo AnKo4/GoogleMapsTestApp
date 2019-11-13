@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoogleMapsViewController: GoogleMapViewController  {
+class GoogleMapsViewController: GoogleMapViewController {
     
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var zoomInButton: UIButton!
@@ -35,6 +35,8 @@ class GoogleMapsViewController: GoogleMapViewController  {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
         self.navigationController?.isNavigationBarHidden = true
     }
     
@@ -45,19 +47,8 @@ class GoogleMapsViewController: GoogleMapViewController  {
 
 
     private func setupView() {
-        
-        let localResponse = viewModel.fetchLocalData()
-        (clusterManager, renderer) = clusterConfigurator.configureClusterManager(for: mapView, buckets: localResponse.buckets, colors: localResponse.colors, algorithm: localResponse.algorithm, mapPoints: localResponse.mapPoints)
-        renderer.delegate = self
-        clusterManager.setDelegate(self, mapDelegate: self)
-        
-        viewModel.fetchServerData() { [weak self]
-            response in
-            guard let self = self else { return }
-            (self.clusterManagerFromNetwork, self.rendererFromNetwork) = self.clusterConfigurator.configureClusterManager(for: self.mapView, buckets: response.buckets, colors: response.colors, algorithm: response.algorithm, mapPoints: response.mapPoints)
-            self.rendererFromNetwork.delegate = self
-            self.clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
-        }
+        viewModel.fetchLocalData()
+        viewModel.fetchServerData()
     }
     
     private func setupButtons() {
@@ -76,7 +67,7 @@ class GoogleMapsViewController: GoogleMapViewController  {
         }
     }
     
-    private func MarkerIcon(category: MarkerCategory) -> UIImage? {
+    private func markerIcon(category: MarkerCategory) -> UIImage? {
         switch category {
         case .human: return UIImage(named: "Body")
         case .ufo: return UIImage(named: "Reproductive")
@@ -89,7 +80,7 @@ class GoogleMapsViewController: GoogleMapViewController  {
             return
         }
 
-        selectedMarker.icon = MarkerIcon(category: markerInfo.category)
+        selectedMarker.icon = markerIcon(category: markerInfo.category)
         selectedMarker.title = nil
         selectedMarker.snippet = nil
         
@@ -147,6 +138,34 @@ extension GoogleMapsViewController: GMUClusterRendererDelegate {
         guard let markerInfo = marker.userData as? POIItem else {
             return
         }
-        marker.icon = MarkerIcon(category: markerInfo.category)
+        marker.icon = markerIcon(category: markerInfo.category)
     }
+}
+
+extension GoogleMapsViewController: GoogleMapsViewModelOutput {
+    func showLocalData(data: ClusterConfiguratorParameters) {
+        (clusterManager, renderer) =
+            clusterConfigurator.configureClusterManager(for: mapView,
+                                                        buckets: data.buckets,
+                                                        colors: data.colors,
+                                                        algorithm: data.algorithm,
+                                                        mapPoints: data.mapPoints)
+        renderer.delegate = self
+        clusterManager.setDelegate(self, mapDelegate: self)
+
+    }
+    
+    func showNetworkData(data: ClusterConfiguratorParameters) {
+        (clusterManagerFromNetwork, rendererFromNetwork) =
+            clusterConfigurator.configureClusterManager(for: mapView,
+                                                        buckets: data.buckets,
+                                                        colors: data.colors,
+                                                        algorithm: data.algorithm,
+                                                        mapPoints: data.mapPoints)
+        rendererFromNetwork.delegate = self
+        clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
+
+    }
+    
+
 }
