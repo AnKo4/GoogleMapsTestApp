@@ -11,3 +11,16 @@ import Foundation
 protocol NetworkDataProvider: class {
     func getPOIData<T: Codable>(output structure: T.Type, completion: @escaping (T) -> Void)
 }
+
+extension NetworkDataProvider {
+    func decodeData<T: Codable>(data: Data, to structure: T.Type) -> (T?, Error?) {
+        do {
+            let decodedData = try JSONDecoder().decode(structure.self, from: data)
+            return (decodedData, nil)
+        } catch {
+//            print("Error while decoding: \(error.localizedDescription)")
+            return (nil, error)
+        }
+         
+     }
+}

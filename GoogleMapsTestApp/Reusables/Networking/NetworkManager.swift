@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 
+
 class NetworkManager: NetworkDataProvider {
     
     private let provider = MoyaProvider<MoyaService>()
@@ -18,19 +19,20 @@ class NetworkManager: NetworkDataProvider {
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                guard let decodedData = self.decodeData(data: response.data, to: structure.self) else { return }
-                completion(decodedData)
+                let (decodedData, error) = self.decodeData(data: response.data, to: structure.self)
+                switch error {
+                case nil:
+                    guard let data = decodedData else { return }
+                    completion(data)
+                default:
+                    guard let error = error else { return }
+                    print("Error while decoding: \(error.localizedDescription)")
+                    print("Decoded data: \(decodedData)")
+                }
+//                completion(decodedData)
             case.failure(let error):
                 print(error.errorDescription ?? "Can't get data from server")
             }
         }
     }
-    
-    private func decodeData<T: Codable>(data: Data, to structure: T.Type) -> T? {
-         guard let decodedData = try? JSONDecoder().decode(structure.self, from: data) else {
-             print("Something gone wrong while decoding...")
-             return nil
-         }
-         return decodedData
-     }
-}
+ }

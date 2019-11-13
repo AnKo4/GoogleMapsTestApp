@@ -68,6 +68,7 @@
 		55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBB12356F7B40011273F /* GQTPointQuadTreeChild.m */; };
 		55B617D12372BCAD00AAC6BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D02372BCAD00AAC6BA /* Constants.swift */; };
 		55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D92372DB7100AAC6BA /* Routable.swift */; };
+		55C6F44E237C2C3000305F62 /* GoogleMapsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */; };
 		55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E63EA72350B6A2001882F8 /* MapZoom.swift */; };
 		55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */; };
 		55E80739236C497B00EFBA3D /* MapPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80738236C497B00EFBA3D /* MapPointType.swift */; };
@@ -182,6 +183,7 @@
 		55AFFBB52356F7B40011273F /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
 		55B617D02372BCAD00AAC6BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55B617D92372DB7100AAC6BA /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewModelOutput.swift; sourceTree = "<group>"; };
 		55E63EA72350B6A2001882F8 /* MapZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapZoom.swift; sourceTree = "<group>"; };
 		55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
 		55E80738236C497B00EFBA3D /* MapPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointType.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				55B617D92372DB7100AAC6BA /* Routable.swift */,
 				5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */,
 				557766DD23759173004592F1 /* BaseModuleProtocol.swift */,
+				55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				55AFFBC12356F7B40011273F /* GMUKMLParser.m in Sources */,
 				55AFFBCC2356F7B40011273F /* GMULineString.m in Sources */,
 				556B9CA8235DCB9500AB713B /* NetworkManager.swift in Sources */,
+				55C6F44E237C2C3000305F62 /* GoogleMapsViewModelOutput.swift in Sources */,
 				55509534236B07F0009EB330 /* MapViewControllerViewModel.swift in Sources */,
 				55509537236B0923009EB330 /* GoogleMapViewController.swift in Sources */,
 				55B617D12372BCAD00AAC6BA /* Constants.swift in Sources */,

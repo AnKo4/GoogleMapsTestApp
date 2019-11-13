@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GoogleMapsViewModel: MapViewControllerViewModel {
+class GoogleMapsViewModel: MapViewControllerViewModel {
 
     var view: GoogleMapsViewModelOutput?
     
@@ -32,7 +32,8 @@ struct GoogleMapsViewModel: MapViewControllerViewModel {
     }
 
     func fetchServerData() {
-        networkManager.getPOIData(output: Geodata.self) { data in
+        networkManager.getPOIData(output: Geodata.self) { [weak self] data in
+            guard let self = self else { return }
             let outputData = DataForClusterConfigurator(mapPoints: data.features,
                                                         buckets: Constants.buckets,
                                                         colors: Constants.colors,
