@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Moya
 
 protocol NetworkDataProvider: class {
-    func getPOIData<T: Codable>(output structure: T.Type, completion: @escaping (T) -> Void)
+    func getPOIData(completion: @escaping (Geodata?, Error?) -> Void)
 }
 
 extension NetworkDataProvider {
@@ -20,6 +21,19 @@ extension NetworkDataProvider {
         } catch {
             throw error
         }
-         
      }
+    
+    func handleResult<T: Codable>(result: Result<Moya.Response, MoyaError>, structure: T.Type) throws -> T {
+        switch result {
+        case .success(let response):
+            do {
+                return try decodeData(data: response.data, to: structure.self)
+            } catch {
+                throw error
+            }
+        case.failure(let error):
+            throw error
+        }
+    }
+
 }

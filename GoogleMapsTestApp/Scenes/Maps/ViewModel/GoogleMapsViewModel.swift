@@ -32,13 +32,21 @@ class GoogleMapsViewModel: MapViewControllerViewModel {
     }
 
     func fetchServerData() {
-        networkManager.getPOIData(output: Geodata.self) { [weak self] data in
+        networkManager.getPOIData { [weak self] (data, error) in
             guard let self = self else { return }
-            let outputData = DataForClusterConfigurator(mapPoints: data.features,
-                                                        buckets: Constants.buckets,
-                                                        colors: Constants.colors,
-                                                        algorithm: .gridBased)
-            self.view?.showNetworkData(data: outputData)
+            switch error {
+            case nil:
+                guard let data = data else { return }
+                let outputData = DataForClusterConfigurator(mapPoints: data.features,
+                                                            buckets: Constants.buckets,
+                                                            colors: Constants.colors,
+                                                            algorithm: .gridBased)
+                self.view?.showNetworkData(data: outputData)
+            default:
+                guard let error = error else { return }
+                /// TODO: - Сделать вместо print вызов метода во вью контроллере
+                print("Error: \(error.localizedDescription)")
+            }
         }
     }
 }

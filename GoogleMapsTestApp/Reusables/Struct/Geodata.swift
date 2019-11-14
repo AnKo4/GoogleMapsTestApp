@@ -9,12 +9,12 @@
 import Foundation
 
 struct Geodata: Codable {
-    var typed: String
+    var type: String
     var features: [Feature]
 }
 
 struct Feature: Codable {
-    var type: String
+    var typed: String
     var properties: Properties
     var geometry: Geometry
 }
