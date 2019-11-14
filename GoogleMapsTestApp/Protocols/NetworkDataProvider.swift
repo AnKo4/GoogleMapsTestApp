@@ -10,10 +10,11 @@ import Foundation
 import Moya
 
 protocol NetworkDataProvider: class {
-    func getPOIData(completion: @escaping (Geodata?, Error?) -> Void)
+    
 }
 
 extension NetworkDataProvider {
+    
     func decodeData<T: Codable>(data: Data, to structure: T.Type) throws -> T {
         do {
             let decodedData = try JSONDecoder().decode(structure.self, from: data)

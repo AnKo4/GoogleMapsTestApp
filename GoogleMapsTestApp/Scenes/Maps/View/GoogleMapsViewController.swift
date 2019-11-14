@@ -143,6 +143,7 @@ extension GoogleMapsViewController: GMUClusterRendererDelegate {
 }
 
 extension GoogleMapsViewController: GoogleMapsViewModelOutput {
+    
     func showLocalData(data: ClusterConfiguratorParameters) {
         (clusterManager, renderer) =
             clusterConfigurator.configureClusterManager(for: mapView,
@@ -167,5 +168,4 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
 
     }
     
-
 }

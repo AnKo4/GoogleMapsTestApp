@@ -10,15 +10,17 @@ import Foundation
 
 struct GoogleMapsSceneModule: BaseModuleProtocol {
 
-    var view: GoogleMapsViewController?
+    var view: (GoogleMapViewController & GoogleMapsViewModelOutput)?
 
-    init(networkManager: NetworkDataProvider, localDataSource: ClusterConfiguratorDataSourceProtocol, clusterConfigurator: ClusterConfigurator) {
-        self.view = GoogleMapsViewController.make()
+    init(networkManager: GoogleMapsNetworkDataProvider, localDataSource: ClusterConfiguratorDataSourceProtocol, clusterConfigurator: ClusterConfigurator) {
         
+        self.view = GoogleMapsViewController.make()
+
         guard self.view != nil else { return }
+        let router = GoogleMapsRouter(view: self.view)
         let viewModel = GoogleMapsViewModel(networkManager: networkManager,
                                             localDataSource: localDataSource,
-                                            view: self.view)
+                                            view: self.view, router: router)
         self.view?.viewModel = viewModel
         self.view?.clusterConfigurator = clusterConfigurator
     }

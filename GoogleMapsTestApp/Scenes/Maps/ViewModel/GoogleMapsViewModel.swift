@@ -11,16 +11,20 @@ import Foundation
 class GoogleMapsViewModel: MapViewControllerViewModel {
 
     var view: GoogleMapsViewModelOutput?
+    var router: GoogleMapsRouterProtocol
+
     
-    private var networkManager: NetworkDataProvider!
+    private var networkManager: GoogleMapsNetworkDataProvider!
     private var localDataSource: ClusterConfiguratorDataSourceProtocol!
 
-    init(networkManager: NetworkDataProvider,
+    init(networkManager: GoogleMapsNetworkDataProvider,
          localDataSource: ClusterConfiguratorDataSourceProtocol,
-         view: GoogleMapsViewModelOutput?) {
+         view: GoogleMapsViewModelOutput?,
+         router: GoogleMapsRouterProtocol) {
         self.networkManager = networkManager
         self.localDataSource = localDataSource
         self.view = view
+        self.router = router
     }
 
     func fetchLocalData() {
@@ -32,7 +36,7 @@ class GoogleMapsViewModel: MapViewControllerViewModel {
     }
 
     func fetchServerData() {
-        networkManager.getPOIData { [weak self] (data, error) in
+        networkManager.fetchGooglePOIData { [weak self] (data, error) in
             guard let self = self else { return }
             switch error {
             case nil:
@@ -44,8 +48,7 @@ class GoogleMapsViewModel: MapViewControllerViewModel {
                 self.view?.showNetworkData(data: outputData)
             default:
                 guard let error = error else { return }
-                /// TODO: - Сделать вместо print вызов метода во вью контроллере
-                print("Error: \(error.localizedDescription)")
+                self.router.showAlert(message: error.localizedDescription)
             }
         }
     }

@@ -10,11 +10,9 @@ import Foundation
 import Moya
 
 
-class NetworkManager: NetworkDataProvider {
-    
-    private let provider = MoyaProvider<MoyaService>()
+class GoogleMapsNetworkManager: GoogleMapsNetworkDataProvider {
         
-    func getPOIData(completion: @escaping (Geodata?, Error?) -> Void) {
+    func fetchGooglePOIData(completion: @escaping (Geodata?, Error?) -> Void) {
         provider.request(.getPOIData) { result in
             do {
                 let data = try self.handleResult(result: result, structure: Geodata.self)

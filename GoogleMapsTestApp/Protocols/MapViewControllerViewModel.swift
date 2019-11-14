@@ -10,6 +10,7 @@ import Foundation
 
 protocol  MapViewControllerViewModel: class {
     var view: GoogleMapsViewModelOutput? { get set }
+    var router: GoogleMapsRouterProtocol { get set }
     
     func fetchLocalData()
     func fetchServerData()
