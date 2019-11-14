@@ -13,13 +13,12 @@ protocol NetworkDataProvider: class {
 }
 
 extension NetworkDataProvider {
-    func decodeData<T: Codable>(data: Data, to structure: T.Type) -> (T?, Error?) {
+    func decodeData<T: Codable>(data: Data, to structure: T.Type) throws -> T {
         do {
             let decodedData = try JSONDecoder().decode(structure.self, from: data)
-            return (decodedData, nil)
+            return decodedData
         } catch {
-//            print("Error while decoding: \(error.localizedDescription)")
-            return (nil, error)
+            throw error
         }
          
      }

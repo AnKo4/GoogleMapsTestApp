@@ -19,17 +19,12 @@ class NetworkManager: NetworkDataProvider {
             guard let self = self else { return }
             switch result {
             case .success(let response):
-                let (decodedData, error) = self.decodeData(data: response.data, to: structure.self)
-                switch error {
-                case nil:
-                    guard let data = decodedData else { return }
-                    completion(data)
-                default:
-                    guard let error = error else { return }
+                do {
+                    let decodedData = try self.decodeData(data: response.data, to: structure.self)
+                    completion(decodedData)
+                } catch {
                     print("Error while decoding: \(error.localizedDescription)")
-                    print("Decoded data: \(decodedData)")
                 }
-//                completion(decodedData)
             case.failure(let error):
                 print(error.errorDescription ?? "Can't get data from server")
             }
