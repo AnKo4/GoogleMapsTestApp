@@ -18,6 +18,8 @@ class GoogleMapsRouter: GoogleMapsRouterProtocol {
     
     func showAlert(message: String) {
         let alertController = UIAlertController(title: "Ошибка!", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
         view?.present(alertController, animated: true, completion: nil)
     }
 

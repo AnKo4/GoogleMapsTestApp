@@ -14,7 +14,7 @@ struct Geodata: Codable {
 }
 
 struct Feature: Codable {
-    var typed: String
+    var type: String
     var properties: Properties
     var geometry: Geometry
 }

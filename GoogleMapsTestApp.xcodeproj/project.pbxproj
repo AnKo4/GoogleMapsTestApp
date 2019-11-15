@@ -35,7 +35,7 @@
 		5575845F2366CA11008A3841 /* GoogleMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */; };
 		557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */; };
 		557766CE23755EFD004592F1 /* ButtonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CD23755EFD004592F1 /* ButtonRouter.swift */; };
-		557766D0237579AF004592F1 /* GoogleMapsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CF237579AF004592F1 /* GoogleMapsModule.swift */; };
+		557766D0237579AF004592F1 /* GoogleMapsSceneModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CF237579AF004592F1 /* GoogleMapsSceneModule.swift */; };
 		557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766D623758DEB004592F1 /* ButtonSceneModule.swift */; };
 		557766DE23759173004592F1 /* BaseModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766DD23759173004592F1 /* BaseModuleProtocol.swift */; };
 		557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766DF23759213004592F1 /* ButtonSceneViewModel.swift */; };
@@ -116,7 +116,7 @@
 		5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewModel.swift; sourceTree = "<group>"; };
 		557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouterPorotocol.swift; sourceTree = "<group>"; };
 		557766CD23755EFD004592F1 /* ButtonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouter.swift; sourceTree = "<group>"; };
-		557766CF237579AF004592F1 /* GoogleMapsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsModule.swift; sourceTree = "<group>"; };
+		557766CF237579AF004592F1 /* GoogleMapsSceneModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsSceneModule.swift; sourceTree = "<group>"; };
 		557766D623758DEB004592F1 /* ButtonSceneModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneModule.swift; sourceTree = "<group>"; };
 		557766DD23759173004592F1 /* BaseModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModuleProtocol.swift; sourceTree = "<group>"; };
 		557766DF23759213004592F1 /* ButtonSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneViewModel.swift; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 				55E0EB57237D8C2500B93676 /* Router */,
 				557766C923755EAE004592F1 /* ViewModel */,
 				557766CA23755EB7004592F1 /* View */,
-				557766CF237579AF004592F1 /* GoogleMapsModule.swift */,
+				557766CF237579AF004592F1 /* GoogleMapsSceneModule.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -802,7 +802,7 @@
 				5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */,
 				55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */,
 				55AFFBC02356F7B40011273F /* GMUHeatmapTileLayer.m in Sources */,
-				557766D0237579AF004592F1 /* GoogleMapsModule.swift in Sources */,
+				557766D0237579AF004592F1 /* GoogleMapsSceneModule.swift in Sources */,
 				557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */,
 				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
 				5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */,
