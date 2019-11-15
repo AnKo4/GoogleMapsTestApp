@@ -20,7 +20,8 @@ class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
     func configureClusterManager(for mapView: GMSMapView,
                                  parameters: ClusterConfiguratorParameters ) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
         let iconGenerator = componentsFactory.makeIconGenerator(buckets: parameters.buckets, colors: parameters.colors)
-        let clusterAlgorithm = componentsFactory.makeAlgorithm(algorithm: parameters.algorithm)
+//        let clusterAlgorithm = componentsFactory.makeAlgorithm(algorithm: parameters.algorithm)
+        let clusterAlgorithm = parameters.algorithm.value
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         let clusterManager = GMUClusterManager(map: mapView, algorithm: clusterAlgorithm, renderer: renderer)
         configure(clusterManager: clusterManager, from: parameters.mapPoints)
@@ -34,35 +35,5 @@ class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
             clusterManager.add(mapItem)
         }
         clusterManager.cluster()
-    }
-}
-
-
-protocol GMUComponentFactoryProtocol {
-    func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator
-    func makeAlgorithm(algorithm: ClusterAlgorithm) -> GMUClusterAlgorithm
-}
-
-class GMUComponentFactory: GMUComponentFactoryProtocol {
-    
-    func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator {
-        guard
-            let buckets = buckets, let colors = colors,
-            buckets.count != 0,
-            buckets.count == colors.count
-            else {
-                return GMUDefaultClusterIconGenerator()
-        }
-        let iconGenerator = GMUDefaultClusterIconGenerator(buckets: buckets, backgroundColors: colors)
-        return iconGenerator
-    }
-    
-    func makeAlgorithm(algorithm: ClusterAlgorithm) -> GMUClusterAlgorithm {
-        switch algorithm {
-        case .distanceBased:
-            return GMUNonHierarchicalDistanceBasedAlgorithm()
-        case .gridBased:
-            return GMUGridBasedClusterAlgorithm()
-        }
     }
 }

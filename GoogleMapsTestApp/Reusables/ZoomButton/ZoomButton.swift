@@ -10,6 +10,11 @@ import UIKit
 
 class ZoomButton: UIButton {
     
+    private struct ButtonSettings {
+        static let cornerRadius: CGFloat = 20
+        static let color = UIColor.white
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         

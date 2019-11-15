@@ -12,3 +12,14 @@ enum ClusterAlgorithm: String, Codable {
     case distanceBased
     case gridBased
 }
+
+extension ClusterAlgorithm {
+    var value: GMUClusterAlgorithm {
+        switch self {
+        case .distanceBased:
+            return GMUNonHierarchicalDistanceBasedAlgorithm()
+        case .gridBased:
+            return GMUGridBasedClusterAlgorithm()
+        }
+    }
+}
