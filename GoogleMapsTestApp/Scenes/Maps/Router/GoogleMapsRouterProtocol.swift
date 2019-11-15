@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GoogleMapsRouterProtocol: class {
-    var view: UIViewController? { get set }
-    func showAlert(message: String)
+
+protocol GoogleMapsRouterProtocol: class, AlertPresentable {
+
 }

@@ -48,7 +48,7 @@ class GoogleMapsViewModel: MapViewControllerViewModel {
                 self.view?.showNetworkData(data: outputData)
             default:
                 guard let error = error else { return }
-                self.router.showAlert(message: error.localizedDescription)
+                self.router.showAlert(with: error.localizedDescription)
             }
         }
     }

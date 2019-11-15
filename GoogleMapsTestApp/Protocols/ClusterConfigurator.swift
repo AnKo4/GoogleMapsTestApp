@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol ClusterConfigurator: class {
-    func configureClusterManager(for mapView: GMSMapView, buckets: [NSNumber]?, colors: [UIColor]?,
-                                 algorithm: ClusterAlgorithm, mapPoints: [MapPointType]) -> (GMUClusterManager, GMUDefaultClusterRenderer)
+protocol ClusterConfiguratorProtocol: class {
+    var componentsFactory: GMUComponentFactoryProtocol! { get }
+    
+    func configureClusterManager(for mapView: GMSMapView, parameters: ClusterConfiguratorParameters ) -> (GMUClusterManager, GMUDefaultClusterRenderer)
 }

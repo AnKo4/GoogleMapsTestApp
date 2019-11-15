@@ -78,6 +78,8 @@
 		55E80739236C497B00EFBA3D /* MapPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80738236C497B00EFBA3D /* MapPointType.swift */; };
 		55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift */; };
 		55E8073D236C4D2C00EFBA3D /* MapPointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */; };
+		55FA2FF9237E8B9800DB4A29 /* ButtonSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FF8237E8B9800DB4A29 /* ButtonSettings.swift */; };
+		55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFB237E984900DB4A29 /* ZoomButton.swift */; };
 		83D362FD4235044B907BCA17 /* Pods_GoogleMapsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -199,6 +201,8 @@
 		55E80738236C497B00EFBA3D /* MapPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointType.swift; sourceTree = "<group>"; };
 		55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorDataSource.swift; sourceTree = "<group>"; };
 		55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointTypeProtocol.swift; sourceTree = "<group>"; };
+		55FA2FF8237E8B9800DB4A29 /* ButtonSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSettings.swift; sourceTree = "<group>"; };
+		55FA2FFB237E984900DB4A29 /* ZoomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButton.swift; sourceTree = "<group>"; };
 		BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A471C461DB421CB3CA01B3 /* Pods-GoogleMapsTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.debug.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA6FBF6FD5838CF85A4F54A /* Pods-GoogleMapsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.release.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 		5561BCD0237AD91E00073CF1 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				55FA2FFA237E97FF00DB4A29 /* ZoomButton */,
 				557933FE23507C1C00BFAA8E /* Struct */,
 				554CC8B5234F700E00E95117 /* MapItem */,
 				556B9CA3235DA90A00AB713B /* MoyaService */,
@@ -437,6 +442,7 @@
 				556B9CAA235DCCEF00AB713B /* Geodata.swift */,
 				55B617D02372BCAD00AAC6BA /* Constants.swift */,
 				5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */,
+				55FA2FF8237E8B9800DB4A29 /* ButtonSettings.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -577,6 +583,14 @@
 				5553427923719AE1004558A4 /* ClusterAlgorithms.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		55FA2FFA237E97FF00DB4A29 /* ZoomButton */ = {
+			isa = PBXGroup;
+			children = (
+				55FA2FFB237E984900DB4A29 /* ZoomButton.swift */,
+			);
+			path = ZoomButton;
 			sourceTree = "<group>";
 		};
 		7FBCBD39EB05E03D807B3EE5 /* Pods */ = {
@@ -759,6 +773,7 @@
 				55B617D12372BCAD00AAC6BA /* Constants.swift in Sources */,
 				55AFFBC52356F7B40011273F /* GMUPolygon.m in Sources */,
 				55AFFBC82356F7B40011273F /* GMUGroundOverlay.m in Sources */,
+				55FA2FF9237E8B9800DB4A29 /* ButtonSettings.swift in Sources */,
 				5551093023575218000B8AE1 /* MarkerCategory.swift in Sources */,
 				55AFFBCD2356F7B40011273F /* GMUGeoJSONParser.m in Sources */,
 				55AFFBC92356F7B40011273F /* GMUStyle.m in Sources */,
@@ -805,6 +820,7 @@
 				557766D0237579AF004592F1 /* GoogleMapsSceneModule.swift in Sources */,
 				557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */,
 				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
+				55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */,
 				5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */,
 				5565FA1B2374376A00ED769A /* ClusterConfiguratorParameters.swift in Sources */,
 				5553427623719629004558A4 /* ClusterConfigurator.swift in Sources */,

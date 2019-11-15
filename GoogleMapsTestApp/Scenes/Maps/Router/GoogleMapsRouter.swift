@@ -10,17 +10,43 @@ import Foundation
 
 class GoogleMapsRouter: GoogleMapsRouterProtocol {
     
-    var view: UIViewController?
+    weak var alertPresenter: AlertPresenterProtocol?
     
-    init(view: UIViewController?) {
-        self.view = view
+    init(presenter: AlertPresenterProtocol) {
+        self.alertPresenter = presenter
     }
+}
+
+typealias AlertPresentable = AlertShowable & AlertPresenterHolder
+
+protocol AlertShowable {
+    func showAlert(with message: String)
+}
+
+protocol AlertPresenterHolder {
+    var alertPresenter: AlertPresenterProtocol? { get }
+}
+
+extension AlertShowable where Self: AlertPresenterHolder {
     
-    func showAlert(message: String) {
+    func showAlert(with message: String) {
         let alertController = UIAlertController(title: "Ошибка!", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ок", style: .cancel, handler: nil)
         alertController.addAction(okAction)
-        view?.present(alertController, animated: true, completion: nil)
+        alertPresenter?.present(alert: alertController, animated: true)
     }
+}
 
+
+protocol AlertPresenterProtocol: class {
+    func present(alert viewController: UIAlertController, animated: Bool)
+}
+
+
+extension UIViewController: AlertPresenterProtocol {
+    
+    func present(alert viewController: UIAlertController, animated: Bool) {
+        present(viewController, animated: animated)
+    }
+    
 }

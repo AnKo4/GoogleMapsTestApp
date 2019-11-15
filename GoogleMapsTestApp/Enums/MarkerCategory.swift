@@ -12,3 +12,19 @@ enum MarkerCategory: String, Codable {
     case human
     case ufo
 }
+
+extension MarkerCategory {
+    var icon: UIImage? {
+        switch self {
+        case .human: return UIImage(named: "Body")
+        case .ufo: return UIImage(named: "Reproductive")
+        }
+    }
+    
+    var iconForSelectedState: UIImage? {
+        switch self {
+        case .human: return UIImage(named: "Body_selected")
+        case .ufo: return UIImage(named: "Reproductive_selected")
+        }
+    }
+}

@@ -8,22 +8,44 @@
 
 import Foundation
 
-class ClusterManagerConfigurator: ClusterConfigurator {
-        
+
+class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
+    
+    var componentsFactory: GMUComponentFactoryProtocol!
+    
+    init(factory: GMUComponentFactoryProtocol) {
+        self.componentsFactory = factory
+    }
+
     func configureClusterManager(for mapView: GMSMapView,
-                                 buckets: [NSNumber]?,
-                                 colors: [UIColor]?,
-                                 algorithm: ClusterAlgorithm,
-                                 mapPoints: [MapPointType]) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
-        let iconGenerator = makeIconGenerator(buckets: buckets, colors: colors)
-        let clusterAlgorithm = makeAlgorithm(algorithm: algorithm)
+                                 parameters: ClusterConfiguratorParameters ) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
+        let iconGenerator = componentsFactory.makeIconGenerator(buckets: parameters.buckets, colors: parameters.colors)
+        let clusterAlgorithm = componentsFactory.makeAlgorithm(algorithm: parameters.algorithm)
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         let clusterManager = GMUClusterManager(map: mapView, algorithm: clusterAlgorithm, renderer: renderer)
-        makeCluster(for: clusterManager, from: mapPoints)
+        configure(clusterManager: clusterManager, from: parameters.mapPoints)
         return (clusterManager, renderer)
     }
     
-    private func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator {
+    func configure(clusterManager: GMUClusterManager, from mapPoints: [MapPointType]) {
+        for item in mapPoints {
+            let position = CLLocationCoordinate2DMake(item.lat, item.long)
+            let mapItem = POIItem(position: position, name: item.name ?? "", snippet: item.snippet ?? "", category: item.category)
+            clusterManager.add(mapItem)
+        }
+        clusterManager.cluster()
+    }
+}
+
+
+protocol GMUComponentFactoryProtocol {
+    func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator
+    func makeAlgorithm(algorithm: ClusterAlgorithm) -> GMUClusterAlgorithm
+}
+
+class GMUComponentFactory: GMUComponentFactoryProtocol {
+    
+    func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator {
         guard
             let buckets = buckets, let colors = colors,
             buckets.count != 0,
@@ -35,21 +57,12 @@ class ClusterManagerConfigurator: ClusterConfigurator {
         return iconGenerator
     }
     
-    private func makeAlgorithm(algorithm: ClusterAlgorithm) -> GMUClusterAlgorithm {
+    func makeAlgorithm(algorithm: ClusterAlgorithm) -> GMUClusterAlgorithm {
         switch algorithm {
         case .distanceBased:
             return GMUNonHierarchicalDistanceBasedAlgorithm()
         case .gridBased:
             return GMUGridBasedClusterAlgorithm()
         }
-    }
-    
-    private func makeCluster(for clusterManager: GMUClusterManager, from mapPoints: [MapPointType]) {
-        for item in mapPoints {
-            let position = CLLocationCoordinate2DMake(item.lat, item.long)
-            let mapItem = POIItem(position: position, name: item.name ?? "", snippet: item.snippet ?? "", category: item.category)
-            clusterManager.add(mapItem)
-        }
-        clusterManager.cluster()
     }
 }

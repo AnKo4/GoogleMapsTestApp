@@ -9,8 +9,8 @@
 import Foundation
 
 struct MapPoint: MapPointType {
-    var lat = 0.0
-    var long = 0.0
+    var lat: Double = 0.0
+    var long: Double = 0.0
     var name: String?
     var snippet: String?
     var category: MarkerCategory

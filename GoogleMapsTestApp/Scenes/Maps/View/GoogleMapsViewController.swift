@@ -11,8 +11,8 @@ import UIKit
 class GoogleMapsViewController: GoogleMapViewController {
     
     @IBOutlet private weak var mapView: GMSMapView!
-    @IBOutlet private weak var zoomInButton: UIButton!
-    @IBOutlet private weak var zoomOutButton: UIButton!
+    @IBOutlet private weak var zoomInButton: ZoomButton!
+    @IBOutlet private weak var zoomOutButton: ZoomButton!
     
     private var clusterManager: GMUClusterManager!
     private var clusterManagerFromNetwork: GMUClusterManager!
@@ -23,15 +23,15 @@ class GoogleMapsViewController: GoogleMapViewController {
     private var markerIsSelected = false
     
     var viewModel: MapViewControllerViewModel!
-    var clusterConfigurator: ClusterConfigurator!
+    var clusterConfigurator: ClusterConfiguratorProtocol!
 
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupMapView()
-        setupView()
         setupButtons()
+        requestForInfomation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,17 +46,14 @@ class GoogleMapsViewController: GoogleMapViewController {
     }
 
 
-    private func setupView() {
+    private func requestForInfomation() {
         viewModel.fetchLocalData()
         viewModel.fetchServerData()
     }
     
     private func setupButtons() {
-        zoomInButton.layer.cornerRadius = 20
-        zoomOutButton.layer.cornerRadius = 20
-        
-        zoomInButton.backgroundColor = .white
-        zoomOutButton.backgroundColor = .white
+        zoomInButton.setTitle(title: "+")
+        zoomOutButton.setTitle(title: "–")
     }
     
     private func changeMapZoom(action: MapZoomAction) {
@@ -67,20 +64,14 @@ class GoogleMapsViewController: GoogleMapViewController {
         }
     }
     
-    private func markerIcon(category: MarkerCategory) -> UIImage? {
-        switch category {
-        case .human: return UIImage(named: "Body")
-        case .ufo: return UIImage(named: "Reproductive")
-        }
-    }
     
-    private func redrawDeselectedMarker() {
+    private func deselectMarker() {
         guard markerIsSelected,
             let markerInfo = selectedMarker.userData as? POIItem else {
             return
         }
 
-        selectedMarker.icon = markerIcon(category: markerInfo.category)
+        selectedMarker.icon = markerInfo.category.icon
         selectedMarker.title = nil
         selectedMarker.snippet = nil
         
@@ -99,7 +90,7 @@ class GoogleMapsViewController: GoogleMapViewController {
 
 extension GoogleMapsViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        redrawDeselectedMarker()
+        deselectMarker()
     }
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
@@ -107,12 +98,9 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
             return false
         }
         
-        redrawDeselectedMarker()
+        deselectMarker()
         
-        switch markerInfo.category {
-        case .human: marker.icon = UIImage(named: "Body_selected")
-        case .ufo: marker.icon = UIImage(named: "Reproductive_selected")
-        }
+        marker.icon = markerInfo.category.iconForSelectedState
         marker.title = markerInfo.name
         marker.snippet = markerInfo.snippet
         
@@ -138,7 +126,7 @@ extension GoogleMapsViewController: GMUClusterRendererDelegate {
         guard let markerInfo = marker.userData as? POIItem else {
             return
         }
-        marker.icon = markerIcon(category: markerInfo.category)
+        marker.icon = markerInfo.category.icon
     }
 }
 
@@ -146,11 +134,7 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
     
     func showLocalData(data: ClusterConfiguratorParameters) {
         (clusterManager, renderer) =
-            clusterConfigurator.configureClusterManager(for: mapView,
-                                                        buckets: data.buckets,
-                                                        colors: data.colors,
-                                                        algorithm: data.algorithm,
-                                                        mapPoints: data.mapPoints)
+            clusterConfigurator.configureClusterManager(for: mapView, parameters: data)
         renderer.delegate = self
         clusterManager.setDelegate(self, mapDelegate: self)
 
@@ -158,14 +142,9 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
     
     func showNetworkData(data: ClusterConfiguratorParameters) {
         (clusterManagerFromNetwork, rendererFromNetwork) =
-            clusterConfigurator.configureClusterManager(for: mapView,
-                                                        buckets: data.buckets,
-                                                        colors: data.colors,
-                                                        algorithm: data.algorithm,
-                                                        mapPoints: data.mapPoints)
+            clusterConfigurator.configureClusterManager(for: mapView, parameters: data)
         rendererFromNetwork.delegate = self
         clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
-
     }
     
 }
