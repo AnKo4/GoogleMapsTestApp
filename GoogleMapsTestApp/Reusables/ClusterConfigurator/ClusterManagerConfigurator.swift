@@ -20,7 +20,6 @@ class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
     func configureClusterManager(for mapView: GMSMapView,
                                  parameters: ClusterConfiguratorParameters ) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
         let iconGenerator = componentsFactory.makeIconGenerator(buckets: parameters.buckets, colors: parameters.colors)
-//        let clusterAlgorithm = componentsFactory.makeAlgorithm(algorithm: parameters.algorithm)
         let clusterAlgorithm = parameters.algorithm.value
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         let clusterManager = GMUClusterManager(map: mapView, algorithm: clusterAlgorithm, renderer: renderer)

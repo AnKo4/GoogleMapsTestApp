@@ -22,7 +22,7 @@ class GoogleMapsViewController: GoogleMapViewController {
     
     private var markerIsSelected = false
     
-    var viewModel: MapViewControllerViewModel!
+    var viewModel: MapViewControllerViewModelProtocol!
     var clusterConfigurator: ClusterConfiguratorProtocol!
 
    
@@ -148,3 +148,12 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
     }
     
 }
+
+extension UIViewController: AlertPresenterProtocol {
+    
+    func present(alert viewController: UIAlertController, animated: Bool) {
+        present(viewController, animated: animated)
+    }
+    
+}
+

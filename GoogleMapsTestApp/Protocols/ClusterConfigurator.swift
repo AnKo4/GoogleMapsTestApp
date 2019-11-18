@@ -11,5 +11,5 @@ import Foundation
 protocol ClusterConfiguratorProtocol: class {
     var componentsFactory: GMUComponentFactoryProtocol! { get }
     
-    func configureClusterManager(for mapView: GMSMapView, parameters: ClusterConfiguratorParameters ) -> (GMUClusterManager, GMUDefaultClusterRenderer)
+    func configureClusterManager(for mapView: GMSMapView, parameters: ClusterConfiguratorParameters) -> (GMUClusterManager, GMUDefaultClusterRenderer)
 }

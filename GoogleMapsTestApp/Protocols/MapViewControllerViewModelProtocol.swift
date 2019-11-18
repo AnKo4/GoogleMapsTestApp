@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol  MapViewControllerViewModel: class {
+protocol  MapViewControllerViewModelProtocol: class {
     var view: GoogleMapsViewModelOutput? { get set }
     var router: GoogleMapsRouterProtocol { get set }
     

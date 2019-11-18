@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MapViewController: class {
-    var viewModel: MapViewControllerViewModel! { get set }
+protocol MapViewControllerProtocol: class {
+    var viewModel: MapViewControllerViewModelProtocol! { get set }
     var clusterConfigurator: ClusterConfiguratorProtocol! { get set }
 }

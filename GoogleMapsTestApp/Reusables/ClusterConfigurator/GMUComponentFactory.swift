@@ -21,13 +21,5 @@ class GMUComponentFactory: GMUComponentFactoryProtocol {
         let iconGenerator = GMUDefaultClusterIconGenerator(buckets: buckets, backgroundColors: colors)
         return iconGenerator
     }
-    
-//    func makeAlgorithm(algorithm: ClusterAlgorithm) -> GMUClusterAlgorithm {
-//        switch algorithm {
-//        case .distanceBased:
-//            return GMUNonHierarchicalDistanceBasedAlgorithm()
-//        case .gridBased:
-//            return GMUGridBasedClusterAlgorithm()
-//        }
-//    }
+
 }
