@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias GoogleMapsNetworkDataProvider = NetworkDataProvider & GoogleMapsNetworkDataProviderProtocol
+typealias GoogleMapsNetworkDataProvider = NetworkDataProviderProtocol & GoogleMapsNetworkDataProviderProtocol

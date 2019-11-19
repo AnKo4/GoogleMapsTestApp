@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MapViewControllerProtocol: class {
-    var viewModel: MapViewControllerViewModelProtocol! { get set }
+protocol GoogleMapsViewControllerProtocol: class {
+    var viewModel: GoogleMapsSceneViewModelProtocol! { get set }
     var clusterConfigurator: ClusterConfiguratorProtocol! { get set }
 }

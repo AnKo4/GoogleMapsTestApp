@@ -10,7 +10,7 @@ import Foundation
 
 struct GoogleMapsSceneModule: BaseModuleProtocol {
 
-    var view: (GoogleMapViewController & GoogleMapsViewModelOutput & AlertPresenterProtocol)?
+    var view: (GoogleMapsViewControllerType & GoogleMapsViewModelOutput & AlertPresenterProtocol)?
 
     init() {
         
@@ -23,7 +23,7 @@ struct GoogleMapsSceneModule: BaseModuleProtocol {
         let clusterComponentFactory = GMUComponentFactory()
         let clusterConfigurator = ClusterManagerConfigurator(factory: clusterComponentFactory)
         let router = GoogleMapsRouter(presenter: presenter)
-        let viewModel = GoogleMapsViewModel(networkManager: networkManager,
+        let viewModel = GoogleMapsSceneViewModel(networkManager: networkManager,
                                             localDataSource: localDataSource,
                                             view: self.view, router: router)
         self.view?.viewModel = viewModel

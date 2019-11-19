@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoogleMapsViewController: GoogleMapViewController {
+class GoogleMapsViewController: GoogleMapsViewControllerType {
     
     @IBOutlet private weak var mapView: GMSMapView!
     @IBOutlet private weak var zoomInButton: ZoomButton!
@@ -22,7 +22,7 @@ class GoogleMapsViewController: GoogleMapViewController {
     
     private var markerIsSelected = false
     
-    var viewModel: MapViewControllerViewModelProtocol!
+    var viewModel: GoogleMapsSceneViewModelProtocol!
     var clusterConfigurator: ClusterConfiguratorProtocol!
 
    
@@ -156,4 +156,3 @@ extension UIViewController: AlertPresenterProtocol {
     }
     
 }
-

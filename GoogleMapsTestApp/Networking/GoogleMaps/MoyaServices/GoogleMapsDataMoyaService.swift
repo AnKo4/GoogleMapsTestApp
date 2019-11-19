@@ -9,11 +9,11 @@
 import Foundation
 import Moya
 
-enum MoyaService {
+enum GoogleMapsDataMoyaService {
     case getPOIData
 }
 
-extension MoyaService: TargetType {
+extension GoogleMapsDataMoyaService: TargetType {
     
     var baseURL: URL {
         return URL(string: "https://www.mocky.io/v2")!

@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol ButtonSceneViewModelProtocol: class {
-    var buttonText: String { get }
-    func route()
-}
-
 class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
 
     var buttonText: String

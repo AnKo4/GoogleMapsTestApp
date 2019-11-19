@@ -14,8 +14,8 @@ protocol GoogleMapsNetworkDataProviderProtocol: class {
 }
 
 extension GoogleMapsNetworkDataProviderProtocol {
-    var provider: MoyaProvider<MoyaService> {
-        return MoyaProvider<MoyaService>()
+    var provider: MoyaProvider<GoogleMapsDataMoyaService> {
+        return MoyaProvider<GoogleMapsDataMoyaService>()
     }
 
 }

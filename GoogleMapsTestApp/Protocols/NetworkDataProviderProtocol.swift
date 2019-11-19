@@ -9,11 +9,11 @@
 import Foundation
 import Moya
 
-protocol NetworkDataProvider: class {
+protocol NetworkDataProviderProtocol: class {
     
 }
 
-extension NetworkDataProvider {
+extension NetworkDataProviderProtocol {
     
     func decodeData<T: Codable>(data: Data, to structure: T.Type) throws -> T {
         do {

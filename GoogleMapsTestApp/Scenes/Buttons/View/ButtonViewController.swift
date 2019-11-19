@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol ButtonViewControllerProtocol: class {
-    var viewModel: ButtonSceneViewModelProtocol! { get set }
-}
-
 class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     @IBOutlet weak var button: UIButton!

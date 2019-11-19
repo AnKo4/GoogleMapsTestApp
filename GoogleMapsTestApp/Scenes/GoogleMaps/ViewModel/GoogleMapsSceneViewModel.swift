@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GoogleMapsViewModel: MapViewControllerViewModelProtocol {
+class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
 
     var view: GoogleMapsViewModelOutput?
     var router: GoogleMapsRouterProtocol

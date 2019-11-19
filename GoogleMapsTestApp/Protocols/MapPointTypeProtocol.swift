@@ -15,7 +15,3 @@ protocol MapPointPositionable {
     var name: String? { get }
     var snippet: String? { get }
 }
-
-protocol MapPointCategoryContainerType {
-    var category: MarkerCategory { get }
-}

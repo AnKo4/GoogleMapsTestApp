@@ -8,4 +8,4 @@
 
 import Foundation
 
-typealias GoogleMapViewController = MapViewControllerProtocol & UIViewController
+typealias GoogleMapsViewControllerType = GoogleMapsViewControllerProtocol & UIViewController
