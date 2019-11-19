@@ -10,15 +10,15 @@ import Foundation
 
 class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
 
-    var buttonText: String
+    var buttonTitle: String
     var router: ButtonRouterPorotocol
 
-    init(router: ButtonRouterPorotocol, buttonText: String) {
+    init(router: ButtonRouterPorotocol, buttonTitle: String) {
         self.router = router
-        self.buttonText = buttonText
+        self.buttonTitle = buttonTitle
     }
 
     func route() {
-        router.goToMapsViewController()
+        router.showGoogleMapsViewController()
     }
 }

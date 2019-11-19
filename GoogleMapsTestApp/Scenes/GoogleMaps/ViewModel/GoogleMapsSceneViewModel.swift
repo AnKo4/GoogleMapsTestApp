@@ -32,7 +32,7 @@ class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
                                                     buckets: nil,
                                                     colors: nil,
                                                     algorithm: .distanceBased)
-        view?.showLocalData(data: outputData)
+        view?.showLocalData(outputData)
     }
 
     func fetchServerData() {
@@ -42,10 +42,10 @@ class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
             case nil:
                 guard let data = data else { return }
                 let outputData = DataForClusterConfigurator(mapPoints: data.features,
-                                                            buckets: Constants.buckets,
-                                                            colors: Constants.colors,
+                                                            buckets: ClusterConfiguratorParametersConstants.buckets,
+                                                            colors: ClusterConfiguratorParametersConstants.colors,
                                                             algorithm: .gridBased)
-                self.view?.showNetworkData(data: outputData)
+                self.view?.showNetworkData(outputData)
             default:
                 guard let error = error else { return }
                 self.router.showAlert(with: error.localizedDescription)

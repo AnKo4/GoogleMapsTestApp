@@ -27,7 +27,7 @@ class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
         return (clusterManager, renderer)
     }
     
-    func configure(clusterManager: GMUClusterManager, from mapPoints: [MapPointType]) {
+    private func configure(clusterManager: GMUClusterManager, from mapPoints: [MapPointType]) {
         for item in mapPoints {
             let position = CLLocationCoordinate2DMake(item.lat, item.long)
             let mapItem = POIItem(position: position, name: item.name ?? "", snippet: item.snippet ?? "", category: item.category)

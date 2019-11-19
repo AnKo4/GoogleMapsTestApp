@@ -12,13 +12,13 @@ struct ButtonSceneModule: BaseModuleProtocol {
 
     var view: (UIViewController & ButtonViewControllerProtocol)?
 
-    init(buttonText: String, navController: UINavigationController) {
+    init(buttonTitle: String, navController: UINavigationController) {
 
-        self.view = ButtonViewController.make()
+        self.view = ButtonViewController.makeSelfFrom(storyboard: "Main")
 
         guard self.view != nil else { return }
         let router = ButtonRouter(navigationController: navController)
-        let viewModel = ButtonSceneViewModel(router: router, buttonText: buttonText)
+        let viewModel = ButtonSceneViewModel(router: router, buttonTitle: buttonTitle)
         self.view?.viewModel = viewModel
     }
 }

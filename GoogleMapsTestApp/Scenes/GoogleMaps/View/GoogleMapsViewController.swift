@@ -29,8 +29,8 @@ class GoogleMapsViewController: GoogleMapsViewControllerType {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupMapView()
-        setupButtons()
+        configureMapView()
+        configureButtons()
         requestForInfomation()
     }
     
@@ -40,9 +40,9 @@ class GoogleMapsViewController: GoogleMapsViewControllerType {
         self.navigationController?.isNavigationBarHidden = true
     }
     
-    private func setupMapView() {
-        let location = CLLocationCoordinate2D(latitude: StartPoint.lat, longitude: StartPoint.long)
-        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: StartPoint.zoom)
+    private func configureMapView() {
+        let location = CLLocationCoordinate2D(latitude: GoogleMapsStartPointConstants.lat, longitude: GoogleMapsStartPointConstants.long)
+        mapView.camera = GMSCameraPosition.camera(withTarget: location, zoom: GoogleMapsStartPointConstants.zoom)
     }
 
 
@@ -51,7 +51,7 @@ class GoogleMapsViewController: GoogleMapsViewControllerType {
         viewModel.fetchServerData()
     }
     
-    private func setupButtons() {
+    private func configureButtons() {
         zoomInButton.setTitle(title: "+")
         zoomOutButton.setTitle(title: "–")
     }
@@ -63,8 +63,7 @@ class GoogleMapsViewController: GoogleMapsViewControllerType {
         case .zoomOut: mapView.animate(toZoom: zoom - 1)
         }
     }
-    
-    
+        
     private func deselectMarker() {
         guard markerIsSelected,
             let markerInfo = selectedMarker.userData as? POIItem else {
@@ -131,16 +130,14 @@ extension GoogleMapsViewController: GMUClusterRendererDelegate {
 }
 
 extension GoogleMapsViewController: GoogleMapsViewModelOutput {
-    
-    func showLocalData(data: ClusterConfiguratorParameters) {
+    func showLocalData(_ data: ClusterConfiguratorParameters) {
         (clusterManager, renderer) =
             clusterConfigurator.configureClusterManager(for: mapView, parameters: data)
         renderer.delegate = self
         clusterManager.setDelegate(self, mapDelegate: self)
-
     }
     
-    func showNetworkData(data: ClusterConfiguratorParameters) {
+    func showNetworkData(_ data: ClusterConfiguratorParameters) {
         (clusterManagerFromNetwork, rendererFromNetwork) =
             clusterConfigurator.configureClusterManager(for: mapView, parameters: data)
         rendererFromNetwork.delegate = self
@@ -150,7 +147,6 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
 }
 
 extension UIViewController: AlertPresenterProtocol {
-    
     func present(alert viewController: UIAlertController, animated: Bool) {
         present(viewController, animated: animated)
     }

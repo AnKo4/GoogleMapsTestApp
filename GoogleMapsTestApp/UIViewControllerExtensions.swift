@@ -13,8 +13,11 @@ extension UIViewController {
         return String(describing: self)
     }
     
-    class func make<T>() -> T? {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    /**
+    Returns an instance from storyboard
+    */
+    class func makeSelfFrom<T>(storyboard name: String) -> T? {
+        let storyboard = UIStoryboard(name: name, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: self.id) as? T
     }
 }

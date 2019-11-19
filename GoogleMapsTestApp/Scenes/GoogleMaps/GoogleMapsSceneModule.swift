@@ -14,7 +14,7 @@ struct GoogleMapsSceneModule: BaseModuleProtocol {
 
     init() {
         
-        self.view = GoogleMapsViewController.make()
+        self.view = GoogleMapsViewController.makeSelfFrom(storyboard: "Main")
 
         guard let presenter = view else { return }
 
@@ -24,8 +24,8 @@ struct GoogleMapsSceneModule: BaseModuleProtocol {
         let clusterConfigurator = ClusterManagerConfigurator(factory: clusterComponentFactory)
         let router = GoogleMapsRouter(presenter: presenter)
         let viewModel = GoogleMapsSceneViewModel(networkManager: networkManager,
-                                            localDataSource: localDataSource,
-                                            view: self.view, router: router)
+                                                 localDataSource: localDataSource,
+                                                 view: self.view, router: router)
         self.view?.viewModel = viewModel
         self.view?.clusterConfigurator = clusterConfigurator
     }

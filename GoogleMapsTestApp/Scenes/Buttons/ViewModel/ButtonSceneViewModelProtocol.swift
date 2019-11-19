@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ButtonSceneViewModelProtocol: class {
-    var buttonText: String { get }
+    var buttonTitle: String { get }
     func route()
 }

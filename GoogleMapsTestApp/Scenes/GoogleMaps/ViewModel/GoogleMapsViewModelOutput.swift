@@ -9,6 +9,6 @@
 import Foundation
 
 protocol GoogleMapsViewModelOutput: class {
-    func showLocalData(data: ClusterConfiguratorParameters)
-    func showNetworkData(data: ClusterConfiguratorParameters)
+    func showLocalData(_ data: ClusterConfiguratorParameters)
+    func showNetworkData(_ data: ClusterConfiguratorParameters)
 }

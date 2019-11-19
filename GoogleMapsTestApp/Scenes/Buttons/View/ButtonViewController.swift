@@ -21,7 +21,7 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
     }
 
     private func configureButton() {
-        button.setTitle(viewModel.buttonText, for: .normal)
+        button.setTitle(viewModel.buttonTitle, for: .normal)
     }
 
     @IBAction func buttonDidTap(_ sender: UIButton) {

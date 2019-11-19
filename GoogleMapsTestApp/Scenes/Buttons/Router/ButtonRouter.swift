@@ -17,7 +17,7 @@ class ButtonRouter: ButtonRouterPorotocol {
         self.navController = navigationController
     }
     
-    func goToMapsViewController() {
+    func showGoogleMapsViewController() {
         let module = GoogleMapsSceneModule()
         guard let view = module.view else { return }
         navController?.pushViewController(view, animated: true)
