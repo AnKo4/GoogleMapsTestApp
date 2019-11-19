@@ -20,7 +20,7 @@
 		5551093023575218000B8AE1 /* MarkerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551092F23575218000B8AE1 /* MarkerCategory.swift */; };
 		5553427623719629004558A4 /* ClusterConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */; };
 		555342782371998C004558A4 /* ClusterManagerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555342772371998C004558A4 /* ClusterManagerConfigurator.swift */; };
-		5553427A23719AE1004558A4 /* ClusterAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427923719AE1004558A4 /* ClusterAlgorithm.swift */; };
+		5553427A23719AE1004558A4 /* ClusterAlgorithmType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427923719AE1004558A4 /* ClusterAlgorithmType.swift */; };
 		555A9CF72383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A9CF62383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift */; };
 		555A9CF92383CE5C005BE304 /* ButtonViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A9CF82383CE5C005BE304 /* ButtonViewControllerProtocol.swift */; };
 		555C009B234F3E34000E2496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C009A234F3E34000E2496 /* AppDelegate.swift */; };
@@ -77,6 +77,8 @@
 		55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBB12356F7B40011273F /* GQTPointQuadTreeChild.m */; };
 		55B617D12372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D02372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift */; };
 		55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D92372DB7100AAC6BA /* Routable.swift */; };
+		55C389B42384276D000F9FCB /* IconGeneratorParametersType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C389B32384276D000F9FCB /* IconGeneratorParametersType.swift */; };
+		55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C389B52384289B000F9FCB /* IconGeneratorParameters.swift */; };
 		55C6F44E237C2C3000305F62 /* GoogleMapsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */; };
 		55E0EB59237D8C6200B93676 /* GoogleMapsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0EB58237D8C6200B93676 /* GoogleMapsRouterProtocol.swift */; };
 		55E0EB5B237D9B3A00B93676 /* GoogleMapsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0EB5A237D9B3A00B93676 /* GoogleMapsRouter.swift */; };
@@ -109,7 +111,7 @@
 		5551092F23575218000B8AE1 /* MarkerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerCategory.swift; sourceTree = "<group>"; };
 		5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		555342772371998C004558A4 /* ClusterManagerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterManagerConfigurator.swift; sourceTree = "<group>"; };
-		5553427923719AE1004558A4 /* ClusterAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAlgorithm.swift; sourceTree = "<group>"; };
+		5553427923719AE1004558A4 /* ClusterAlgorithmType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAlgorithmType.swift; sourceTree = "<group>"; };
 		555A9CF62383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneViewModelProtocol.swift; sourceTree = "<group>"; };
 		555A9CF82383CE5C005BE304 /* ButtonViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewControllerProtocol.swift; sourceTree = "<group>"; };
 		555C0097234F3E34000E2496 /* GoogleMapsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,8 @@
 		55AFFBB52356F7B40011273F /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
 		55B617D02372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorParametersConstants.swift; sourceTree = "<group>"; };
 		55B617D92372DB7100AAC6BA /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		55C389B32384276D000F9FCB /* IconGeneratorParametersType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorParametersType.swift; sourceTree = "<group>"; };
+		55C389B52384289B000F9FCB /* IconGeneratorParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorParameters.swift; sourceTree = "<group>"; };
 		55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewModelOutput.swift; sourceTree = "<group>"; };
 		55E0EB58237D8C6200B93676 /* GoogleMapsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsRouterProtocol.swift; sourceTree = "<group>"; };
 		55E0EB5A237D9B3A00B93676 /* GoogleMapsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsRouter.swift; sourceTree = "<group>"; };
@@ -341,7 +345,7 @@
 		5561BCD0237AD91E00073CF1 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
-				557933FE23507C1C00BFAA8E /* Struct */,
+				557933FE23507C1C00BFAA8E /* Structures */,
 				554CC8B5234F700E00E95117 /* POIItem */,
 			);
 			path = Reusables;
@@ -453,11 +457,9 @@
 		557933F8235063B500BFAA8E /* ClusterConfigurator */ = {
 			isa = PBXGroup;
 			children = (
-				5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */,
-				55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */,
-				5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */,
+				55C389B723842D55000F9FCB /* Protocols */,
+				55C389B823842D9B000F9FCB /* Structures */,
 				555342772371998C004558A4 /* ClusterManagerConfigurator.swift */,
-				55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */,
 				55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */,
 			);
 			path = ClusterConfigurator;
@@ -471,16 +473,15 @@
 			path = MockData;
 			sourceTree = "<group>";
 		};
-		557933FE23507C1C00BFAA8E /* Struct */ = {
+		557933FE23507C1C00BFAA8E /* Structures */ = {
 			isa = PBXGroup;
 			children = (
 				55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */,
 				559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */,
 				557933FF23507C3500BFAA8E /* MapPoint.swift */,
 				556B9CAA235DCCEF00AB713B /* Geodata.swift */,
-				5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */,
 			);
-			path = Struct;
+			path = Structures;
 			sourceTree = "<group>";
 		};
 		559E42AB2383D6A600C3BC00 /* Common */ = {
@@ -622,6 +623,27 @@
 			path = QuadTree;
 			sourceTree = "<group>";
 		};
+		55C389B723842D55000F9FCB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */,
+				55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */,
+				5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */,
+				55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */,
+				55C389B32384276D000F9FCB /* IconGeneratorParametersType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		55C389B823842D9B000F9FCB /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */,
+				55C389B52384289B000F9FCB /* IconGeneratorParameters.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
 		55E0EB57237D8C2500B93676 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,7 +658,7 @@
 			children = (
 				55E63EA72350B6A2001882F8 /* MapZoom.swift */,
 				5551092F23575218000B8AE1 /* MarkerCategory.swift */,
-				5553427923719AE1004558A4 /* ClusterAlgorithm.swift */,
+				5553427923719AE1004558A4 /* ClusterAlgorithmType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -820,6 +842,7 @@
 			files = (
 				55AFFBB92356F7B40011273F /* GMUSimpleClusterAlgorithm.m in Sources */,
 				555342782371998C004558A4 /* ClusterManagerConfigurator.swift in Sources */,
+				55C389B42384276D000F9FCB /* IconGeneratorParametersType.swift in Sources */,
 				55AFFBC12356F7B40011273F /* GMUKMLParser.m in Sources */,
 				55AFFBCC2356F7B40011273F /* GMULineString.m in Sources */,
 				555A9CF92383CE5C005BE304 /* ButtonViewControllerProtocol.swift in Sources */,
@@ -861,10 +884,11 @@
 				559507D22382A24300F34AD9 /* AlertPresenterHolder.swift in Sources */,
 				55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */,
 				55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */,
+				55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */,
 				55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */,
 				557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */,
 				5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */,
-				5553427A23719AE1004558A4 /* ClusterAlgorithm.swift in Sources */,
+				5553427A23719AE1004558A4 /* ClusterAlgorithmType.swift in Sources */,
 				5502F73C23794DF6001003C9 /* Launcher.swift in Sources */,
 				559507CE2382A1CE00F34AD9 /* AlertPresentable.swift in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,

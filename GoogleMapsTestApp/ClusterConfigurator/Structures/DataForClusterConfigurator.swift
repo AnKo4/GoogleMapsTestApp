@@ -10,7 +10,6 @@ import Foundation
 
 struct DataForClusterConfigurator: ClusterConfiguratorParameters {
     var mapPoints: [MapPointType]
-    var buckets: [NSNumber]?
-    var colors: [UIColor]?
-    var algorithm: ClusterAlgorithm
+    var iconGeneratorParameters: IconGeneratorParametersType
+    var algorithm: ClusterAlgorithmType
 }

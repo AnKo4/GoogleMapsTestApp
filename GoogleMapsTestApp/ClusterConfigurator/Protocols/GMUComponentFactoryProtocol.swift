@@ -9,5 +9,5 @@
 import Foundation
 
 protocol GMUComponentFactoryProtocol {
-    func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator
+    func makeIconGenerator(with parameters: IconGeneratorParametersType) -> GMUClusterIconGenerator
 }

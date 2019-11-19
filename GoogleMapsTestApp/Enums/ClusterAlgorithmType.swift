@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum ClusterAlgorithm: String, Codable {
+enum ClusterAlgorithmType: String, Codable {
     case distanceBased
     case gridBased
 }
 
-extension ClusterAlgorithm {
-    var value: GMUClusterAlgorithm {
+extension ClusterAlgorithmType {
+    var algorithmObject: GMUClusterAlgorithm {
         switch self {
         case .distanceBased:
             return GMUNonHierarchicalDistanceBasedAlgorithm()

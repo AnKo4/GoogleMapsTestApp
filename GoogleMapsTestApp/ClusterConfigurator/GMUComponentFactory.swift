@@ -10,11 +10,10 @@ import Foundation
 
 class GMUComponentFactory: GMUComponentFactoryProtocol {
     
-    func makeIconGenerator(buckets: [NSNumber]?, colors: [UIColor]?) -> GMUClusterIconGenerator {
+    func makeIconGenerator(with parameters: IconGeneratorParametersType) -> GMUClusterIconGenerator {
         guard
-            let buckets = buckets, let colors = colors,
-            buckets.count != 0,
-            buckets.count == colors.count
+            let buckets = parameters.buckets,
+            let colors = parameters.colors
             else {
                 return GMUDefaultClusterIconGenerator()
         }

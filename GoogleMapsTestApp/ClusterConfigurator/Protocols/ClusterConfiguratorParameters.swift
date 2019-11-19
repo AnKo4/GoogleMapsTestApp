@@ -10,7 +10,6 @@ import Foundation
 
 protocol ClusterConfiguratorParameters {
     var mapPoints: [MapPointType] { get }
-    var buckets: [NSNumber]? { get }
-    var colors: [UIColor]? { get }
-    var algorithm: ClusterAlgorithm { get }
+    var iconGeneratorParameters: IconGeneratorParametersType { get }
+    var algorithm: ClusterAlgorithmType { get }
 }

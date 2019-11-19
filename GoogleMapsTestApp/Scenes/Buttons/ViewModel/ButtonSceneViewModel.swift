@@ -19,6 +19,6 @@ class ButtonSceneViewModel: ButtonSceneViewModelProtocol {
     }
 
     func route() {
-        router.showGoogleMapsViewController()
+        router.showGoogleMaps()
     }
 }

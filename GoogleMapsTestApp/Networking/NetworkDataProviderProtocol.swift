@@ -27,11 +27,7 @@ extension NetworkDataProviderProtocol {
     func handleResult<T: Codable>(result: Result<Moya.Response, MoyaError>, structure: T.Type) throws -> T {
         switch result {
         case .success(let response):
-            do {
                 return try decodeData(data: response.data, to: structure.self)
-            } catch {
-                throw error
-            }
         case.failure(let error):
             throw error
         }

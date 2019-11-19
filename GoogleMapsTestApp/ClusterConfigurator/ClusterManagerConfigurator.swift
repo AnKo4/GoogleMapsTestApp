@@ -19,11 +19,12 @@ class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
 
     func configureClusterManager(for mapView: GMSMapView,
                                  parameters: ClusterConfiguratorParameters ) -> (GMUClusterManager, GMUDefaultClusterRenderer) {
-        let iconGenerator = componentsFactory.makeIconGenerator(buckets: parameters.buckets, colors: parameters.colors)
-        let clusterAlgorithm = parameters.algorithm.value
+        let iconGenerator = componentsFactory.makeIconGenerator(with: parameters.iconGeneratorParameters)
+        let clusterAlgorithm = parameters.algorithm.algorithmObject
         let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
         let clusterManager = GMUClusterManager(map: mapView, algorithm: clusterAlgorithm, renderer: renderer)
         configure(clusterManager: clusterManager, from: parameters.mapPoints)
+        clusterManager.cluster()
         return (clusterManager, renderer)
     }
     
@@ -33,6 +34,5 @@ class ClusterManagerConfigurator: ClusterConfiguratorProtocol {
             let mapItem = POIItem(position: position, name: item.name ?? "", snippet: item.snippet ?? "", category: item.category)
             clusterManager.add(mapItem)
         }
-        clusterManager.cluster()
     }
 }

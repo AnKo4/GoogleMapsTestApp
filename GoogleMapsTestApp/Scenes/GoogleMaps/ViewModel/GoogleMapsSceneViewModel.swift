@@ -28,9 +28,9 @@ class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
     }
 
     func fetchLocalData() {
+        let iconGeneratorParameters = IconGeneratorParameters(buckets: nil, colors: nil)
         let outputData = DataForClusterConfigurator(mapPoints: localDataSource.mapPoints,
-                                                    buckets: nil,
-                                                    colors: nil,
+                                                    iconGeneratorParameters: iconGeneratorParameters,
                                                     algorithm: .distanceBased)
         view?.showLocalData(outputData)
     }
@@ -41,9 +41,10 @@ class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
             switch error {
             case nil:
                 guard let data = data else { return }
+                let iconGeneratorParameters = self.makeIconGeneratorParameters(buckets: ClusterConfiguratorParametersConstants.buckets,
+                    colors: ClusterConfiguratorParametersConstants.colors)
                 let outputData = DataForClusterConfigurator(mapPoints: data.features,
-                                                            buckets: ClusterConfiguratorParametersConstants.buckets,
-                                                            colors: ClusterConfiguratorParametersConstants.colors,
+                                                            iconGeneratorParameters: iconGeneratorParameters,
                                                             algorithm: .gridBased)
                 self.view?.showNetworkData(outputData)
             default:
@@ -51,5 +52,17 @@ class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
                 self.router.showAlert(with: error.localizedDescription)
             }
         }
+    }
+    
+    private func makeIconGeneratorParameters(buckets: [NSNumber]?, colors: [UIColor]?) -> IconGeneratorParametersType {
+        guard
+            let buckets = buckets, let colors = colors,
+            !buckets.isEmpty,
+            buckets.count == colors.count,
+            buckets.sorted(by: {$0.intValue < $1.intValue}) == buckets
+            else {
+                return IconGeneratorParameters(buckets: nil, colors: nil)
+        }
+        return IconGeneratorParameters(buckets: buckets, colors: colors)
     }
 }
