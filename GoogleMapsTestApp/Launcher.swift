@@ -12,10 +12,10 @@ class Launcher {
     static func launch(with window: UIWindow?) {
         
         let navController = UINavigationController()
-        let module = ButtonSceneModule(buttonText: "Click me :)", navController: navController)
-        navController.setViewControllers([module.view], animated: true)
+        let module = ButtonSceneModule(buttonTitle: "Click me :)", navController: navController)
+        guard let view = module.view else { return }
+        navController.setViewControllers([view], animated: true)
         
-        // MARK: - Для красоты
         navController.isNavigationBarHidden = true
         
         window?.rootViewController = navController

@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		5502F73C23794DF6001003C9 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73B23794DF6001003C9 /* Launcher.swift */; };
 		5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */; };
-		552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A5306234F4DCF0056A6BD /* APIKey.swift */; };
-		554CC8B7234F702B00E95117 /* MapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC8B6234F702B00E95117 /* MapItem.swift */; };
+		5529FC21237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529FC20237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift */; };
+		5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529FC22237D72F000144605 /* GoogleMapsNetworkDataProvider.swift */; };
+		552A5307234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A5306234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift */; };
+		554CC8B7234F702B00E95117 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC8B6234F702B00E95117 /* POIItem.swift */; };
 		5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550952E236AFEC6009EB330 /* ButtonViewController.swift */; };
-		55509532236B075F009EB330 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509531236B075F009EB330 /* MapViewController.swift */; };
-		55509534236B07F0009EB330 /* MapViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509533236B07F0009EB330 /* MapViewControllerViewModel.swift */; };
-		55509537236B0923009EB330 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509536236B0923009EB330 /* GoogleMapViewController.swift */; };
+		55509532236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509531236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift */; };
+		55509534236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509533236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift */; };
+		55509537236B0923009EB330 /* GoogleMapsViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55509536236B0923009EB330 /* GoogleMapsViewControllerType.swift */; };
 		5551093023575218000B8AE1 /* MarkerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551092F23575218000B8AE1 /* MarkerCategory.swift */; };
-		5553427623719629004558A4 /* ClusterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427523719629004558A4 /* ClusterConfigurator.swift */; };
+		5553427623719629004558A4 /* ClusterConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */; };
 		555342782371998C004558A4 /* ClusterManagerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555342772371998C004558A4 /* ClusterManagerConfigurator.swift */; };
-		5553427A23719AE1004558A4 /* ClusterAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427923719AE1004558A4 /* ClusterAlgorithms.swift */; };
+		5553427A23719AE1004558A4 /* ClusterAlgorithmType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553427923719AE1004558A4 /* ClusterAlgorithmType.swift */; };
+		555A9CF72383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A9CF62383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift */; };
+		555A9CF92383CE5C005BE304 /* ButtonViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555A9CF82383CE5C005BE304 /* ButtonViewControllerProtocol.swift */; };
 		555C009B234F3E34000E2496 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C009A234F3E34000E2496 /* AppDelegate.swift */; };
 		555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C009C234F3E34000E2496 /* SceneDelegate.swift */; };
 		555C009F234F3E34000E2496 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C009E234F3E34000E2496 /* GoogleMapsViewController.swift */; };
@@ -27,19 +31,24 @@
 		555C00A7234F3E35000E2496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C00A5234F3E35000E2496 /* LaunchScreen.storyboard */; };
 		5565FA1B2374376A00ED769A /* ClusterConfiguratorParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */; };
 		5565FA1D23743A2B00ED769A /* DataForClusterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */; };
-		556B9CA5235DA92C00AB713B /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA4235DA92C00AB713B /* MoyaService.swift */; };
-		556B9CA8235DCB9500AB713B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA7235DCB9500AB713B /* NetworkManager.swift */; };
+		556B9CA5235DA92C00AB713B /* GoogleMapsDataMoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA4235DA92C00AB713B /* GoogleMapsDataMoyaService.swift */; };
+		556B9CA8235DCB9500AB713B /* GoogleMapsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CA7235DCB9500AB713B /* GoogleMapsNetworkManager.swift */; };
 		556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CAA235DCCEF00AB713B /* Geodata.swift */; };
-		5575845F2366CA11008A3841 /* GoogleMapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */; };
+		5575845F2366CA11008A3841 /* GoogleMapsSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */; };
 		557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */; };
 		557766CE23755EFD004592F1 /* ButtonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CD23755EFD004592F1 /* ButtonRouter.swift */; };
-		557766D0237579AF004592F1 /* GoogleMapsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CF237579AF004592F1 /* GoogleMapsModule.swift */; };
+		557766D0237579AF004592F1 /* GoogleMapsSceneModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CF237579AF004592F1 /* GoogleMapsSceneModule.swift */; };
 		557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766D623758DEB004592F1 /* ButtonSceneModule.swift */; };
 		557766DE23759173004592F1 /* BaseModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766DD23759173004592F1 /* BaseModuleProtocol.swift */; };
 		557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766DF23759213004592F1 /* ButtonSceneViewModel.swift */; };
-		557933FD2350676400BFAA8E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* Coordinates.swift */; };
+		557933FD2350676400BFAA8E /* MockCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* MockCoordinates.swift */; };
 		5579340023507C3500BFAA8E /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FF23507C3500BFAA8E /* MapPoint.swift */; };
-		557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557934012350A6EE00BFAA8E /* StartPoint.swift */; };
+		557934022350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557934012350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift */; };
+		559507CE2382A1CE00F34AD9 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507CD2382A1CE00F34AD9 /* AlertPresentable.swift */; };
+		559507D02382A1F900F34AD9 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507CF2382A1F900F34AD9 /* AlertShowable.swift */; };
+		559507D22382A24300F34AD9 /* AlertPresenterHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */; };
+		559507D42382A26D00F34AD9 /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */; };
+		559E42A92383D3D500C3BC00 /* MapPointCategoryContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */; };
 		55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB6D2356F7B40011273F /* GMUClusterManager.m */; };
 		55AFFBB72356F7B40011273F /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB712356F7B40011273F /* GMUGridBasedClusterAlgorithm.m */; };
 		55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB742356F7B40011273F /* GMUWrappingDictionaryKey.m */; };
@@ -66,31 +75,45 @@
 		55AFFBCD2356F7B40011273F /* GMUGeoJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBAC2356F7B40011273F /* GMUGeoJSONParser.m */; };
 		55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBAF2356F7B40011273F /* GQTPointQuadTree.m */; };
 		55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFBB12356F7B40011273F /* GQTPointQuadTreeChild.m */; };
-		55B617D12372BCAD00AAC6BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D02372BCAD00AAC6BA /* Constants.swift */; };
+		55B617D12372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D02372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift */; };
 		55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B617D92372DB7100AAC6BA /* Routable.swift */; };
+		55C389B42384276D000F9FCB /* IconGeneratorParametersType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C389B32384276D000F9FCB /* IconGeneratorParametersType.swift */; };
+		55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C389B52384289B000F9FCB /* IconGeneratorParameters.swift */; };
+		55C6F44E237C2C3000305F62 /* GoogleMapsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */; };
+		55E0EB59237D8C6200B93676 /* GoogleMapsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0EB58237D8C6200B93676 /* GoogleMapsRouterProtocol.swift */; };
+		55E0EB5B237D9B3A00B93676 /* GoogleMapsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0EB5A237D9B3A00B93676 /* GoogleMapsRouter.swift */; };
 		55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E63EA72350B6A2001882F8 /* MapZoom.swift */; };
-		55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */; };
+		55E80737236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80736236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift */; };
 		55E80739236C497B00EFBA3D /* MapPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80738236C497B00EFBA3D /* MapPointType.swift */; };
-		55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift */; };
+		55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */; };
 		55E8073D236C4D2C00EFBA3D /* MapPointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */; };
+		55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFB237E984900DB4A29 /* ZoomButton.swift */; };
+		55FA2FFE237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */; };
+		55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */; };
 		83D362FD4235044B907BCA17 /* Pods_GoogleMapsTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5502F73B23794DF6001003C9 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = GoogleMapsTestApp/UIViewControllerExtensions.swift; sourceTree = SOURCE_ROOT; };
-		552A5306234F4DCF0056A6BD /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		5529FC1E237D6CAC00144605 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		5529FC1F237D6CAC00144605 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5529FC20237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsNetworkDataProviderProtocol.swift; sourceTree = "<group>"; };
+		5529FC22237D72F000144605 /* GoogleMapsNetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsNetworkDataProvider.swift; sourceTree = "<group>"; };
+		552A5306234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsUtilsAPIKey.swift; sourceTree = "<group>"; };
 		552A532B234F54320056A6BD /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMUMarkerClustering.h; path = ../GMUMarkerClustering.h; sourceTree = "<group>"; };
 		552A536D234F55060056A6BD /* GoogleMapsTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		554CC8B6234F702B00E95117 /* MapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItem.swift; sourceTree = "<group>"; };
+		554CC8B6234F702B00E95117 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
 		5550952E236AFEC6009EB330 /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
-		55509531236B075F009EB330 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		55509533236B07F0009EB330 /* MapViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerViewModel.swift; sourceTree = "<group>"; };
-		55509536236B0923009EB330 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		55509531236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		55509533236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsSceneViewModelProtocol.swift; sourceTree = "<group>"; };
+		55509536236B0923009EB330 /* GoogleMapsViewControllerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewControllerType.swift; sourceTree = "<group>"; };
 		5551092F23575218000B8AE1 /* MarkerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerCategory.swift; sourceTree = "<group>"; };
-		5553427523719629004558A4 /* ClusterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfigurator.swift; sourceTree = "<group>"; };
+		5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		555342772371998C004558A4 /* ClusterManagerConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterManagerConfigurator.swift; sourceTree = "<group>"; };
-		5553427923719AE1004558A4 /* ClusterAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAlgorithms.swift; sourceTree = "<group>"; };
+		5553427923719AE1004558A4 /* ClusterAlgorithmType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAlgorithmType.swift; sourceTree = "<group>"; };
+		555A9CF62383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneViewModelProtocol.swift; sourceTree = "<group>"; };
+		555A9CF82383CE5C005BE304 /* ButtonViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewControllerProtocol.swift; sourceTree = "<group>"; };
 		555C0097234F3E34000E2496 /* GoogleMapsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMapsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555C009A234F3E34000E2496 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555C009C234F3E34000E2496 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,19 +124,24 @@
 		555C00A8234F3E35000E2496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorParameters.swift; sourceTree = "<group>"; };
 		5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForClusterConfigurator.swift; sourceTree = "<group>"; };
-		556B9CA4235DA92C00AB713B /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
-		556B9CA7235DCB9500AB713B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		556B9CA4235DA92C00AB713B /* GoogleMapsDataMoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsDataMoyaService.swift; sourceTree = "<group>"; };
+		556B9CA7235DCB9500AB713B /* GoogleMapsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsNetworkManager.swift; sourceTree = "<group>"; };
 		556B9CAA235DCCEF00AB713B /* Geodata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geodata.swift; sourceTree = "<group>"; };
-		5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewModel.swift; sourceTree = "<group>"; };
+		5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsSceneViewModel.swift; sourceTree = "<group>"; };
 		557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouterPorotocol.swift; sourceTree = "<group>"; };
 		557766CD23755EFD004592F1 /* ButtonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouter.swift; sourceTree = "<group>"; };
-		557766CF237579AF004592F1 /* GoogleMapsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsModule.swift; sourceTree = "<group>"; };
+		557766CF237579AF004592F1 /* GoogleMapsSceneModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsSceneModule.swift; sourceTree = "<group>"; };
 		557766D623758DEB004592F1 /* ButtonSceneModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneModule.swift; sourceTree = "<group>"; };
 		557766DD23759173004592F1 /* BaseModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModuleProtocol.swift; sourceTree = "<group>"; };
 		557766DF23759213004592F1 /* ButtonSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSceneViewModel.swift; sourceTree = "<group>"; };
-		557933FC2350676400BFAA8E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		557933FC2350676400BFAA8E /* MockCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinates.swift; sourceTree = "<group>"; };
 		557933FF23507C3500BFAA8E /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
-		557934012350A6EE00BFAA8E /* StartPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPoint.swift; sourceTree = "<group>"; };
+		557934012350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsStartPointConstants.swift; sourceTree = "<group>"; };
+		559507CD2382A1CE00F34AD9 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		559507CF2382A1F900F34AD9 /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
+		559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterHolder.swift; sourceTree = "<group>"; };
+		559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
+		559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointCategoryContainerType.swift; sourceTree = "<group>"; };
 		55AFFB6D2356F7B40011273F /* GMUClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUClusterManager.m; sourceTree = "<group>"; };
 		55AFFB6E2356F7B40011273F /* GMUStaticCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStaticCluster.h; sourceTree = "<group>"; };
 		55AFFB712356F7B40011273F /* GMUGridBasedClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGridBasedClusterAlgorithm.m; sourceTree = "<group>"; };
@@ -180,13 +208,21 @@
 		55AFFBB32356F7B40011273F /* GQTPointQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTree.h; sourceTree = "<group>"; };
 		55AFFBB42356F7B40011273F /* GQTPointQuadTreeChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeChild.h; sourceTree = "<group>"; };
 		55AFFBB52356F7B40011273F /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
-		55B617D02372BCAD00AAC6BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		55B617D02372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorParametersConstants.swift; sourceTree = "<group>"; };
 		55B617D92372DB7100AAC6BA /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		55C389B32384276D000F9FCB /* IconGeneratorParametersType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorParametersType.swift; sourceTree = "<group>"; };
+		55C389B52384289B000F9FCB /* IconGeneratorParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGeneratorParameters.swift; sourceTree = "<group>"; };
+		55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewModelOutput.swift; sourceTree = "<group>"; };
+		55E0EB58237D8C6200B93676 /* GoogleMapsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsRouterProtocol.swift; sourceTree = "<group>"; };
+		55E0EB5A237D9B3A00B93676 /* GoogleMapsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsRouter.swift; sourceTree = "<group>"; };
 		55E63EA72350B6A2001882F8 /* MapZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapZoom.swift; sourceTree = "<group>"; };
-		55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
+		55E80736236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProviderProtocol.swift; sourceTree = "<group>"; };
 		55E80738236C497B00EFBA3D /* MapPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointType.swift; sourceTree = "<group>"; };
-		55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorDataSource.swift; sourceTree = "<group>"; };
+		55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorDataSourceProtocol.swift; sourceTree = "<group>"; };
 		55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointTypeProtocol.swift; sourceTree = "<group>"; };
+		55FA2FFB237E984900DB4A29 /* ZoomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButton.swift; sourceTree = "<group>"; };
+		55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMUComponentFactoryProtocol.swift; sourceTree = "<group>"; };
+		55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMUComponentFactory.swift; sourceTree = "<group>"; };
 		BE1C6788AA2A50E7DE79A2A5 /* Pods_GoogleMapsTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A471C461DB421CB3CA01B3 /* Pods-GoogleMapsTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.debug.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA6FBF6FD5838CF85A4F54A /* Pods-GoogleMapsTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsTestApp.release.xcconfig"; path = "Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -216,37 +252,50 @@
 			path = "Google-Maps-iOS-Utils";
 			sourceTree = "<group>";
 		};
-		554CC8B5234F700E00E95117 /* MapItem */ = {
+		55437D392383CB8B007CE015 /* UI elements */ = {
 			isa = PBXGroup;
 			children = (
-				554CC8B6234F702B00E95117 /* MapItem.swift */,
+				55FA2FFA237E97FF00DB4A29 /* ZoomButton */,
 			);
-			path = MapItem;
+			path = "UI elements";
 			sourceTree = "<group>";
 		};
-		55509530236B071F009EB330 /* Protocols */ = {
+		55437D3A2383CBC1007CE015 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				55509531236B075F009EB330 /* MapViewController.swift */,
-				55509533236B07F0009EB330 /* MapViewControllerViewModel.swift */,
-				55E80736236C1D5700EFBA3D /* NetworkDataProvider.swift */,
-				55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift */,
-				55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */,
-				5553427523719629004558A4 /* ClusterConfigurator.swift */,
-				55B617D92372DB7100AAC6BA /* Routable.swift */,
-				5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */,
-				557766DD23759173004592F1 /* BaseModuleProtocol.swift */,
+				55B617D02372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift */,
+				557934012350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift */,
 			);
-			path = Protocols;
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		554CC8B5234F700E00E95117 /* POIItem */ = {
+			isa = PBXGroup;
+			children = (
+				554CC8B6234F702B00E95117 /* POIItem.swift */,
+			);
+			path = POIItem;
 			sourceTree = "<group>";
 		};
 		55509535236B0895009EB330 /* TypeAliases */ = {
 			isa = PBXGroup;
 			children = (
-				55509536236B0923009EB330 /* GoogleMapViewController.swift */,
+				55509536236B0923009EB330 /* GoogleMapsViewControllerType.swift */,
 				55E80738236C497B00EFBA3D /* MapPointType.swift */,
+				5529FC22237D72F000144605 /* GoogleMapsNetworkDataProvider.swift */,
+				559507CD2382A1CE00F34AD9 /* AlertPresentable.swift */,
 			);
 			path = TypeAliases;
+			sourceTree = "<group>";
+		};
+		555A9CF52383CD14005BE304 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				556B9CA3235DA90A00AB713B /* MoyaServices */,
+				5529FC20237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift */,
+				556B9CA7235DCB9500AB713B /* GoogleMapsNetworkManager.swift */,
+			);
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		555C008E234F3E34000E2496 = {
@@ -271,11 +320,15 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				559E42AB2383D6A600C3BC00 /* Common */,
+				55437D3A2383CBC1007CE015 /* Constants */,
+				55437D392383CB8B007CE015 /* UI elements */,
+				556B9CA6235DCB7200AB713B /* Networking */,
+				557933F8235063B500BFAA8E /* ClusterConfigurator */,
 				5561BCD0237AD91E00073CF1 /* Reusables */,
 				556B9CAC235DEA3400AB713B /* Extensions */,
 				557766D5237581D3004592F1 /* Scenes */,
 				55509535236B0895009EB330 /* TypeAliases */,
-				55509530236B071F009EB330 /* Protocols */,
 				55E63EA62350B688001882F8 /* Enums */,
 				557933FB2350675100BFAA8E /* MockData */,
 				555C009A234F3E34000E2496 /* AppDelegate.swift */,
@@ -284,7 +337,6 @@
 				555C00A3234F3E35000E2496 /* Assets.xcassets */,
 				555C00A5234F3E35000E2496 /* LaunchScreen.storyboard */,
 				555C00A8234F3E35000E2496 /* Info.plist */,
-				552A5306234F4DCF0056A6BD /* APIKey.swift */,
 				5502F73B23794DF6001003C9 /* Launcher.swift */,
 			);
 			path = GoogleMapsTestApp;
@@ -293,27 +345,25 @@
 		5561BCD0237AD91E00073CF1 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
-				557933FE23507C1C00BFAA8E /* Struct */,
-				554CC8B5234F700E00E95117 /* MapItem */,
-				556B9CA3235DA90A00AB713B /* MoyaService */,
-				556B9CA6235DCB7200AB713B /* Networking */,
-				557933F8235063B500BFAA8E /* ClusterConfigurator */,
+				557933FE23507C1C00BFAA8E /* Structures */,
+				554CC8B5234F700E00E95117 /* POIItem */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
 		};
-		556B9CA3235DA90A00AB713B /* MoyaService */ = {
+		556B9CA3235DA90A00AB713B /* MoyaServices */ = {
 			isa = PBXGroup;
 			children = (
-				556B9CA4235DA92C00AB713B /* MoyaService.swift */,
+				556B9CA4235DA92C00AB713B /* GoogleMapsDataMoyaService.swift */,
 			);
-			path = MoyaService;
+			path = MoyaServices;
 			sourceTree = "<group>";
 		};
 		556B9CA6235DCB7200AB713B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				556B9CA7235DCB9500AB713B /* NetworkManager.swift */,
+				555A9CF52383CD14005BE304 /* GoogleMaps */,
+				55E80736236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -326,14 +376,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		557766C723755E91004592F1 /* Maps */ = {
+		557766C723755E91004592F1 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				557766CA23755EB7004592F1 /* View */,
+				55E0EB57237D8C2500B93676 /* Router */,
 				557766C923755EAE004592F1 /* ViewModel */,
-				557766CF237579AF004592F1 /* GoogleMapsModule.swift */,
+				557766CA23755EB7004592F1 /* View */,
+				557766CF237579AF004592F1 /* GoogleMapsSceneModule.swift */,
 			);
-			path = Maps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		557766C823755EA5004592F1 /* Router */ = {
@@ -348,7 +399,9 @@
 		557766C923755EAE004592F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5575845E2366CA11008A3841 /* GoogleMapsViewModel.swift */,
+				55C6F44D237C2C3000305F62 /* GoogleMapsViewModelOutput.swift */,
+				55509533236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift */,
+				5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -356,6 +409,7 @@
 		557766CA23755EB7004592F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55509531236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift */,
 				555C009E234F3E34000E2496 /* GoogleMapsViewController.swift */,
 			);
 			path = View;
@@ -364,9 +418,9 @@
 		557766D123757EC6004592F1 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				557766D223757ED7004592F1 /* View */,
-				557766D323757EE2004592F1 /* ViewModel */,
 				557766C823755EA5004592F1 /* Router */,
+				557766D323757EE2004592F1 /* ViewModel */,
+				557766D223757ED7004592F1 /* View */,
 				557766D623758DEB004592F1 /* ButtonSceneModule.swift */,
 			);
 			path = Buttons;
@@ -376,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				5550952E236AFEC6009EB330 /* ButtonViewController.swift */,
+				555A9CF82383CE5C005BE304 /* ButtonViewControllerProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				557766DF23759213004592F1 /* ButtonSceneViewModel.swift */,
+				555A9CF62383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -391,8 +447,9 @@
 		557766D5237581D3004592F1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				55AB456A2383FCD4000B0CCC /* ModuleProtocols */,
 				557766D123757EC6004592F1 /* Buttons */,
-				557766C723755E91004592F1 /* Maps */,
+				557766C723755E91004592F1 /* GoogleMaps */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -400,7 +457,10 @@
 		557933F8235063B500BFAA8E /* ClusterConfigurator */ = {
 			isa = PBXGroup;
 			children = (
+				55C389B723842D55000F9FCB /* Protocols */,
+				55C389B823842D9B000F9FCB /* Structures */,
 				555342772371998C004558A4 /* ClusterManagerConfigurator.swift */,
+				55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */,
 			);
 			path = ClusterConfigurator;
 			sourceTree = "<group>";
@@ -408,21 +468,40 @@
 		557933FB2350675100BFAA8E /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				557933FC2350676400BFAA8E /* Coordinates.swift */,
+				557933FC2350676400BFAA8E /* MockCoordinates.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
 		};
-		557933FE23507C1C00BFAA8E /* Struct */ = {
+		557933FE23507C1C00BFAA8E /* Structures */ = {
 			isa = PBXGroup;
 			children = (
+				55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */,
+				559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */,
 				557933FF23507C3500BFAA8E /* MapPoint.swift */,
-				557934012350A6EE00BFAA8E /* StartPoint.swift */,
 				556B9CAA235DCCEF00AB713B /* Geodata.swift */,
-				55B617D02372BCAD00AAC6BA /* Constants.swift */,
-				5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */,
 			);
-			path = Struct;
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		559E42AB2383D6A600C3BC00 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				552A5306234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		55AB456A2383FCD4000B0CCC /* ModuleProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				55B617D92372DB7100AAC6BA /* Routable.swift */,
+				557766DD23759173004592F1 /* BaseModuleProtocol.swift */,
+				559507CF2382A1F900F34AD9 /* AlertShowable.swift */,
+				559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */,
+				559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */,
+			);
+			path = ModuleProtocols;
 			sourceTree = "<group>";
 		};
 		55AFFB6C2356F7B40011273F /* Clustering */ = {
@@ -544,14 +623,52 @@
 			path = QuadTree;
 			sourceTree = "<group>";
 		};
+		55C389B723842D55000F9FCB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5565FA1A2374376A00ED769A /* ClusterConfiguratorParameters.swift */,
+				55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */,
+				5553427523719629004558A4 /* ClusterConfiguratorProtocol.swift */,
+				55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */,
+				55C389B32384276D000F9FCB /* IconGeneratorParametersType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		55C389B823842D9B000F9FCB /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				5565FA1C23743A2B00ED769A /* DataForClusterConfigurator.swift */,
+				55C389B52384289B000F9FCB /* IconGeneratorParameters.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		55E0EB57237D8C2500B93676 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				55E0EB58237D8C6200B93676 /* GoogleMapsRouterProtocol.swift */,
+				55E0EB5A237D9B3A00B93676 /* GoogleMapsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		55E63EA62350B688001882F8 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				55E63EA72350B6A2001882F8 /* MapZoom.swift */,
 				5551092F23575218000B8AE1 /* MarkerCategory.swift */,
-				5553427923719AE1004558A4 /* ClusterAlgorithms.swift */,
+				5553427923719AE1004558A4 /* ClusterAlgorithmType.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		55FA2FFA237E97FF00DB4A29 /* ZoomButton */ = {
+			isa = PBXGroup;
+			children = (
+				55FA2FFB237E984900DB4A29 /* ZoomButton.swift */,
+			);
+			path = ZoomButton;
 			sourceTree = "<group>";
 		};
 		7FBCBD39EB05E03D807B3EE5 /* Pods */ = {
@@ -584,6 +701,7 @@
 				555C0095234F3E34000E2496 /* Resources */,
 				2D566A7E114A7F1AA966075C /* [CP] Copy Pods Resources */,
 				0D807213B43B54B57D6B2AEE /* [CP] Embed Pods Frameworks */,
+				55CA38A9237AF8AD008DDC12 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -616,6 +734,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 555C008E234F3E34000E2496;
 			productRefGroup = 555C0098234F3E34000E2496 /* Products */;
@@ -675,6 +794,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoogleMapsTestApp/Pods-GoogleMapsTestApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		55CA38A9237AF8AD008DDC12 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		BC40E2ADDA8371608F6FF098 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -706,48 +842,58 @@
 			files = (
 				55AFFBB92356F7B40011273F /* GMUSimpleClusterAlgorithm.m in Sources */,
 				555342782371998C004558A4 /* ClusterManagerConfigurator.swift in Sources */,
+				55C389B42384276D000F9FCB /* IconGeneratorParametersType.swift in Sources */,
 				55AFFBC12356F7B40011273F /* GMUKMLParser.m in Sources */,
 				55AFFBCC2356F7B40011273F /* GMULineString.m in Sources */,
-				556B9CA8235DCB9500AB713B /* NetworkManager.swift in Sources */,
-				55509534236B07F0009EB330 /* MapViewControllerViewModel.swift in Sources */,
-				55509537236B0923009EB330 /* GoogleMapViewController.swift in Sources */,
-				55B617D12372BCAD00AAC6BA /* Constants.swift in Sources */,
+				555A9CF92383CE5C005BE304 /* ButtonViewControllerProtocol.swift in Sources */,
+				556B9CA8235DCB9500AB713B /* GoogleMapsNetworkManager.swift in Sources */,
+				55C6F44E237C2C3000305F62 /* GoogleMapsViewModelOutput.swift in Sources */,
+				55509534236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift in Sources */,
+				55509537236B0923009EB330 /* GoogleMapsViewControllerType.swift in Sources */,
+				55B617D12372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift in Sources */,
 				55AFFBC52356F7B40011273F /* GMUPolygon.m in Sources */,
 				55AFFBC82356F7B40011273F /* GMUGroundOverlay.m in Sources */,
 				5551093023575218000B8AE1 /* MarkerCategory.swift in Sources */,
 				55AFFBCD2356F7B40011273F /* GMUGeoJSONParser.m in Sources */,
 				55AFFBC92356F7B40011273F /* GMUStyle.m in Sources */,
 				555C009F234F3E34000E2496 /* GoogleMapsViewController.swift in Sources */,
-				55509532236B075F009EB330 /* MapViewController.swift in Sources */,
+				5529FC21237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift in Sources */,
+				55509532236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift in Sources */,
 				557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */,
 				555C009B234F3E34000E2496 /* AppDelegate.swift in Sources */,
 				55AFFBBD2356F7B40011273F /* GMUStaticCluster.m in Sources */,
 				55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */,
-				554CC8B7234F702B00E95117 /* MapItem.swift in Sources */,
+				554CC8B7234F702B00E95117 /* POIItem.swift in Sources */,
 				55AFFBC72356F7B40011273F /* GMUFeature.m in Sources */,
 				55AFFBB72356F7B40011273F /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				5565FA1D23743A2B00ED769A /* DataForClusterConfigurator.swift in Sources */,
 				55AFFBBF2356F7B40011273F /* GMUGradient.m in Sources */,
 				55AFFBBA2356F7B40011273F /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
-				552A5307234F4DCF0056A6BD /* APIKey.swift in Sources */,
+				552A5307234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift in Sources */,
 				55AFFBC32356F7B40011273F /* GMUGeometryCollection.m in Sources */,
-				5575845F2366CA11008A3841 /* GoogleMapsViewModel.swift in Sources */,
+				5575845F2366CA11008A3841 /* GoogleMapsSceneViewModel.swift in Sources */,
 				55E8073D236C4D2C00EFBA3D /* MapPointTypeProtocol.swift in Sources */,
 				55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */,
 				55AFFBCA2356F7B40011273F /* GMUPoint.m in Sources */,
-				557933FD2350676400BFAA8E /* Coordinates.swift in Sources */,
-				55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSource.swift in Sources */,
+				557933FD2350676400BFAA8E /* MockCoordinates.swift in Sources */,
+				55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift in Sources */,
 				55AFFBC22356F7B40011273F /* GMUGeometryRenderer.m in Sources */,
 				55AFFBC62356F7B40011273F /* GMUStyleMap.m in Sources */,
 				557766DE23759173004592F1 /* BaseModuleProtocol.swift in Sources */,
 				55AFFBBE2356F7B40011273F /* GMUWeightedLatLng.m in Sources */,
+				559507D22382A24300F34AD9 /* AlertPresenterHolder.swift in Sources */,
+				55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */,
 				55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */,
+				55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */,
 				55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */,
 				557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */,
 				5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */,
-				5553427A23719AE1004558A4 /* ClusterAlgorithms.swift in Sources */,
+				5553427A23719AE1004558A4 /* ClusterAlgorithmType.swift in Sources */,
 				5502F73C23794DF6001003C9 /* Launcher.swift in Sources */,
+				559507CE2382A1CE00F34AD9 /* AlertPresentable.swift in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
+				555A9CF72383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift in Sources */,
+				559507D42382A26D00F34AD9 /* AlertPresenterProtocol.swift in Sources */,
 				5579340023507C3500BFAA8E /* MapPoint.swift in Sources */,
 				55AFFBCB2356F7B40011273F /* GMUPair.m in Sources */,
 				55AFFBC42356F7B40011273F /* GMUPlacemark.m in Sources */,
@@ -756,17 +902,24 @@
 				5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */,
 				55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */,
 				55AFFBC02356F7B40011273F /* GMUHeatmapTileLayer.m in Sources */,
-				557766D0237579AF004592F1 /* GoogleMapsModule.swift in Sources */,
+				557766D0237579AF004592F1 /* GoogleMapsSceneModule.swift in Sources */,
 				557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */,
-				557934022350A6EE00BFAA8E /* StartPoint.swift in Sources */,
+				557934022350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift in Sources */,
+				559E42A92383D3D500C3BC00 /* MapPointCategoryContainerType.swift in Sources */,
+				55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */,
+				5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */,
 				5565FA1B2374376A00ED769A /* ClusterConfiguratorParameters.swift in Sources */,
-				5553427623719629004558A4 /* ClusterConfigurator.swift in Sources */,
-				55E80737236C1D5700EFBA3D /* NetworkDataProvider.swift in Sources */,
+				55FA2FFE237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift in Sources */,
+				5553427623719629004558A4 /* ClusterConfiguratorProtocol.swift in Sources */,
+				55E0EB5B237D9B3A00B93676 /* GoogleMapsRouter.swift in Sources */,
+				559507D02382A1F900F34AD9 /* AlertShowable.swift in Sources */,
+				55E80737236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift in Sources */,
+				55E0EB59237D8C6200B93676 /* GoogleMapsRouterProtocol.swift in Sources */,
 				55AFFBBC2356F7B40011273F /* GMUDefaultClusterIconGenerator.m in Sources */,
 				556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */,
 				557766CE23755EFD004592F1 /* ButtonRouter.swift in Sources */,
 				55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */,
-				556B9CA5235DA92C00AB713B /* MoyaService.swift in Sources */,
+				556B9CA5235DA92C00AB713B /* GoogleMapsDataMoyaService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +930,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				555C00A1234F3E34000E2496 /* Base */,
+				5529FC1E237D6CAC00144605 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -785,6 +939,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				555C00A6234F3E35000E2496 /* Base */,
+				5529FC1F237D6CAC00144605 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -796,6 +951,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -856,6 +1012,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

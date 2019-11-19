@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ButtonRouterPorotocol: Routable {
-    func goToMapsViewController()
+    func showGoogleMaps()
 }

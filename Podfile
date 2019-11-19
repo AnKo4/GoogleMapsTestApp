@@ -7,6 +7,6 @@ target 'GoogleMapsTestApp' do
   use_frameworks!
 
   # Pods for GoogleMapsTestApp
-  pod 'GoogleMaps', '~> 3.5'
+  pod 'GoogleMaps', '~> 3.6'
   pod 'Moya', '14.0.0-beta.4'
 end
