@@ -14,12 +14,13 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     var viewModel: ButtonSceneViewModelProtocol!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureButton()
     }
-
+    
     private func configureButton() {
         button.setTitle(viewModel.buttonTitle, for: .normal)
     }

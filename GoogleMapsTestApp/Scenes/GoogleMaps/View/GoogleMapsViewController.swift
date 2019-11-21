@@ -106,6 +106,8 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         selectedMarker = marker
         markerIsSelected = true
         
+        viewModel.markerDidSelected()
+        
         return false
     }
 
@@ -148,6 +150,13 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
 
 extension UIViewController: AlertPresenterProtocol {
     func present(alert viewController: UIAlertController, animated: Bool) {
+        present(viewController, animated: animated)
+    }
+    
+}
+
+extension UIViewController: HasAbilityToPresent {
+    func show(viewController: UIViewController, animated: Bool) {
         present(viewController, animated: animated)
     }
     

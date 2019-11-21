@@ -36,6 +36,10 @@
 		556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556B9CAA235DCCEF00AB713B /* Geodata.swift */; };
 		556FE7F323868B3300CF0D1C /* MapObjectInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FE7F123868B3300CF0D1C /* MapObjectInfoViewController.swift */; };
 		556FE7F423868B3300CF0D1C /* MapObjectInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556FE7F223868B3300CF0D1C /* MapObjectInfoViewController.xib */; };
+		556FE7F62386A4EC00CF0D1C /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556FE7F52386A4EC00CF0D1C /* ButtonViewController.xib */; };
+		556FE7F82386C49900CF0D1C /* HasAbilityToPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FE7F72386C49900CF0D1C /* HasAbilityToPresent.swift */; };
+		556FE7FA2386C9B500CF0D1C /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FE7F92386C9B500CF0D1C /* ViewControllerPresentable.swift */; };
+		556FE7FC2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FE7FB2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift */; };
 		5575845F2366CA11008A3841 /* GoogleMapsSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */; };
 		557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */; };
 		557766CE23755EFD004592F1 /* ButtonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CD23755EFD004592F1 /* ButtonRouter.swift */; };
@@ -131,6 +135,10 @@
 		556B9CAA235DCCEF00AB713B /* Geodata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geodata.swift; sourceTree = "<group>"; };
 		556FE7F123868B3300CF0D1C /* MapObjectInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapObjectInfoViewController.swift; sourceTree = "<group>"; };
 		556FE7F223868B3300CF0D1C /* MapObjectInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapObjectInfoViewController.xib; sourceTree = "<group>"; };
+		556FE7F52386A4EC00CF0D1C /* ButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
+		556FE7F72386C49900CF0D1C /* HasAbilityToPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasAbilityToPresent.swift; sourceTree = "<group>"; };
+		556FE7F92386C9B500CF0D1C /* ViewControllerPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresentable.swift; sourceTree = "<group>"; };
+		556FE7FB2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterHolder.swift; sourceTree = "<group>"; };
 		5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsSceneViewModel.swift; sourceTree = "<group>"; };
 		557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouterPorotocol.swift; sourceTree = "<group>"; };
 		557766CD23755EFD004592F1 /* ButtonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouter.swift; sourceTree = "<group>"; };
@@ -476,6 +484,7 @@
 			children = (
 				5550952E236AFEC6009EB330 /* ButtonViewController.swift */,
 				555A9CF82383CE5C005BE304 /* ButtonViewControllerProtocol.swift */,
+				556FE7F52386A4EC00CF0D1C /* ButtonViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +555,9 @@
 				559507CF2382A1F900F34AD9 /* AlertShowable.swift */,
 				559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */,
 				559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */,
+				556FE7F72386C49900CF0D1C /* HasAbilityToPresent.swift */,
+				556FE7F92386C9B500CF0D1C /* ViewControllerPresentable.swift */,
+				556FE7FB2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift */,
 			);
 			path = ModuleProtocols;
 			sourceTree = "<group>";
@@ -798,6 +810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				556FE7F423868B3300CF0D1C /* MapObjectInfoViewController.xib in Resources */,
+				556FE7F62386A4EC00CF0D1C /* ButtonViewController.xib in Resources */,
 				555C00A7234F3E35000E2496 /* LaunchScreen.storyboard in Resources */,
 				555C00A4234F3E35000E2496 /* Assets.xcassets in Resources */,
 				555C00A2234F3E34000E2496 /* Main.storyboard in Resources */,
@@ -913,6 +926,7 @@
 				554CC8B7234F702B00E95117 /* POIItem.swift in Sources */,
 				55AFFBC72356F7B40011273F /* GMUFeature.m in Sources */,
 				55AFFBB72356F7B40011273F /* GMUGridBasedClusterAlgorithm.m in Sources */,
+				556FE7F82386C49900CF0D1C /* HasAbilityToPresent.swift in Sources */,
 				5565FA1D23743A2B00ED769A /* DataForClusterConfigurator.swift in Sources */,
 				55AFFBBF2356F7B40011273F /* GMUGradient.m in Sources */,
 				55AFFBBA2356F7B40011273F /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
@@ -920,6 +934,7 @@
 				55AFFBC32356F7B40011273F /* GMUGeometryCollection.m in Sources */,
 				5575845F2366CA11008A3841 /* GoogleMapsSceneViewModel.swift in Sources */,
 				55E8073D236C4D2C00EFBA3D /* MapPointTypeProtocol.swift in Sources */,
+				556FE7FA2386C9B500CF0D1C /* ViewControllerPresentable.swift in Sources */,
 				55B617DA2372DB7100AAC6BA /* Routable.swift in Sources */,
 				55AFFBCA2356F7B40011273F /* GMUPoint.m in Sources */,
 				557933FD2350676400BFAA8E /* MockCoordinates.swift in Sources */,
@@ -932,6 +947,7 @@
 				55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */,
 				55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */,
 				55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */,
+				556FE7FC2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift in Sources */,
 				55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */,
 				556FE7F323868B3300CF0D1C /* MapObjectInfoViewController.swift in Sources */,
 				557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */,

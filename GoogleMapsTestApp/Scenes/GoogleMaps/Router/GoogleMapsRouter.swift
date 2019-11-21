@@ -10,10 +10,13 @@ import Foundation
 
 class GoogleMapsRouter: GoogleMapsRouterProtocol {
     
+    weak var viewControllerPresenter: HasAbilityToPresent?
     weak var alertPresenter: AlertPresenterProtocol?
     
-    init(presenter: AlertPresenterProtocol) {
+    init(presenter: AlertPresenterProtocol & HasAbilityToPresent) {
         self.alertPresenter = presenter
+        self.viewControllerPresenter = presenter
     }
+
 
 }
