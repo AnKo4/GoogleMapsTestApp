@@ -9,6 +9,12 @@
 import UIKit
 
 class MapObjectInfoViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.layer.cornerRadius = 5
+    }
 
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true)

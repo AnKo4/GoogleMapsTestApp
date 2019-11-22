@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ViewControllerPresenterHolder: class {
-    var viewControllerPresenter: HasAbilityToPresent? { get }
+    var controllerPresenter: HasAbilityToPresent? { get }
 }

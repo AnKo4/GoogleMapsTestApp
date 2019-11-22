@@ -15,6 +15,6 @@ protocol ViewControllerPresentable: class {
 extension ViewControllerPresentable where Self: ViewControllerPresenterHolder {
     func showViewController() {
         let controller = MapObjectInfoViewController(nibName: MapObjectInfoViewController.id, bundle: nil)
-        viewControllerPresenter?.show(viewController: controller, animated: true)
+        controllerPresenter?.show(viewController: controller, animated: true)
     }
 }

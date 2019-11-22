@@ -18,21 +18,76 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDZ-Jd-dYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yB-e4-J2r" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="845"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oju-us-pjz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="845"/>
+                                    <subviews>
+                                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-E9-IqP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-Xu-eb5">
+                                            <rect key="frame" x="0.0" y="207" width="414" height="330"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIz-bk-jcS">
+                                            <rect key="frame" x="0.0" y="537" width="414" height="308"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="aIz-bk-jcS" secondAttribute="trailing" id="8lK-6k-kIn"/>
+                                        <constraint firstItem="SU5-Xu-eb5" firstAttribute="leading" secondItem="oju-us-pjz" secondAttribute="leading" id="MWa-pR-OGd"/>
+                                        <constraint firstItem="3pm-E9-IqP" firstAttribute="leading" secondItem="oju-us-pjz" secondAttribute="leading" id="VYa-mG-yaW"/>
+                                        <constraint firstAttribute="trailing" secondItem="3pm-E9-IqP" secondAttribute="trailing" id="axf-RZ-FTf"/>
+                                        <constraint firstItem="aIz-bk-jcS" firstAttribute="leading" secondItem="oju-us-pjz" secondAttribute="leading" id="sof-U1-X1x"/>
+                                        <constraint firstAttribute="trailing" secondItem="SU5-Xu-eb5" secondAttribute="trailing" id="utw-56-I7E"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="oju-us-pjz" firstAttribute="top" secondItem="1yB-e4-J2r" secondAttribute="top" id="8Sa-ei-waK"/>
+                                <constraint firstAttribute="trailing" secondItem="oju-us-pjz" secondAttribute="trailing" id="JRZ-XK-Vfd"/>
+                                <constraint firstItem="oju-us-pjz" firstAttribute="leading" secondItem="1yB-e4-J2r" secondAttribute="leading" id="b0a-jZ-Njb"/>
+                                <constraint firstAttribute="bottom" secondItem="oju-us-pjz" secondAttribute="bottom" id="wxq-WY-MuY"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1yB-e4-J2r" firstAttribute="leading" secondItem="WDZ-Jd-dYQ" secondAttribute="leading" id="Hbk-XQ-JfI"/>
+                        <constraint firstAttribute="bottom" secondItem="1yB-e4-J2r" secondAttribute="bottom" id="P9O-bK-3Lr"/>
+                        <constraint firstItem="1yB-e4-J2r" firstAttribute="top" secondItem="WDZ-Jd-dYQ" secondAttribute="top" id="aFz-NW-d5G"/>
+                        <constraint firstAttribute="trailing" secondItem="1yB-e4-J2r" secondAttribute="trailing" id="qs2-q4-bcg"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Quu-lz-NXf"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Bwa-z4-fzi"/>
+                </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-zv-wzu">
-                    <rect key="frame" x="195" y="356" width="24" height="24"/>
+                    <rect key="frame" x="374.66666666666669" y="16.333333333333332" width="24" height="23.999999999999996"/>
                     <state key="normal" image="btn_close"/>
                     <connections>
                         <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="Wbg-43-jZ2"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.79611504079999995" green="0.79599207640000003" blue="0.80000168090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="XwG-zv-wzu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dgl-lf-0DA"/>
-                <constraint firstItem="XwG-zv-wzu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u1Q-sC-QYc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WDZ-Jd-dYQ" secondAttribute="bottom" id="NTX-xm-IiN"/>
+                <constraint firstItem="1yB-e4-J2r" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="Ogy-Zz-pIy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XwG-zv-wzu" secondAttribute="trailing" constant="15.25" id="R8K-JC-2Ne"/>
+                <constraint firstItem="WDZ-Jd-dYQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tqd-xO-Bau"/>
+                <constraint firstItem="WDZ-Jd-dYQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bgn-Sg-FQ6"/>
+                <constraint firstItem="XwG-zv-wzu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16.25" id="mPn-1Y-ECf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WDZ-Jd-dYQ" secondAttribute="trailing" id="vpg-sy-8it"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="116"/>
+            <point key="canvasLocation" x="137.68115942028987" y="115.7608695652174"/>
         </view>
     </objects>
     <resources>
