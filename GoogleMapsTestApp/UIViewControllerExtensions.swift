@@ -22,3 +22,9 @@ extension UIViewController {
     }
 
 }
+
+extension UIView {
+    class var id: String {
+        return String(describing: self)
+    }
+}

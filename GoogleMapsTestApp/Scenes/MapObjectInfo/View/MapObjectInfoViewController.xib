@@ -27,7 +27,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oju-us-pjz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="845"/>
                                     <subviews>
-                                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-E9-IqP">
+                                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-E9-IqP" userLabel="Object title" customClass="ObjectTitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </view>

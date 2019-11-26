@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonViewController" customModule="GoogleMapsTestApp" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="Jvh-2m-GpH" id="Z4o-xa-TdU"/>
+                <outlet property="rating" destination="nJx-st-x3E" id="cxU-2q-aYJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="IGY-uz-P2a"/>
             </connections>
         </placeholder>
@@ -26,6 +27,11 @@
                         <action selector="buttonDidTap:" destination="-1" eventType="touchUpInside" id="sod-pP-bg5"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJx-st-x3E" customClass="Rating" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="123" width="298" height="125"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -33,7 +39,7 @@
                 <constraint firstItem="Jvh-2m-GpH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wlQ-Gz-teb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="139" y="116"/>
+            <point key="canvasLocation" x="137.68115942028987" y="115.7608695652174"/>
         </view>
     </objects>
 </document>
