@@ -16,9 +16,6 @@ class MapObjectInfoViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.layer.cornerRadius = 5
-//        let view = UINib(nibName: ObjectTitleView.id, bundle: .main).instantiate(withOwner: nil, options: nil).first
-//        let view = ObjectTitleView()
-//        modulesStack.addArrangedSubview(view)
     }
 
     @IBAction func closeButtonTapped(_ sender: UIButton) {

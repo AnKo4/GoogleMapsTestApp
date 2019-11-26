@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ObjectTitleView: UIView {
+@IBDesignable class ObjectTitleView: UIView {
 
-    @IBOutlet weak var objectTitleLabel: UILabel!
-    @IBOutlet weak var objectDescriptionLabel: UILabel!
-    @IBOutlet weak var objectRating: Rating!
+    @IBOutlet private weak var objectTitleLabel: UILabel!
+    @IBOutlet private weak var objectDescriptionLabel: UILabel!
+    @IBOutlet private weak var objectRating: Rating!
+    @IBOutlet private weak var distanceButton: UIButton!
     
     
     override init(frame: CGRect) {
@@ -35,6 +36,34 @@ class ObjectTitleView: UIView {
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
+        configureDistanceButton()
+        // MARK: - remove these 2 lines in future
+        let ratingData = RatingData(value: 2, voicesCount: 23, agency: "Yelp")
+        objectRating.showRating(with: ratingData)
+    }
+    
+    private func configureDistanceButton() {
+        distanceButton.layer.cornerRadius = 5
+        distanceButton.titleLabel?.numberOfLines = 0
+    }
+    
+}
+
+extension ObjectTitleView: ObjectTitleOutputProtocol {
+    func showObjectTitle(_ title: String) {
+        objectTitleLabel.text = title
+    }
+    
+    func showObjectDescription(_ description: String) {
+        objectDescriptionLabel.text = description
+    }
+    
+    func showObjectRarting(_ rating: RatingInfo) {
+        objectRating.showRating(with: rating)
+    }
+    
+    func showDistanceButtonTitle(_ title: String) {
+        distanceButton.setTitle("Directions" + "\n" + "\(title)", for: .normal)
     }
     
 }

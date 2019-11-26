@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Rating: UIView {
+@IBDesignable class Rating: UIView {
     
     @IBOutlet private weak var ratingStarsStack: UIStackView!
     @IBOutlet private weak var ratingTextLabel: UILabel!

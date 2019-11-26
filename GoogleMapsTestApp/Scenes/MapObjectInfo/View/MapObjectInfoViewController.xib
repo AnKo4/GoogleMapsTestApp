@@ -22,21 +22,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yB-e4-J2r" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="845"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="980"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oju-us-pjz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="845"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="980"/>
                                     <subviews>
                                         <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pm-E9-IqP" userLabel="Object title" customClass="ObjectTitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="342"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </view>
                                         <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-Xu-eb5">
-                                            <rect key="frame" x="0.0" y="207" width="414" height="330"/>
+                                            <rect key="frame" x="0.0" y="342" width="414" height="330"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIz-bk-jcS">
-                                            <rect key="frame" x="0.0" y="537" width="414" height="308"/>
+                                            <rect key="frame" x="0.0" y="672" width="414" height="308"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </view>
                                     </subviews>

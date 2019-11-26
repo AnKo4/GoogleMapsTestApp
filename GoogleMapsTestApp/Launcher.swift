@@ -12,7 +12,7 @@ class Launcher {
     static func launch(with window: UIWindow?) {
         
         let navController = UINavigationController()
-        let module = ButtonSceneModule(buttonTitle: "Click \n me :)", navController: navController)
+        let module = ButtonSceneModule(buttonTitle: "Click" + "\n" + "me :)", navController: navController)
         guard let view = module.view else { return }
         navController.setViewControllers([view], animated: true)
         

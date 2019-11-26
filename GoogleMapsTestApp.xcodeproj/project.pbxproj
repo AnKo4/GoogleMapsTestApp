@@ -12,6 +12,9 @@
 		5529FC21237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529FC20237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift */; };
 		5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5529FC22237D72F000144605 /* GoogleMapsNetworkDataProvider.swift */; };
 		552A5307234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A5306234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift */; };
+		5532F8F6238D619C00028D86 /* ObjectTitleOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5532F8F5238D619C00028D86 /* ObjectTitleOutputProtocol.swift */; };
+		5532F8F9238D644200028D86 /* ObjectTitleDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5532F8F8238D644200028D86 /* ObjectTitleDataProtocol.swift */; };
+		5532F8FB238D649C00028D86 /* ObjectTitleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5532F8FA238D649C00028D86 /* ObjectTitleData.swift */; };
 		554CBF62238BE75E00773795 /* ObjectTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CBF61238BE75E00773795 /* ObjectTitleView.swift */; };
 		554CBF64238BE77200773795 /* ObjectTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554CBF63238BE77200773795 /* ObjectTitleView.xib */; };
 		554CC8B7234F702B00E95117 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC8B6234F702B00E95117 /* POIItem.swift */; };
@@ -49,6 +52,7 @@
 		557510D4238D0E9000FF4AEA /* RatingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510D3238D0E9000FF4AEA /* RatingData.swift */; };
 		557510D6238D117D00FF4AEA /* RatingShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510D5238D117D00FF4AEA /* RatingShowable.swift */; };
 		557510D9238D14A900FF4AEA /* RatingInformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510D8238D14A900FF4AEA /* RatingInformer.swift */; };
+		557510DB238D534900FF4AEA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510DA238D534900FF4AEA /* UIViewExtensions.swift */; };
 		5575845F2366CA11008A3841 /* GoogleMapsSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */; };
 		557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */; };
 		557766CE23755EFD004592F1 /* ButtonRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557766CD23755EFD004592F1 /* ButtonRouter.swift */; };
@@ -118,6 +122,9 @@
 		552A5306234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsUtilsAPIKey.swift; sourceTree = "<group>"; };
 		552A532B234F54320056A6BD /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMUMarkerClustering.h; path = ../GMUMarkerClustering.h; sourceTree = "<group>"; };
 		552A536D234F55060056A6BD /* GoogleMapsTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleMapsTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		5532F8F5238D619C00028D86 /* ObjectTitleOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleOutputProtocol.swift; sourceTree = "<group>"; };
+		5532F8F8238D644200028D86 /* ObjectTitleDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleDataProtocol.swift; sourceTree = "<group>"; };
+		5532F8FA238D649C00028D86 /* ObjectTitleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleData.swift; sourceTree = "<group>"; };
 		554CBF61238BE75E00773795 /* ObjectTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleView.swift; sourceTree = "<group>"; };
 		554CBF63238BE77200773795 /* ObjectTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ObjectTitleView.xib; sourceTree = "<group>"; };
 		554CC8B6234F702B00E95117 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
@@ -157,6 +164,7 @@
 		557510D3238D0E9000FF4AEA /* RatingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingData.swift; sourceTree = "<group>"; };
 		557510D5238D117D00FF4AEA /* RatingShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingShowable.swift; sourceTree = "<group>"; };
 		557510D8238D14A900FF4AEA /* RatingInformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingInformer.swift; sourceTree = "<group>"; };
+		557510DA238D534900FF4AEA /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		5575845E2366CA11008A3841 /* GoogleMapsSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsSceneViewModel.swift; sourceTree = "<group>"; };
 		557766CB23755ECF004592F1 /* ButtonRouterPorotocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouterPorotocol.swift; sourceTree = "<group>"; };
 		557766CD23755EFD004592F1 /* ButtonRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonRouter.swift; sourceTree = "<group>"; };
@@ -282,6 +290,15 @@
 			path = "Google-Maps-iOS-Utils";
 			sourceTree = "<group>";
 		};
+		5532F8F7238D640C00028D86 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				5532F8F8238D644200028D86 /* ObjectTitleDataProtocol.swift */,
+				5532F8FA238D649C00028D86 /* ObjectTitleData.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
 		55437D392383CB8B007CE015 /* UI elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +327,7 @@
 		554CBF5D238BE56B00773795 /* ObjectTitle */ = {
 			isa = PBXGroup;
 			children = (
+				5532F8F7238D640C00028D86 /* Structures */,
 				554CBF5E238BE65D00773795 /* View */,
 			);
 			path = ObjectTitle;
@@ -320,6 +338,7 @@
 			children = (
 				554CBF61238BE75E00773795 /* ObjectTitleView.swift */,
 				554CBF63238BE77200773795 /* ObjectTitleView.xib */,
+				5532F8F5238D619C00028D86 /* ObjectTitleOutputProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */,
+				557510DA238D534900FF4AEA /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1032,6 +1052,7 @@
 				557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */,
 				555C009B234F3E34000E2496 /* AppDelegate.swift in Sources */,
 				55AFFBBD2356F7B40011273F /* GMUStaticCluster.m in Sources */,
+				5532F8F6238D619C00028D86 /* ObjectTitleOutputProtocol.swift in Sources */,
 				55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */,
 				554CC8B7234F702B00E95117 /* POIItem.swift in Sources */,
 				55AFFBC72356F7B40011273F /* GMUFeature.m in Sources */,
@@ -1039,6 +1060,7 @@
 				557510D4238D0E9000FF4AEA /* RatingData.swift in Sources */,
 				556FE7F82386C49900CF0D1C /* HasAbilityToPresent.swift in Sources */,
 				5565FA1D23743A2B00ED769A /* DataForClusterConfigurator.swift in Sources */,
+				557510DB238D534900FF4AEA /* UIViewExtensions.swift in Sources */,
 				55AFFBBF2356F7B40011273F /* GMUGradient.m in Sources */,
 				55AFFBBA2356F7B40011273F /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
 				552A5307234F4DCF0056A6BD /* GoogleMapsUtilsAPIKey.swift in Sources */,
@@ -1065,6 +1087,7 @@
 				557766E023759213004592F1 /* ButtonSceneViewModel.swift in Sources */,
 				5550952F236AFEC6009EB330 /* ButtonViewController.swift in Sources */,
 				5553427A23719AE1004558A4 /* ClusterAlgorithmType.swift in Sources */,
+				5532F8F9238D644200028D86 /* ObjectTitleDataProtocol.swift in Sources */,
 				5502F73C23794DF6001003C9 /* Launcher.swift in Sources */,
 				559507CE2382A1CE00F34AD9 /* AlertPresentable.swift in Sources */,
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
@@ -1078,6 +1101,7 @@
 				5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */,
 				557510D2238D0E6A00FF4AEA /* RatingInfo.swift in Sources */,
 				554CBF62238BE75E00773795 /* ObjectTitleView.swift in Sources */,
+				5532F8FB238D649C00028D86 /* ObjectTitleData.swift in Sources */,
 				557510D9238D14A900FF4AEA /* RatingInformer.swift in Sources */,
 				55AFFBCE2356F7B40011273F /* GQTPointQuadTree.m in Sources */,
 				55AFFBC02356F7B40011273F /* GMUHeatmapTileLayer.m in Sources */,
