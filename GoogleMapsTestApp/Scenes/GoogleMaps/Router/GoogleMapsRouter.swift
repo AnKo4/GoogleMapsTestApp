@@ -17,6 +17,11 @@ class GoogleMapsRouter: GoogleMapsRouterProtocol {
         self.alertPresenter = presenter
         self.controllerPresenter = presenter
     }
-
+    
+    func showObjectInfo() {
+        let module = MapObjectInfoModule()
+        guard let view = module.view else { return }
+        controllerPresenter?.show(viewController: view, animated: true)
+    }
 
 }

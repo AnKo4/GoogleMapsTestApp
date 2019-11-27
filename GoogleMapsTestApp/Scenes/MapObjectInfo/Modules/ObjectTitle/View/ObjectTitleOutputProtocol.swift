@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ObjectTitleOutputProtocol {
+protocol ObjectTitlePresenterOutput: class {
     func showObjectTitle(_ title: String)
     func showObjectDescription(_ description: String)
     func showObjectRarting(_ rating: RatingInfo)

@@ -8,17 +8,38 @@
 
 import UIKit
 
-class MapObjectInfoViewController: UIViewController {
-    
+class MapObjectInfoViewController: UIViewController, ModulesHolderProtocol, MapObjectInfoProtocol {
+
     @IBOutlet weak var modulesStack: UIStackView!
+    
+    var presenter: MapObjectInfoPresenterProtocol?
+    var modules: [UIView] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureView()
+    }
+    
+    private func configureView() {
         self.view.layer.cornerRadius = 5
+        addModules()
+    }
+    
+    func addModules() {
+        for module in modules {
+            modulesStack.addArrangedSubview(module)
+        }
     }
 
-    @IBAction func closeButtonTapped(_ sender: UIButton) {
+    @IBAction private func closeButtonTapped(_ sender: UIButton) {
+        presenter?.closeButtonDidTap()
+    }
+}
+
+extension MapObjectInfoViewController: MapObjectInfoRouterOutput {
+    func close() {
         dismiss(animated: true)
     }
 }

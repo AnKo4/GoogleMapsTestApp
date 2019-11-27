@@ -55,7 +55,7 @@ class GoogleMapsSceneViewModel: GoogleMapsSceneViewModelProtocol {
     }
     
     func markerDidSelected() {
-        router.showViewController()
+        router.showObjectInfo()
     }
     
     private func makeIconGeneratorParameters(buckets: [NSNumber]?, colors: [UIColor]?) -> IconGeneratorParametersType {

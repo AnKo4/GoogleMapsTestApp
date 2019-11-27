@@ -8,12 +8,14 @@
 
 import UIKit
 
-@IBDesignable class ObjectTitleView: UIView {
+@IBDesignable class ObjectTitleView: UIView, ObjectTitleViewProtocol {
 
     @IBOutlet private weak var objectTitleLabel: UILabel!
     @IBOutlet private weak var objectDescriptionLabel: UILabel!
     @IBOutlet private weak var objectRating: Rating!
     @IBOutlet private weak var distanceButton: UIButton!
+    
+    weak var presenter: ObjectTitlePresenterProtocol?
     
     
     override init(frame: CGRect) {
@@ -49,7 +51,7 @@ import UIKit
     
 }
 
-extension ObjectTitleView: ObjectTitleOutputProtocol {
+extension ObjectTitleView: ObjectTitlePresenterOutput {
     func showObjectTitle(_ title: String) {
         objectTitleLabel.text = title
     }
