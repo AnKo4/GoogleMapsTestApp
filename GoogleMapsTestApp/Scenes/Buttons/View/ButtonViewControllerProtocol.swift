@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ButtonViewControllerProtocol: class {
-    var viewModel: ButtonSceneViewModelProtocol! { get set }
+    var viewModel: ButtonSceneViewModelProtocol? { get set }
 }

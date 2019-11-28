@@ -10,22 +10,20 @@ import Foundation
 
 class MapObjectInfoModule: BaseModuleProtocol {
     
-    var view: (UIViewController & ModulesHolderProtocol & MapObjectInfoProtocol)?
+    var view: UIViewController? // & ModulesHolderProtocol & MapObjectInfoProtocol & MapObjectInfoPresenterOutput)?
+    var submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol
     
-    init() {
-        var modules: [UIView] = []
-        
+    init(submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol) {
+        self.submodulesFactory = submodulesFactory
         let view = MapObjectInfoViewController(nibName: MapObjectInfoViewController.id, bundle: nil)
 
-        let router = MapsObjectInfoRouter(view: view)
-        let presenter = MapObjectInfoPresenter(router: router)
+        let interactor = MapObjectInfoInteractor()
+        let router = MapObjectInfoRouter(view: view)
+        let presenter = MapObjectInfoPresenter(view: view, interactor: interactor, router: router)
         view.presenter = presenter
+        interactor.presenter = presenter
         
-        let objectTitleModule = ObjectTitleModule()
-        modules.append(objectTitleModule.view)
-
-        view.modules = modules
+        view.modules = submodulesFactory.makeModules()
         self.view = view
     }
-    
 }

@@ -9,13 +9,6 @@
 import Foundation
 
 protocol MapObjectInfoPresenterProtocol: class {
-    var router: MapsObjectInfoRouter? { get }
-    
-    func closeButtonDidTap()
-}
-
-extension MapObjectInfoPresenterProtocol {
-    func closeButtonDidTap() {
-        router?.popMapsObjectInfo()
-    }
+    var router: MapObjectInfoRouterInput { get }
+    var interactor: MapObjectInfoInteractorInput { get }
 }

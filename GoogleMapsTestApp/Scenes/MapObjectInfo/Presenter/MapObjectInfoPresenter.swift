@@ -9,9 +9,22 @@
 import Foundation
 
 class MapObjectInfoPresenter: MapObjectInfoPresenterProtocol {
-    var router: MapsObjectInfoRouter?
-    
-    init(router: MapsObjectInfoRouter) {
+    var view: MapObjectInfoPresenterOutput
+    var interactor: MapObjectInfoInteractorInput
+    var router: MapObjectInfoRouterInput
+
+    init(view: MapObjectInfoPresenterOutput, interactor: MapObjectInfoInteractorInput,
+         router: MapObjectInfoRouterInput) {
+        self.view = view
+        self.interactor = interactor
         self.router = router
     }
+}
+
+extension MapObjectInfoPresenter: MapObjectInfoPresenterInput {
+    
+}
+
+extension MapObjectInfoPresenter: MapObjectInfoInteractorOutput {
+    
 }

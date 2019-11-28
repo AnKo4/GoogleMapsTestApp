@@ -11,10 +11,3 @@ import Foundation
 protocol ViewControllerPresentable: class {
     func showObjectInfo()
 }
-
-//extension ViewControllerPresentable where Self: ViewControllerPresenterHolder {
-//    func showObjectInfo() {
-//        let controller = MapObjectInfoViewController(nibName: MapObjectInfoViewController.id, bundle: nil)
-//        controllerPresenter?.show(viewController: controller, animated: true)
-//    }
-//}

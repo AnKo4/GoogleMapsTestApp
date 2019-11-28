@@ -12,7 +12,7 @@ class MapObjectInfoViewController: UIViewController, ModulesHolderProtocol, MapO
 
     @IBOutlet weak var modulesStack: UIStackView!
     
-    var presenter: MapObjectInfoPresenterProtocol?
+    var presenter: MapObjectInfoPresenterInput?
     var modules: [UIView] = []
     
     
@@ -36,6 +36,10 @@ class MapObjectInfoViewController: UIViewController, ModulesHolderProtocol, MapO
     @IBAction private func closeButtonTapped(_ sender: UIButton) {
         presenter?.closeButtonDidTap()
     }
+}
+
+extension MapObjectInfoViewController: MapObjectInfoPresenterOutput {
+    
 }
 
 extension MapObjectInfoViewController: MapObjectInfoRouterOutput {

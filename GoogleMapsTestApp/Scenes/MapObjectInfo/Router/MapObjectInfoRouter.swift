@@ -8,10 +8,14 @@
 
 import Foundation
 
-class MapsObjectInfoRouter: MapsObjectInfoRouterProtocol {
-    var view: MapObjectInfoRouterOutput?
+class MapObjectInfoRouter: MapObjectInfoRouterProtocol {
+    weak var view: MapObjectInfoRouterOutput?
     
     init(view: MapObjectInfoRouterOutput) {
         self.view = view
     }
+}
+
+extension MapObjectInfoRouter: MapObjectInfoRouterInput {
+    
 }

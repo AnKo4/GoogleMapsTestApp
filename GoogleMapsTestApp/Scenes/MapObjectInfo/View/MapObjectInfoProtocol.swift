@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MapObjectInfoProtocol: class {
-    var presenter: MapObjectInfoPresenterProtocol? { get set }
+    var presenter: MapObjectInfoPresenterInput? { get set }
 }

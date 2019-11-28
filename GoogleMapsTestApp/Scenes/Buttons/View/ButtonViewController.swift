@@ -13,7 +13,7 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var rating: Rating!
     
-    var viewModel: ButtonSceneViewModelProtocol!
+    var viewModel: ButtonSceneViewModelProtocol?
 
 
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
     
     private func configureButton() {
         button.titleLabel?.numberOfLines = 0
-        button.setTitle(viewModel.buttonTitle, for: .normal)
+        button.setTitle(viewModel?.buttonTitle, for: .normal)
     }
 
     private func showRating() {
@@ -34,6 +34,6 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
     }
     
     @IBAction func buttonDidTap(_ sender: UIButton) {
-        viewModel.route()
+        viewModel?.route()
     }
 }

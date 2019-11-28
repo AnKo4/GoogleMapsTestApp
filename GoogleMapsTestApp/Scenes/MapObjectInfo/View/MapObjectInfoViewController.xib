@@ -37,7 +37,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="Bwa-z4-fzi"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-zv-wzu">
-                    <rect key="frame" x="374.66666666666669" y="16.333333333333332" width="24" height="23.999999999999996"/>
+                    <rect key="frame" x="350.66666666666669" y="16.333333333333329" width="48" height="48"/>
                     <state key="normal" image="btn_close"/>
                     <connections>
                         <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="Wbg-43-jZ2"/>

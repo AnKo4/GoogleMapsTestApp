@@ -8,14 +8,6 @@
 
 import Foundation
 
-protocol MapsObjectInfoRouterProtocol: class {
+protocol MapObjectInfoRouterProtocol: class {
     var view: MapObjectInfoRouterOutput? { get }
-    
-    func popMapsObjectInfo()
-}
-
-extension MapsObjectInfoRouterProtocol {
-    func popMapsObjectInfo() {
-        view?.close()
-    }
 }
