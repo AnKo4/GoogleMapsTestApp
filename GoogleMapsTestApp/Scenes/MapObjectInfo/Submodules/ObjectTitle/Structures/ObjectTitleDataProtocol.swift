@@ -11,6 +11,6 @@ import Foundation
 protocol ObjectTitleDataProtocol {
     var objectTitle: String { get }
     var objectDescription: String { get }
-    var objectRating: RatingInfo { get }
+    var objectRating: RatingInfoData { get }
     var distanceButtonTitle: String { get }
 }

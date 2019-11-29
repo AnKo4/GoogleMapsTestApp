@@ -8,6 +8,8 @@
 
 import Foundation
 
-class ObjectTitleRouter: ObjectTitleRouterProtocol {
+class ObjectTitleRouter: ObjectTitleRouterProtocol, AlertPresenterHolder, AlertShowable {
+    var alertPresenter: AlertPresenterProtocol?
+    
     
 }

@@ -14,7 +14,9 @@ class ObjectTitleModule: BaseModuleProtocol {
     
     init() {
         let view = ObjectTitleView()
-        let interactor = ObjectTitleInteractor()
+        let service = ObjectTitleFakeService()
+        let interactor = ObjectTitleInteractor(service: service)
+        service.interactor = interactor
         let router = ObjectTitleRouter()
         let presenter = ObjectTitlePresenter(interactor: interactor, router: router)
         view.presenter = presenter

@@ -9,9 +9,15 @@
 import Foundation
 
 // MARK: - Struct for presenter
-struct ObjectTitleData: ObjectTitleDataProtocol {
+struct ObjectTitleData: ObjectTitleDataProtocol, Codable {
     var objectTitle: String
     var objectDescription: String
-    var objectRating: RatingInfo
+    var objectRating: RatingInfoData
     var distanceButtonTitle: String
+}
+
+struct RatingInfoData: RatingInfo, Codable {
+    var value: Int
+    var voicesCount: Int
+    var agency: String
 }

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ObjectTitleInteractorProtocol: class {
-    
+    var service: ObjectTitleServiceInput { get }
+    var presenter: ObjectTitleInteractorOutput? { get set }
 }
