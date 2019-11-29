@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MapObjectInfoPresenterProtocol: class {
+    var view: MapObjectInfoPresenterOutput { get }
     var router: MapObjectInfoRouterInput { get }
     var interactor: MapObjectInfoInteractorInput { get }
 }
