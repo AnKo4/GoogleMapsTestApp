@@ -18,9 +18,9 @@ class GoogleMapsRouter: GoogleMapsRouterProtocol {
         self.controllerPresenter = presenter
     }
     
-    func showObjectInfo() {
+    func showObjectInfo(objectId: Int) {
         let submodulesFactory = MapObjectInfoSubmodulesFactory()
-        let module = MapObjectInfoModule(submodulesFactory: submodulesFactory)
+        let module = MapObjectInfoModule(submodulesFactory: submodulesFactory, objectId: objectId)
         guard let view = module.view else { return }
         controllerPresenter?.show(viewController: view, animated: true)
     }

@@ -106,7 +106,7 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         selectedMarker = marker
         markerIsSelected = true
         
-        viewModel.markerDidSelected()
+        viewModel.markerDidSelected(objectId: markerInfo.category.markerId)
         
         return false
     }

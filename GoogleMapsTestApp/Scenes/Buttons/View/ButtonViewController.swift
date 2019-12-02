@@ -11,7 +11,6 @@ import UIKit
 class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var rating: Rating!
     
     var viewModel: ButtonSceneViewModelProtocol?
 
@@ -20,7 +19,6 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
         super.viewDidLoad()
 
         configureButton()
-        showRating()
     }
     
     private func configureButton() {
@@ -28,11 +26,6 @@ class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
         button.setTitle(viewModel?.buttonTitle, for: .normal)
     }
 
-    private func showRating() {
-        let data = RatingData(value: 2, voicesCount: 3, agency: "IMDB")
-        rating.showRating(with: data)
-    }
-    
     @IBAction func buttonDidTap(_ sender: UIButton) {
         viewModel?.route()
     }

@@ -8,30 +8,37 @@
 
 import Foundation
 
-protocol ObjectTitlePresenterProtocol: class {
-    var view: ObjectTitlePresenterOutput? { get }
-    var interactor: ObjectTitleInteractorProtocol? { get }
-    var router: ObjectTitleRouterProtocol? { get }
-    func interactorDidFetchData(_ data: ObjectTitleDataProtocol)
+class ObjectTitlePresenter: ObjectTitlePresenterProtocol {
     
+    var view: ObjectTitlePresenterOutput
+    var interactor: ObjectTitleInteractorInput
+    var externalPresenter: ExternalPresenterInput
+
+    
+    init(view: ObjectTitlePresenterOutput, interactor: ObjectTitleInteractorInput,
+         externalPresenter: ExternalPresenterInput) {
+        self.view = view
+        self.interactor = interactor
+        self.externalPresenter = externalPresenter
+    }
 }
 
-class ObjectTitlePresenter: ObjectTitlePresenterProtocol {
+extension ObjectTitlePresenter: ObjectTitleInteractorOutput {
 
-    var view: ObjectTitlePresenterOutput?
-    var interactor: ObjectTitleInteractorProtocol?
-    var router: ObjectTitleRouterProtocol?
-
-    
-    init(interactor: ObjectTitleInteractorProtocol, router: ObjectTitleRouterProtocol) {
-        self.interactor = interactor
-        self.router = router
+    func interactorDidFetchData(_ data: ObjectTitleDataProtocol) {
+        view.showObjectTitle(data.objectTitle)
+        view.showObjectDescription(data.objectDescription)
+        view.showObjectRarting(data.objectRating)
+        view.showDistanceButtonTitle(data.distanceButtonTitle)
     }
     
-    func interactorDidFetchData(_ data: ObjectTitleDataProtocol) {
-        view?.showObjectTitle(data.objectTitle)
-        view?.showObjectDescription(data.objectDescription)
-        view?.showObjectRarting(data.objectRating)
-        view?.showDistanceButtonTitle(data.distanceButtonTitle)
+    func interactorDidReceiveError(_ error: Error) {
+        externalPresenter.submoduleDidReceiveError(error)
+    }
+}
+
+extension ObjectTitlePresenter: ObjectTitlePresenterInput {
+    func viewCompletedConfiguration() {
+        interactor.viewNeedsData()
     }
 }

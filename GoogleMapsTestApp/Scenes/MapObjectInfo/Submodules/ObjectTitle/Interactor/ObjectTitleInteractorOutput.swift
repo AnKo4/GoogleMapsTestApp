@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ObjectTitleInteractorOutput: class {
-    
+    func interactorDidFetchData(_ data: ObjectTitleDataProtocol)
+    func interactorDidReceiveError(_ error: Error)
 }

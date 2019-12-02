@@ -9,6 +9,6 @@
 import Foundation
 
 struct ClusterConfiguratorParametersConstants {
-    static let buckets: [NSNumber] = [4, 5, 6, 8, 10, 12]
-    static let colors: [UIColor] = [.red, .blue, .cyan, .gray, .green, .black]
+    static let buckets: [NSNumber] = [4, 5, 6, 8, 10]
+    static let colors: [UIColor] = [.red, .blue, .cyan, .gray, .green]
 }

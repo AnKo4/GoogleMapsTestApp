@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum ObjectTitleMoyaFakeService {
-    case getObjectTitleData
+    case getObjectTitleData(objectId: Int)
 }
 
 extension ObjectTitleMoyaFakeService: TargetType {
@@ -33,8 +33,12 @@ extension ObjectTitleMoyaFakeService: TargetType {
     }
     
     var sampleData: Data {
-        // MARK: - change this code!!!
-        return Data()
+        switch self {
+        case .getObjectTitleData(let objectId):
+            let data = ObjectTitleFakeDataFactory.data(objectId: objectId)
+            guard let encodedData = try? JSONEncoder().encode(data) else { return Data() }
+            return encodedData
+        }
     }
     
     var task: Task {

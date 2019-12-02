@@ -9,5 +9,5 @@
 import Foundation
 
 protocol MapObjectInfoSubmodulesFactoryProtocol: class {
-    func makeModules() -> [UIView]
+    func makeModules(with externalPresenter: ExternalPresenterInput, objectId: Int) -> [UIView]
 }

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ObjectTitleViewProtocol: class {
-    var presenter: ObjectTitlePresenterProtocol? { get set }
+    var presenter: ObjectTitlePresenterInput? { get set }
 }

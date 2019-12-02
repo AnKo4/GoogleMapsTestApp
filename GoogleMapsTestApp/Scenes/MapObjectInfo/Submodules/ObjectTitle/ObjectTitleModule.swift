@@ -12,14 +12,14 @@ class ObjectTitleModule: BaseModuleProtocol {
     
     var view: UIView & ObjectTitleViewProtocol & ObjectTitlePresenterOutput
     
-    init() {
+    init(with externalPresenter: ExternalPresenterInput, objectId: Int) {
         let view = ObjectTitleView()
         let service = ObjectTitleFakeService()
-        let interactor = ObjectTitleInteractor(service: service)
+        let interactor = ObjectTitleInteractor(service: service, objectId: objectId)
         service.interactor = interactor
-        let router = ObjectTitleRouter()
-        let presenter = ObjectTitlePresenter(interactor: interactor, router: router)
+        let presenter = ObjectTitlePresenter(view: view, interactor: interactor, externalPresenter: externalPresenter)
         view.presenter = presenter
+        interactor.presenter = presenter
         self.view = view
     }
 }

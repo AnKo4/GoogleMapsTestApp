@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ObjectTitleServiceInput: class {
-    func fetchObjectTitleData()
+    func fetchObjectTitleData(objectId: Int)
 }

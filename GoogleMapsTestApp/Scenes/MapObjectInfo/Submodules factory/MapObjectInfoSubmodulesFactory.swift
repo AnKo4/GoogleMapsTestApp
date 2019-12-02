@@ -9,10 +9,10 @@
 import Foundation
 
 class MapObjectInfoSubmodulesFactory: MapObjectInfoSubmodulesFactoryProtocol {
-    func makeModules() -> [UIView] {
+    func makeModules(with externalPresenter: ExternalPresenterInput, objectId: Int) -> [UIView] {
         var modules: [UIView] = []
 
-        let objectTitleModule = ObjectTitleModule()
+        let objectTitleModule = ObjectTitleModule(with: externalPresenter, objectId: objectId)
         modules.append(objectTitleModule.view)
         return modules
     }

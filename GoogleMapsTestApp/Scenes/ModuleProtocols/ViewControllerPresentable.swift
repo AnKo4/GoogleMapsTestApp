@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ViewControllerPresentable: class {
-    func showObjectInfo()
+    func showObjectInfo(objectId: Int)
 }

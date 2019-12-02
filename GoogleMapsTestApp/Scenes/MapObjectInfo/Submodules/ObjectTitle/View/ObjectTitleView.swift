@@ -15,7 +15,7 @@ import UIKit
     @IBOutlet private weak var objectRating: Rating!
     @IBOutlet private weak var distanceButton: UIButton!
     
-    weak var presenter: ObjectTitlePresenterProtocol?
+    weak var presenter: ObjectTitlePresenterInput?
     
     
     override init(frame: CGRect) {
@@ -39,9 +39,8 @@ import UIKit
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
         configureDistanceButton()
-        // MARK: - remove these 2 lines in future
-        let ratingData = RatingData(value: 2, voicesCount: 23, agency: "Yelp")
-        objectRating.showRating(with: ratingData)
+
+        presenter?.viewCompletedConfiguration()
     }
     
     private func configureDistanceButton() {

@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ObjectTitleInteractorInput: class {
-    
+    func viewNeedsData()
 }

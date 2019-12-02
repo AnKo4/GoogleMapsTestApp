@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol ObjectTitlePresenterProtocol: class {
+    var view: ObjectTitlePresenterOutput { get }
+    var interactor: ObjectTitleInteractorInput { get }
+    var externalPresenter: ExternalPresenterInput { get }
+}

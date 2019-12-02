@@ -11,24 +11,31 @@ import Foundation
 class ObjectTitleInteractor: ObjectTitleInteractorProtocol {
     var service: ObjectTitleServiceInput
     var presenter: ObjectTitleInteractorOutput?
+    var objectId: Int
     
-    init(service: ObjectTitleServiceInput) {
+    init(service: ObjectTitleServiceInput, objectId: Int) {
         self.service = service
+        self.objectId = objectId
+        print("ID = \(self.objectId)")
     }
 }
 
 extension ObjectTitleInteractor: ObjectTitleServiceOutput {
     
     func didReceiveData(_ data: ObjectTitleDataProtocol) {
-        
+        print("data = \(data)")
+        presenter?.interactorDidFetchData(data)
     }
     
     func didReceiveError(_ error: Error) {
-        
+        presenter?.interactorDidReceiveError(error)
     }
 
 }
 
-extension ObjectTitleInteractor: MapObjectInfoInteractorInput {
-    
+extension ObjectTitleInteractor: ObjectTitleInteractorInput {
+    func viewNeedsData() {
+        print("service = \(service)")
+        service.fetchObjectTitleData(objectId: objectId)
+    }
 }

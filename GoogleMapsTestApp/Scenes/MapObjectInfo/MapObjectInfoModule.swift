@@ -13,7 +13,7 @@ class MapObjectInfoModule: BaseModuleProtocol {
     var view: UIViewController? // & ModulesHolderProtocol & MapObjectInfoProtocol & MapObjectInfoPresenterOutput)?
     var submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol
     
-    init(submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol) {
+    init(submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol, objectId: Int) {
         self.submodulesFactory = submodulesFactory
         let view = MapObjectInfoViewController(nibName: MapObjectInfoViewController.id, bundle: nil)
 
@@ -23,7 +23,7 @@ class MapObjectInfoModule: BaseModuleProtocol {
         view.presenter = presenter
         interactor.presenter = presenter
         
-        view.modules = submodulesFactory.makeModules()
+        view.modules = submodulesFactory.makeModules(with: presenter, objectId: objectId)
         self.view = view
     }
 }

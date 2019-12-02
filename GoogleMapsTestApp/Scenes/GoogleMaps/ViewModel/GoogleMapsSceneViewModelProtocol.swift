@@ -14,5 +14,5 @@ protocol  GoogleMapsSceneViewModelProtocol: class {
     
     func fetchLocalData()
     func fetchServerData()
-    func markerDidSelected()
+    func markerDidSelected(objectId: Int)
 }

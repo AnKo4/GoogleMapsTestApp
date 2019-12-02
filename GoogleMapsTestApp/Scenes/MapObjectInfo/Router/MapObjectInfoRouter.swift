@@ -8,11 +8,13 @@
 
 import Foundation
 
-class MapObjectInfoRouter: MapObjectInfoRouterProtocol {
+class MapObjectInfoRouter: MapObjectInfoRouterProtocol, AlertPresenterHolder, AlertShowable {
     weak var view: MapObjectInfoRouterOutput?
-    
-    init(view: MapObjectInfoRouterOutput) {
+    weak var alertPresenter: AlertPresenterProtocol?
+
+    init(view: MapObjectInfoRouterOutput & AlertPresenterProtocol) {
         self.view = view
+        self.alertPresenter = view
     }
 }
 
