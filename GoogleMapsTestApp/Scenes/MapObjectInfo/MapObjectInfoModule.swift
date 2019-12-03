@@ -10,7 +10,7 @@ import Foundation
 
 class MapObjectInfoModule: BaseModuleProtocol {
     
-    var view: UIViewController? // & ModulesHolderProtocol & MapObjectInfoProtocol & MapObjectInfoPresenterOutput)?
+    var view: UIViewController? 
     var submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol
     
     init(submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol, objectId: Int) {

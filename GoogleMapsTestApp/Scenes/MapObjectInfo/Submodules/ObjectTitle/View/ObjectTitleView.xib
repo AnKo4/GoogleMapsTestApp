@@ -15,10 +15,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ObjectTitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="UQc-f5-IqN" id="H9H-fW-xhR"/>
                 <outlet property="distanceButton" destination="2dJ-cP-RZb" id="pgD-6q-ZAh"/>
                 <outlet property="objectDescriptionLabel" destination="6PG-Lx-uIN" id="lxz-ot-mBr"/>
                 <outlet property="objectRating" destination="FPs-3P-2D9" id="0cB-hn-Qfh"/>
                 <outlet property="objectTitleLabel" destination="d5l-oy-vSc" id="fVO-pB-Vo7"/>
+                <outlet property="placeholderLabel" destination="nXH-Dq-j7c" id="wKn-Zu-Dbb"/>
+                <outlet property="placeholderView" destination="WFs-PT-sad" id="dwi-6g-TrH"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,6 +29,24 @@
             <rect key="frame" x="0.0" y="0.0" width="579" height="178"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-PT-sad" userLabel="Placeholder View">
+                    <rect key="frame" x="0.0" y="0.0" width="579" height="178"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXH-Dq-j7c" userLabel="Placeholder Label">
+                            <rect key="frame" x="0.0" y="0.0" width="579" height="178"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nXH-Dq-j7c" firstAttribute="leading" secondItem="WFs-PT-sad" secondAttribute="leading" id="A1S-it-5PD"/>
+                        <constraint firstAttribute="trailing" secondItem="nXH-Dq-j7c" secondAttribute="trailing" id="DBN-yS-mUo"/>
+                        <constraint firstItem="nXH-Dq-j7c" firstAttribute="top" secondItem="WFs-PT-sad" secondAttribute="top" id="R2p-65-bZa"/>
+                        <constraint firstAttribute="bottom" secondItem="nXH-Dq-j7c" secondAttribute="bottom" id="qxi-hy-P2e"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQc-f5-IqN" userLabel="Content View">
                     <rect key="frame" x="0.0" y="0.0" width="579" height="178"/>
                     <subviews>
@@ -58,7 +79,6 @@
                             <rect key="frame" x="16.333333333333314" y="119" width="548.33333333333348" height="50"/>
                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="HiL-gI-5sR"/>
                                 <constraint firstAttribute="height" constant="50" id="OvF-1u-Z6P"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
@@ -83,8 +103,12 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="WFs-PT-sad" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EZX-yi-fot"/>
                 <constraint firstAttribute="trailing" secondItem="UQc-f5-IqN" secondAttribute="trailing" id="RF5-XK-f24"/>
                 <constraint firstItem="UQc-f5-IqN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TPF-D7-5Ug"/>
+                <constraint firstAttribute="trailing" secondItem="WFs-PT-sad" secondAttribute="trailing" id="XQV-Hp-ehQ"/>
+                <constraint firstAttribute="bottom" secondItem="WFs-PT-sad" secondAttribute="bottom" id="c3W-Oy-Vvv"/>
+                <constraint firstItem="WFs-PT-sad" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="deG-n8-0AH"/>
                 <constraint firstAttribute="bottom" secondItem="UQc-f5-IqN" secondAttribute="bottom" id="dvy-7X-S0U"/>
                 <constraint firstItem="UQc-f5-IqN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o2w-aP-rbp"/>
             </constraints>

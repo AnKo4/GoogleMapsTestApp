@@ -13,4 +13,5 @@ protocol ObjectTitlePresenterOutput: class {
     func showObjectDescription(_ description: String)
     func showObjectRarting(_ rating: RatingInfo)
     func showDistanceButtonTitle(_ title: String)
+    func showPlaceholder(with message: String)
 }

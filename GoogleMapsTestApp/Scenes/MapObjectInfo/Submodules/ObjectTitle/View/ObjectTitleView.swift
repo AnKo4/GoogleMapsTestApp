@@ -10,6 +10,11 @@ import UIKit
 
 @IBDesignable class ObjectTitleView: UIView, ObjectTitleViewProtocol {
 
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var placeholderView: UIView!
+    
+    @IBOutlet weak var placeholderLabel: UILabel!
+    
     @IBOutlet private weak var objectTitleLabel: UILabel!
     @IBOutlet private weak var objectDescriptionLabel: UILabel!
     @IBOutlet private weak var objectRating: Rating!
@@ -38,7 +43,13 @@ import UIKit
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
+        configureViews()
         configureDistanceButton()
+    }
+    
+    private func configureViews() {
+        placeholderView.isHidden = true
+        contentView.isHidden = false
     }
     
     private func configureDistanceButton() {
@@ -54,6 +65,12 @@ import UIKit
 }
 
 extension ObjectTitleView: ObjectTitlePresenterOutput {
+    func showPlaceholder(with message: String) {
+        contentView.isHidden = true
+        placeholderView.isHidden = false
+        placeholderLabel.text = message
+    }
+    
     func showObjectTitle(_ title: String) {
         objectTitleLabel.text = title
     }

@@ -33,7 +33,7 @@ extension ObjectTitlePresenter: ObjectTitleInteractorOutput {
     }
     
     func interactorDidReceiveError(_ error: Error) {
-        externalPresenter.submoduleDidReceiveError(error)
+        view.showPlaceholder(with: error.localizedDescription)
     }
 }
 
