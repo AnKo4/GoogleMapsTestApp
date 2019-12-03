@@ -16,14 +16,12 @@ class ObjectTitleInteractor: ObjectTitleInteractorProtocol {
     init(service: ObjectTitleServiceInput, objectId: Int) {
         self.service = service
         self.objectId = objectId
-        print("ID = \(self.objectId)")
     }
 }
 
 extension ObjectTitleInteractor: ObjectTitleServiceOutput {
     
     func didReceiveData(_ data: ObjectTitleDataProtocol) {
-        print("data = \(data)")
         presenter?.interactorDidFetchData(data)
     }
     
@@ -35,7 +33,6 @@ extension ObjectTitleInteractor: ObjectTitleServiceOutput {
 
 extension ObjectTitleInteractor: ObjectTitleInteractorInput {
     func viewNeedsData() {
-        print("service = \(service)")
         service.fetchObjectTitleData(objectId: objectId)
     }
 }

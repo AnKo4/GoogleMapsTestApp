@@ -18,7 +18,6 @@ class ObjectTitleFakeService: ObjectTitleServiceProtocol, NetworkDataProviderPro
 
 extension ObjectTitleFakeService: ObjectTitleServiceInput {
     func fetchObjectTitleData(objectId: Int) {
-        print("sending request for ID: \(objectId)")
         provider.request(.getObjectTitleData(objectId: objectId)) { [weak self] result in
             guard let self = self else { return }
             do {

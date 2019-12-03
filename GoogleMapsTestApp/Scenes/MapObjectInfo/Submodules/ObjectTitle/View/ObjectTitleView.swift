@@ -39,15 +39,18 @@ import UIKit
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
         configureDistanceButton()
-
-        presenter?.viewCompletedConfiguration()
     }
     
     private func configureDistanceButton() {
         distanceButton.layer.cornerRadius = 5
         distanceButton.titleLabel?.numberOfLines = 0
+        distanceButton.titleLabel?.textAlignment = .center
     }
     
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        presenter?.viewCompletedConfiguration()
+    }
 }
 
 extension ObjectTitleView: ObjectTitlePresenterOutput {

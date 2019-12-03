@@ -21,3 +21,16 @@ struct RatingInfoData: RatingInfo, Codable {
     var voicesCount: Int
     var agency: String
 }
+
+struct ObjectTitleCorruptedData: Codable {
+    var objectTitled: String
+    var objectDescription: String
+    var objectRating: RatingInfoData
+    var distanceButtonTitle: String
+}
+
+extension ObjectTitleCorruptedData: ObjectTitleDataProtocol {
+    var objectTitle: String {
+        return self.objectTitled
+    }
+}
