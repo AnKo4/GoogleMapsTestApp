@@ -21,7 +21,7 @@ extension ObjectTitleFakeService: ObjectTitleServiceInput {
         provider.request(.getObjectTitleData(objectId: objectId)) { [weak self] result in
             guard let self = self else { return }
             do {
-                let data = try self.handleResult(result: result, structure: ObjectTitleData.self)
+                let data = try self.handleResult(result: result, structure: ObjectTitleCorruptedData.self)
                 self.interactor?.didReceiveData(data)
             } catch {
                 self.interactor?.didReceiveError(error)

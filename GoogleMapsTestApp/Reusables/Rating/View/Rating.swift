@@ -35,7 +35,6 @@ import UIKit
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
     }
-    
 }
  
 extension Rating: RatingShowable {
