@@ -69,3 +69,18 @@ extension PlaceholderShowable where Self: UIView {
         placeholder?.removeFromSuperview()
     }
 }
+
+extension PlaceholderShowable where Self: UIViewController {
+    mutating func showPlaceholder(message: String, backgroundColor: UIColor = .white, textColor: UIColor = .black) {
+        placeholder = PlaceholderView()
+        guard let placeholder = placeholder else { return }
+        placeholder.setBackground(backgroundColor)
+        placeholder.setTextColor(textColor)
+        placeholder.showMessage(message)
+        view.addSubview(placeholder)
+    }
+    
+    func hidePlaceholder() {
+        placeholder?.removeFromSuperview()
+    }
+}
