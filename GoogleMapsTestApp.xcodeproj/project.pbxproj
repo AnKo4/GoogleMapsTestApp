@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5502F73C23794DF6001003C9 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73B23794DF6001003C9 /* Launcher.swift */; };
 		5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */; };
+		5511A50A2397D78300C13D74 /* PlaceholderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511A5092397D78300C13D74 /* PlaceholderType.swift */; };
+		5511A50C2397D7D800C13D74 /* PlaceholderShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */; };
 		551C0855238E834E009F50C5 /* ObjectTitleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C0854238E834E009F50C5 /* ObjectTitleModule.swift */; };
 		551C0858238E8CE8009F50C5 /* ObjectTitleInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C0857238E8CE8009F50C5 /* ObjectTitleInteractorProtocol.swift */; };
 		551C085D238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C085C238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift */; };
@@ -71,7 +73,6 @@
 		556FE7FA2386C9B500CF0D1C /* ViewControllerPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FE7F92386C9B500CF0D1C /* ViewControllerPresentable.swift */; };
 		556FE7FC2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FE7FB2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift */; };
 		5571315923977FCD00FBFB82 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5571315823977FCD00FBFB82 /* PlaceholderView.swift */; };
-		5571315B23977FF300FBFB82 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5571315A23977FF300FBFB82 /* PlaceholderView.xib */; };
 		557510D2238D0E6A00FF4AEA /* RatingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510D1238D0E6A00FF4AEA /* RatingInfo.swift */; };
 		557510D4238D0E9000FF4AEA /* RatingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510D3238D0E9000FF4AEA /* RatingData.swift */; };
 		557510D6238D117D00FF4AEA /* RatingShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557510D5238D117D00FF4AEA /* RatingShowable.swift */; };
@@ -150,6 +151,8 @@
 /* Begin PBXFileReference section */
 		5502F73B23794DF6001003C9 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = GoogleMapsTestApp/UIViewControllerExtensions.swift; sourceTree = SOURCE_ROOT; };
+		5511A5092397D78300C13D74 /* PlaceholderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderType.swift; sourceTree = "<group>"; };
+		5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderShowable.swift; sourceTree = "<group>"; };
 		551C0854238E834E009F50C5 /* ObjectTitleModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleModule.swift; sourceTree = "<group>"; };
 		551C0857238E8CE8009F50C5 /* ObjectTitleInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleInteractorProtocol.swift; sourceTree = "<group>"; };
 		551C085C238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitlePresenterProtocol.swift; sourceTree = "<group>"; };
@@ -218,7 +221,6 @@
 		556FE7F92386C9B500CF0D1C /* ViewControllerPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresentable.swift; sourceTree = "<group>"; };
 		556FE7FB2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterHolder.swift; sourceTree = "<group>"; };
 		5571315823977FCD00FBFB82 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		5571315A23977FF300FBFB82 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
 		557510D1238D0E6A00FF4AEA /* RatingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingInfo.swift; sourceTree = "<group>"; };
 		557510D3238D0E9000FF4AEA /* RatingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingData.swift; sourceTree = "<group>"; };
 		557510D5238D117D00FF4AEA /* RatingShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingShowable.swift; sourceTree = "<group>"; };
@@ -348,6 +350,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5511A5082397D73C00C13D74 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5511A5092397D78300C13D74 /* PlaceholderType.swift */,
+				5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		551C0856238E85DF009F50C5 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +647,7 @@
 		5571315623977F7A00FBFB82 /* Placeholder */ = {
 			isa = PBXGroup;
 			children = (
+				5511A5082397D73C00C13D74 /* Protocols */,
 				5571315723977FAE00FBFB82 /* View */,
 			);
 			path = Placeholder;
@@ -645,7 +657,6 @@
 			isa = PBXGroup;
 			children = (
 				5571315823977FCD00FBFB82 /* PlaceholderView.swift */,
-				5571315A23977FF300FBFB82 /* PlaceholderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -825,8 +836,8 @@
 		558650E62391314E00285A28 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				558650E72391315C00285A28 /* ObjectTitleServiceProtocol.swift */,
 				558650ED23913E2F00285A28 /* ObjectTitleFakeService.swift */,
+				558650E72391315C00285A28 /* ObjectTitleServiceProtocol.swift */,
 				558650EF2391459800285A28 /* ObjectTitleServiceInput.swift */,
 				558650F1239145C800285A28 /* ObjectTitleServiceOutput.swift */,
 			);
@@ -1111,7 +1122,6 @@
 				556FE7F423868B3300CF0D1C /* MapObjectInfoViewController.xib in Resources */,
 				556FE7F62386A4EC00CF0D1C /* ButtonViewController.xib in Resources */,
 				555C00A7234F3E35000E2496 /* LaunchScreen.storyboard in Resources */,
-				5571315B23977FF300FBFB82 /* PlaceholderView.xib in Resources */,
 				555C00A4234F3E35000E2496 /* Assets.xcassets in Resources */,
 				555C00A2234F3E34000E2496 /* Main.storyboard in Resources */,
 			);
@@ -1204,6 +1214,7 @@
 				551C0861238E93FF009F50C5 /* ObjectTitleInteractor.swift in Sources */,
 				55FE9A402394F797001773C3 /* ExternalPresenterInput.swift in Sources */,
 				555342782371998C004558A4 /* ClusterManagerConfigurator.swift in Sources */,
+				5511A50A2397D78300C13D74 /* PlaceholderType.swift in Sources */,
 				55C389B42384276D000F9FCB /* IconGeneratorParametersType.swift in Sources */,
 				55AFFBC12356F7B40011273F /* GMUKMLParser.m in Sources */,
 				551C086F238EBB68009F50C5 /* MapObjectInfoRouterOutput.swift in Sources */,
@@ -1317,6 +1328,7 @@
 				558650E82391315C00285A28 /* ObjectTitleServiceProtocol.swift in Sources */,
 				5553427623719629004558A4 /* ClusterConfiguratorProtocol.swift in Sources */,
 				55E0EB5B237D9B3A00B93676 /* GoogleMapsRouter.swift in Sources */,
+				5511A50C2397D7D800C13D74 /* PlaceholderShowable.swift in Sources */,
 				559507D02382A1F900F34AD9 /* AlertShowable.swift in Sources */,
 				55E80737236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift in Sources */,
 				55E0EB59237D8C6200B93676 /* GoogleMapsRouterProtocol.swift in Sources */,
