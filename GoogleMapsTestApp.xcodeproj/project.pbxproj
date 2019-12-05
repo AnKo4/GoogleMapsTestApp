@@ -139,6 +139,7 @@
 		55E80739236C497B00EFBA3D /* MapPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E80738236C497B00EFBA3D /* MapPointType.swift */; };
 		55E8073B236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */; };
 		55E8073D236C4D2C00EFBA3D /* MapPointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */; };
+		55F11DEF23992FBB00278367 /* PlaceholderContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F11DEE23992FBB00278367 /* PlaceholderContainerType.swift */; };
 		55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFB237E984900DB4A29 /* ZoomButton.swift */; };
 		55FA2FFE237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */; };
 		55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */; };
@@ -327,6 +328,7 @@
 		55E80738236C497B00EFBA3D /* MapPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointType.swift; sourceTree = "<group>"; };
 		55E8073A236C4B9800EFBA3D /* ClusterConfiguratorDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterConfiguratorDataSourceProtocol.swift; sourceTree = "<group>"; };
 		55E8073C236C4D2C00EFBA3D /* MapPointTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointTypeProtocol.swift; sourceTree = "<group>"; };
+		55F11DEE23992FBB00278367 /* PlaceholderContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderContainerType.swift; sourceTree = "<group>"; };
 		55FA2FFB237E984900DB4A29 /* ZoomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButton.swift; sourceTree = "<group>"; };
 		55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMUComponentFactoryProtocol.swift; sourceTree = "<group>"; };
 		55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMUComponentFactory.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			children = (
 				5511A5092397D78300C13D74 /* PlaceholderType.swift */,
 				5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */,
+				55F11DEE23992FBB00278367 /* PlaceholderContainerType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				55F11DF0239944BD00278367 /* DetailCard */,
 				559E42AB2383D6A600C3BC00 /* Common */,
 				55437D3A2383CBC1007CE015 /* Constants */,
 				55437D392383CB8B007CE015 /* UI elements */,
@@ -1028,6 +1032,21 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		55F11DF0239944BD00278367 /* DetailCard */ = {
+			isa = PBXGroup;
+			children = (
+				55F11DF1239944E300278367 /* View */,
+			);
+			path = DetailCard;
+			sourceTree = "<group>";
+		};
+		55F11DF1239944E300278367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		55FA2FFA237E97FF00DB4A29 /* ZoomButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1237,6 +1256,7 @@
 				555C009F234F3E34000E2496 /* GoogleMapsViewController.swift in Sources */,
 				551C0855238E834E009F50C5 /* ObjectTitleModule.swift in Sources */,
 				5529FC21237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift in Sources */,
+				55F11DEF23992FBB00278367 /* PlaceholderContainerType.swift in Sources */,
 				558650EC239136A900285A28 /* ObjectTitleInteractorInput.swift in Sources */,
 				55509532236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift in Sources */,
 				557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */,

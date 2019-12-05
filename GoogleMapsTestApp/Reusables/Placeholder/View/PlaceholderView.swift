@@ -39,9 +39,8 @@ class PlaceholderView: UIView, PlaceholderType {
     }
     
     @objc func closePlaceholder() {
-        guard let superView = superview as? (UIView & PlaceholderShowable) else { return }
+        guard let superView = superview as? (UIView & PlaceholderContainerType) else { return }
         superView.hidePlaceholder()
-//        backgroundColor = .clear
     }
     
     private func configureLabel() {
@@ -51,6 +50,7 @@ class PlaceholderView: UIView, PlaceholderType {
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.backgroundColor = .white
         addSubview(label)
     }
     

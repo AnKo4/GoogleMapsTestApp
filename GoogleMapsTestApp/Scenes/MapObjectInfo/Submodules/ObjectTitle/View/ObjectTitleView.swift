@@ -8,12 +8,15 @@
 
 import UIKit
 
-@IBDesignable class ObjectTitleView: UIView, ObjectTitleViewProtocol, PlaceholderShowable {
+@IBDesignable
+class ObjectTitleView: UIView, ObjectTitleViewProtocol, PlaceholderContainerType {
 
     @IBOutlet private weak var objectTitleLabel: UILabel!
     @IBOutlet private weak var objectDescriptionLabel: UILabel!
     @IBOutlet private weak var objectRating: Rating!
     @IBOutlet private weak var distanceButton: UIButton!
+    
+    var placeholder: UIView?
     
     weak var presenter: ObjectTitlePresenterInput?
     
@@ -52,11 +55,12 @@ import UIKit
     }
 }
 
+
 extension ObjectTitleView: ObjectTitlePresenterOutput {
     func showPlaceholder(with message: String) {
-        let bgColor = UIColor.lightGray
-        showPlaceholder(message: message, backgroundColor: bgColor)
-        print("subviews: \(subviews)")
+        let placeholder = PlaceholderView()
+        placeholder.label?.text = "bla bla bla"
+        showPlaceholder(placeholder)
     }
     
     func showObjectTitle(_ title: String) {
