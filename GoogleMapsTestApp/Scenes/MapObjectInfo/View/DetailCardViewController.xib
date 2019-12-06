@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailCardViewController" customModule="GoogleMapsTestApp" customModuleProvider="target">
             <connections>
+                <outlet property="buttonsPanelView" destination="1DQ-Dn-Kg1" id="heM-oH-LFD"/>
+                <outlet property="directionsButtonView" destination="zbK-01-HwD" id="3Xz-Py-cSV"/>
+                <outlet property="photosView" destination="c4r-eB-JRG" id="Eba-3N-DSK"/>
+                <outlet property="ratingView" destination="Wj3-wM-zdu" id="jh1-Ei-r4y"/>
+                <outlet property="titleView" destination="RFL-y3-eIc" id="Dwv-cu-AL2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="892"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5j-NV-bED" userLabel="ScrollViewContainer">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2069"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2192"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-9I-UGC">
                                     <rect key="frame" x="374" y="16" width="24" height="24"/>
@@ -33,61 +38,66 @@
                                     <state key="normal" image="btn_close"/>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Vhb-Kf-zg8" userLabel="ModulesStack">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="2069"/>
+                                    <rect key="frame" x="0.0" y="45" width="414" height="2147"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-y3-eIc" userLabel="TitleView" customClass="TitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" priority="250" constant="72" id="D5x-Td-CyW"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj3-wM-zdu" userLabel="RatingView" customClass="Rating" customModule="GoogleMapsTestApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="72" width="414" height="50"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-jX-u32" userLabel="RatingView">
+                                            <rect key="frame" x="0.0" y="72" width="414" height="128"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj3-wM-zdu" userLabel="RatingViewComponent" customClass="Rating" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="0.0" width="398" height="128"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="18" id="hMj-Vd-OZW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wj3-wM-zdu" secondAttribute="trailing" id="9oP-E6-SDc"/>
+                                                <constraint firstItem="Wj3-wM-zdu" firstAttribute="leading" secondItem="DUR-jX-u32" secondAttribute="leading" constant="16" id="Ntr-U0-OBX"/>
+                                                <constraint firstAttribute="height" constant="18" id="WNJ-nR-tVu"/>
+                                                <constraint firstItem="Wj3-wM-zdu" firstAttribute="top" secondItem="DUR-jX-u32" secondAttribute="top" id="cHJ-Jg-dcU"/>
+                                                <constraint firstAttribute="bottom" secondItem="Wj3-wM-zdu" secondAttribute="bottom" id="u4w-Rs-4yL"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-01-HwD" userLabel="DirectionsButtonView" customClass="DirectionsButtonView" customModule="GoogleMapsTestApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="122" width="414" height="80"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="0.0" y="200" width="414" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="L4w-F8-wQb"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4r-eB-JRG" userLabel="PhotosView" customClass="PhotosView" customModule="GoogleMapsTestApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="202" width="414" height="165"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="0.0" y="280" width="414" height="165"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="165" id="aXz-pE-CZh"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DQ-Dn-Kg1" userLabel="ButtonsPanelView" customClass="ButtonsPanelView" customModule="GoogleMapsTestApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="367" width="414" height="128"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <rect key="frame" x="0.0" y="445" width="414" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="tfs-0V-bpU"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-xa-ind">
-                                            <rect key="frame" x="0.0" y="495" width="414" height="128"/>
+                                            <rect key="frame" x="0.0" y="573" width="414" height="128"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ef0-Jg-Rnn">
-                                            <rect key="frame" x="0.0" y="623" width="414" height="128"/>
+                                            <rect key="frame" x="0.0" y="701" width="414" height="128"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3my-F2-pQt">
-                                            <rect key="frame" x="0.0" y="751" width="414" height="128"/>
+                                            <rect key="frame" x="0.0" y="829" width="414" height="128"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgL-pw-1Y4">
-                                            <rect key="frame" x="0.0" y="879" width="414" height="925"/>
+                                            <rect key="frame" x="0.0" y="957" width="414" height="925"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3z-hI-gIx">
-                                            <rect key="frame" x="0.0" y="1804" width="414" height="265"/>
+                                            <rect key="frame" x="0.0" y="1882" width="414" height="265"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
@@ -95,7 +105,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.79726012323943662" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Vhb-Kf-zg8" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" id="3gs-JS-lBw"/>
+                                <constraint firstItem="Vhb-Kf-zg8" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="45" id="3gs-JS-lBw"/>
                                 <constraint firstAttribute="trailing" secondItem="Vhb-Kf-zg8" secondAttribute="trailing" id="XoB-AZ-wdK"/>
                                 <constraint firstItem="udR-9I-UGC" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="16" id="fdW-IP-jGb"/>
                                 <constraint firstItem="Vhb-Kf-zg8" firstAttribute="leading" secondItem="q5j-NV-bED" secondAttribute="leading" id="iDJ-f8-U3V"/>
@@ -115,7 +125,6 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="zuh-pX-hwg"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="B7I-g3-sd9" secondAttribute="trailing" id="CtL-DY-nIG"/>
                 <constraint firstItem="B7I-g3-sd9" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="b3S-PY-h35"/>

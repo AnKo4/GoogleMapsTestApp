@@ -9,7 +9,7 @@
 import Foundation
 
 protocol RatingInfo {
-    var value: Int { get }
+    var stars: Int { get }
     var voicesCount: Int { get }
     var agency: String { get }
 }

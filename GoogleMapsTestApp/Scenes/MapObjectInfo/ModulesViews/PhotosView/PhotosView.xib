@@ -53,7 +53,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="HFl-H0-mjs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Az5-n4-iXW"/>
                 <constraint firstItem="fcc-jj-Kfl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="FLO-dH-dVx"/>

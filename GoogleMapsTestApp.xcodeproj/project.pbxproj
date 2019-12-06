@@ -92,7 +92,6 @@
 		557ED517239A686100DB595E /* PhotosShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED516239A686100DB595E /* PhotosShowable.swift */; };
 		557ED51A239A702A00DB595E /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557ED519239A702A00DB595E /* TitleView.xib */; };
 		557ED51C239A76B700DB595E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED51B239A76B700DB595E /* TitleView.swift */; };
-		557ED51E239A78AB00DB595E /* NibConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED51D239A78AB00DB595E /* NibConfigurable.swift */; };
 		557ED520239A78DD00DB595E /* TitleShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED51F239A78DD00DB595E /* TitleShowable.swift */; };
 		557ED523239A81C400DB595E /* DirectionsButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557ED522239A81C400DB595E /* DirectionsButtonView.xib */; };
 		557ED525239A84E600DB595E /* DirectionsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED524239A84E600DB595E /* DirectionsButtonView.swift */; };
@@ -102,6 +101,7 @@
 		557ED52E239A915B00DB595E /* ButtonsPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557ED52D239A915B00DB595E /* ButtonsPanelView.xib */; };
 		557ED530239A99E600DB595E /* ButtonsPanelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED52F239A99E600DB595E /* ButtonsPanelProtocol.swift */; };
 		557ED532239A9A0E00DB595E /* ButtonsPanelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED531239A9A0E00DB595E /* ButtonsPanelOutput.swift */; };
+		557FA9C9239ABD0200CF84CE /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FA9C8239ABD0200CF84CE /* UIButtonExtensions.swift */; };
 		558650E5239114EC00285A28 /* ObjectTitleMoyaFakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650E4239114EC00285A28 /* ObjectTitleMoyaFakeService.swift */; };
 		558650E82391315C00285A28 /* ObjectTitleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650E72391315C00285A28 /* ObjectTitleServiceProtocol.swift */; };
 		558650EA2391347800285A28 /* ObjectTitleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650E92391347800285A28 /* ObjectTitleInteractorOutput.swift */; };
@@ -263,7 +263,6 @@
 		557ED516239A686100DB595E /* PhotosShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosShowable.swift; sourceTree = "<group>"; };
 		557ED519239A702A00DB595E /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 		557ED51B239A76B700DB595E /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		557ED51D239A78AB00DB595E /* NibConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibConfigurable.swift; sourceTree = "<group>"; };
 		557ED51F239A78DD00DB595E /* TitleShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleShowable.swift; sourceTree = "<group>"; };
 		557ED522239A81C400DB595E /* DirectionsButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectionsButtonView.xib; sourceTree = "<group>"; };
 		557ED524239A84E600DB595E /* DirectionsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsButtonView.swift; sourceTree = "<group>"; };
@@ -273,6 +272,7 @@
 		557ED52D239A915B00DB595E /* ButtonsPanelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsPanelView.xib; sourceTree = "<group>"; };
 		557ED52F239A99E600DB595E /* ButtonsPanelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelProtocol.swift; sourceTree = "<group>"; };
 		557ED531239A9A0E00DB595E /* ButtonsPanelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelOutput.swift; sourceTree = "<group>"; };
+		557FA9C8239ABD0200CF84CE /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		558650E4239114EC00285A28 /* ObjectTitleMoyaFakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleMoyaFakeService.swift; sourceTree = "<group>"; };
 		558650E72391315C00285A28 /* ObjectTitleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleServiceProtocol.swift; sourceTree = "<group>"; };
 		558650E92391347800285A28 /* ObjectTitleInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleInteractorOutput.swift; sourceTree = "<group>"; };
@@ -630,6 +630,7 @@
 			children = (
 				5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */,
 				557510DA238D534900FF4AEA /* UIViewExtensions.swift */,
+				557FA9C8239ABD0200CF84CE /* UIButtonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -957,7 +958,6 @@
 				558D95D0239A62DC00D3374C /* NibLoadable.swift */,
 				558D95D1239A62DC00D3374C /* Reusable.swift */,
 				558D95D2239A62DC00D3374C /* UICollectionView+Reusable.swift */,
-				557ED51D239A78AB00DB595E /* NibConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1458,6 +1458,7 @@
 				5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */,
 				556A4DCD238FC87F00341BDF /* MapObjectInfoPresenterOutput.swift in Sources */,
 				558650E5239114EC00285A28 /* ObjectTitleMoyaFakeService.swift in Sources */,
+				557FA9C9239ABD0200CF84CE /* UIButtonExtensions.swift in Sources */,
 				557510D2238D0E6A00FF4AEA /* RatingInfo.swift in Sources */,
 				554CBF62238BE75E00773795 /* ObjectTitleView.swift in Sources */,
 				558650EE23913E2F00285A28 /* ObjectTitleFakeService.swift in Sources */,
@@ -1471,7 +1472,6 @@
 				557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */,
 				557934022350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift in Sources */,
 				559E42A92383D3D500C3BC00 /* MapPointCategoryContainerType.swift in Sources */,
-				557ED51E239A78AB00DB595E /* NibConfigurable.swift in Sources */,
 				55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */,
 				5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */,
 				5571315923977FCD00FBFB82 /* PlaceholderView.swift in Sources */,

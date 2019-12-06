@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DirectionsButtonView: UIView, NibLoadable, NibConfigurable, DirectionsShowable {
+class DirectionsButtonView: UIView, DirectionsShowable {
 
     @IBOutlet private weak var directionsButton: UIButton?
 
@@ -16,14 +16,29 @@ class DirectionsButtonView: UIView, NibLoadable, NibConfigurable, DirectionsShow
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
-
+        loadFromNib(nibName: "DirectionsButtonView")
+//        configureView()
+        configureButton()
     }
         
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        configureView()
+        loadFromNib(nibName: "DirectionsButtonView")
+        //        configureView()
+        configureButton()
     }
+    
+//    private func loadFromNib() -> UIView {
+//        guard let view = UINib(nibName: "DirectionsButtonView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
+//        return view
+//    }
+//        
+//    private func configureView() {
+//        let view = loadFromNib()
+//        view.frame = bounds
+//        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        addSubview(view)
+//    }
 
     private func configureButton() {
         directionsButton?.layer.cornerRadius = 5

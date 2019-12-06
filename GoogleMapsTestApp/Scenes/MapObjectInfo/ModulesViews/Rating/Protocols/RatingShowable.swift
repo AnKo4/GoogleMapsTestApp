@@ -15,7 +15,7 @@ protocol RatingShowable {
 }
 
 extension RatingShowable {
-    func makeStar(for condition: Bool) -> UIImage? {
+    internal func makeStar(for condition: Bool) -> UIImage? {
         switch condition {
         case true: return UIImage(named: "ic_star_orange")
         case false: return UIImage(named: "ic_star_gray")
@@ -23,7 +23,7 @@ extension RatingShowable {
     }
     
     func showRating(with data: RatingInfo) {
-        showRatingStars(data.value)
+        showRatingStars(data.stars)
         showRatingText(voices: data.voicesCount, on: data.agency)
     }
 }

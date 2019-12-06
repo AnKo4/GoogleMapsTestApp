@@ -9,6 +9,7 @@
 import Foundation
 
 @objc protocol ButtonsPanelOutput: class {
+    func setButtonsPanelDelegate(_ delegate: ButtonsPanelOutput?)
     func callButtonDidTap()
     func websiteButtonDidTap()
     func favouriteButtonDidTap()

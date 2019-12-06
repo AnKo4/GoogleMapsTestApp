@@ -10,4 +10,5 @@ import Foundation
 
 @objc protocol DirectionsButtonOutput {
     func directionsButtonDidTap()
+    func setDirectionButtonDelegate(_ delegate: DirectionsButtonOutput?)
 }

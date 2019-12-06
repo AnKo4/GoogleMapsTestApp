@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosView: UIView, PhotosShowable, NibLoadable, NibConfigurable {
+class PhotosView: UIView, PhotosShowable {
 
     @IBOutlet weak private var collectionView: UICollectionView?
     @IBOutlet weak private var photosProviderLabel: UILabel?
@@ -17,13 +17,15 @@ class PhotosView: UIView, PhotosShowable, NibLoadable, NibConfigurable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
+        loadFromNib(nibName: "PhotosView")
+//        configureView()
         configureCollectionView()
     }
         
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        configureView()
+        loadFromNib(nibName: "PhotosView")
+//        configureView()
         configureCollectionView()
     }
         

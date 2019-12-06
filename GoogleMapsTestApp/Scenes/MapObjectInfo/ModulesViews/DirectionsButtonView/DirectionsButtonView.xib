@@ -38,7 +38,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="ZAm-Sf-IY8" firstAttribute="leading" secondItem="Vg7-Oe-Cly" secondAttribute="leading" constant="16" id="3d1-i2-srt"/>
                 <constraint firstItem="ZAm-Sf-IY8" firstAttribute="top" secondItem="Vg7-Oe-Cly" secondAttribute="top" priority="999" constant="21" id="B4Q-9Q-Xtf"/>

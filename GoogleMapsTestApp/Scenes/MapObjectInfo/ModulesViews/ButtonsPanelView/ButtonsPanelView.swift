@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ButtonsPanelView: UIView, NibLoadable, NibConfigurable, ButtonsPanelProtocol {
+class ButtonsPanelView: UIView, ButtonsPanelProtocol {
 
     @IBOutlet weak private var callButton: UIButton?
     @IBOutlet weak private var websiteButton: UIButton?
@@ -21,20 +21,35 @@ class ButtonsPanelView: UIView, NibLoadable, NibConfigurable, ButtonsPanelProtoc
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureView()
+        loadFromNib(nibName: "ButtonsPanelView")
+//        configureView()
         configureButtons()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        configureView()
+        loadFromNib(nibName: "ButtonsPanelView")
+//        configureView()
         configureButtons()
     }
+
+//    private func loadFromNib() -> UIView {
+//        guard let view = UINib(nibName: "ButtonsPanelView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
+//        return view
+//    }
+//
+//    private func configureView() {
+//        let view = loadFromNib()
+//        view.frame = bounds
+//        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        addSubview(view)
+//    }
     
     private func configureButtons() {
         guard let buttons = buttons else { return }
         for button in buttons {
             button.layer.cornerRadius = 5
+            button.arrangeTitleComponents()
         }
     }
     
