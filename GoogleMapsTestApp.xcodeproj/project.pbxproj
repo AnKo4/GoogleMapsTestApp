@@ -99,6 +99,9 @@
 		557ED527239A882D00DB595E /* DirectionsShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED526239A882D00DB595E /* DirectionsShowable.swift */; };
 		557ED529239A898100DB595E /* DirectionsButtonOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED528239A898100DB595E /* DirectionsButtonOutput.swift */; };
 		557ED52C239A911B00DB595E /* ButtonsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED52B239A911B00DB595E /* ButtonsPanelView.swift */; };
+		557ED52E239A915B00DB595E /* ButtonsPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557ED52D239A915B00DB595E /* ButtonsPanelView.xib */; };
+		557ED530239A99E600DB595E /* ButtonsPanelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED52F239A99E600DB595E /* ButtonsPanelProtocol.swift */; };
+		557ED532239A9A0E00DB595E /* ButtonsPanelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED531239A9A0E00DB595E /* ButtonsPanelOutput.swift */; };
 		558650E5239114EC00285A28 /* ObjectTitleMoyaFakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650E4239114EC00285A28 /* ObjectTitleMoyaFakeService.swift */; };
 		558650E82391315C00285A28 /* ObjectTitleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650E72391315C00285A28 /* ObjectTitleServiceProtocol.swift */; };
 		558650EA2391347800285A28 /* ObjectTitleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650E92391347800285A28 /* ObjectTitleInteractorOutput.swift */; };
@@ -267,6 +270,9 @@
 		557ED526239A882D00DB595E /* DirectionsShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsShowable.swift; sourceTree = "<group>"; };
 		557ED528239A898100DB595E /* DirectionsButtonOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsButtonOutput.swift; sourceTree = "<group>"; };
 		557ED52B239A911B00DB595E /* ButtonsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelView.swift; sourceTree = "<group>"; };
+		557ED52D239A915B00DB595E /* ButtonsPanelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsPanelView.xib; sourceTree = "<group>"; };
+		557ED52F239A99E600DB595E /* ButtonsPanelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelProtocol.swift; sourceTree = "<group>"; };
+		557ED531239A9A0E00DB595E /* ButtonsPanelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsPanelOutput.swift; sourceTree = "<group>"; };
 		558650E4239114EC00285A28 /* ObjectTitleMoyaFakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleMoyaFakeService.swift; sourceTree = "<group>"; };
 		558650E72391315C00285A28 /* ObjectTitleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleServiceProtocol.swift; sourceTree = "<group>"; };
 		558650E92391347800285A28 /* ObjectTitleInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleInteractorOutput.swift; sourceTree = "<group>"; };
@@ -886,6 +892,9 @@
 			isa = PBXGroup;
 			children = (
 				557ED52B239A911B00DB595E /* ButtonsPanelView.swift */,
+				557ED52D239A915B00DB595E /* ButtonsPanelView.xib */,
+				557ED52F239A99E600DB595E /* ButtonsPanelProtocol.swift */,
+				557ED531239A9A0E00DB595E /* ButtonsPanelOutput.swift */,
 			);
 			path = ButtonsPanelView;
 			sourceTree = "<group>";
@@ -1251,6 +1260,7 @@
 				555C00A4234F3E35000E2496 /* Assets.xcassets in Resources */,
 				555C00A2234F3E34000E2496 /* Main.storyboard in Resources */,
 				55F11DF62399483000278367 /* DetailCardViewController.xib in Resources */,
+				557ED52E239A915B00DB595E /* ButtonsPanelView.xib in Resources */,
 				558D95C9239A440300D3374C /* PhotosView.xib in Resources */,
 				557ED51A239A702A00DB595E /* TitleView.xib in Resources */,
 			);
@@ -1357,6 +1367,7 @@
 				557ED52C239A911B00DB595E /* ButtonsPanelView.swift in Sources */,
 				55509534236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift in Sources */,
 				55509537236B0923009EB330 /* GoogleMapsViewControllerType.swift in Sources */,
+				557ED530239A99E600DB595E /* ButtonsPanelProtocol.swift in Sources */,
 				551C0869238EB518009F50C5 /* MapObjectInfoRouter.swift in Sources */,
 				55B617D12372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift in Sources */,
 				55F11DF52399483000278367 /* DetailCardViewController.swift in Sources */,
@@ -1480,6 +1491,7 @@
 				558650EA2391347800285A28 /* ObjectTitleInteractorOutput.swift in Sources */,
 				557ED527239A882D00DB595E /* DirectionsShowable.swift in Sources */,
 				556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */,
+				557ED532239A9A0E00DB595E /* ButtonsPanelOutput.swift in Sources */,
 				558650F2239145C800285A28 /* ObjectTitleServiceOutput.swift in Sources */,
 				557766CE23755EFD004592F1 /* ButtonRouter.swift in Sources */,
 				55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */,

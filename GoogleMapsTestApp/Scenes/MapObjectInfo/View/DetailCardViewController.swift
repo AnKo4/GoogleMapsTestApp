@@ -27,3 +27,29 @@ extension DetailCardViewController: MapObjectInfoRouterOutput {
         dismiss(animated: true)
     }
 }
+
+extension DetailCardViewController: DirectionsButtonOutput {
+    func directionsButtonDidTap() {
+        
+    }
+}
+
+extension DetailCardViewController: ButtonsPanelOutput {
+    func callButtonDidTap() {
+        
+    }
+    
+    func websiteButtonDidTap() {
+        
+    }
+    
+    func favouriteButtonDidTap() {
+        
+    }
+    
+    func shareButtonDidTap() {
+        
+    }
+    
+    
+}

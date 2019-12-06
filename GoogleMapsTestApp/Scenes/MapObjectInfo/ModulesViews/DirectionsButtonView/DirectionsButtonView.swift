@@ -27,11 +27,11 @@ class DirectionsButtonView: UIView, NibLoadable, NibConfigurable, DirectionsShow
 
     private func configureButton() {
         directionsButton?.layer.cornerRadius = 5
-        directionsButton?.titleLabel?.font = UIFont(name: "Roboto", size: 15)
+        directionsButton?.titleLabel?.numberOfLines = 2
     }
     
     func setTitle(_ title: String?) {
-        directionsButton?.setTitle(title, for: .normal)
+        directionsButton?.setTitle("Directions" + "\n" + (title ?? ""), for: .normal)
     }
     
     @IBAction private func directionsButtonDidTap(_ sender: UIButton) {

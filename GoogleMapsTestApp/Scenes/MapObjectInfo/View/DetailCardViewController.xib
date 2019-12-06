@@ -63,9 +63,12 @@
                                                 <constraint firstAttribute="height" constant="165" id="aXz-pE-CZh"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DQ-Dn-Kg1" userLabel="ButtonsPanelView">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DQ-Dn-Kg1" userLabel="ButtonsPanelView" customClass="ButtonsPanelView" customModule="GoogleMapsTestApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="367" width="414" height="128"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="tfs-0V-bpU"/>
+                                            </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-xa-ind">
                                             <rect key="frame" x="0.0" y="495" width="414" height="128"/>
