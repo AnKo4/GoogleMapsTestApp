@@ -88,6 +88,8 @@
 		557933FD2350676400BFAA8E /* MockCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FC2350676400BFAA8E /* MockCoordinates.swift */; };
 		5579340023507C3500BFAA8E /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557933FF23507C3500BFAA8E /* MapPoint.swift */; };
 		557934022350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557934012350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift */; };
+		557A50FD239BAED30018A769 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557A50FC239BAED30018A769 /* RatingView.swift */; };
+		557A50FF239BB42D0018A769 /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557A50FE239BB42D0018A769 /* RatingView.xib */; };
 		557D2135238E5232000A672E /* ObjectTitlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D2134238E5232000A672E /* ObjectTitlePresenter.swift */; };
 		557ED517239A686100DB595E /* PhotosShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557ED516239A686100DB595E /* PhotosShowable.swift */; };
 		557ED51A239A702A00DB595E /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557ED519239A702A00DB595E /* TitleView.xib */; };
@@ -259,6 +261,8 @@
 		557933FC2350676400BFAA8E /* MockCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinates.swift; sourceTree = "<group>"; };
 		557933FF23507C3500BFAA8E /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		557934012350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsStartPointConstants.swift; sourceTree = "<group>"; };
+		557A50FC239BAED30018A769 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		557A50FE239BB42D0018A769 /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		557D2134238E5232000A672E /* ObjectTitlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitlePresenter.swift; sourceTree = "<group>"; };
 		557ED516239A686100DB595E /* PhotosShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosShowable.swift; sourceTree = "<group>"; };
 		557ED519239A702A00DB595E /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
@@ -565,7 +569,6 @@
 		555C0099234F3E34000E2496 /* GoogleMapsTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				55F11DF0239944BD00278367 /* DetailCard */,
 				559E42AB2383D6A600C3BC00 /* Common */,
 				55437D3A2383CBC1007CE015 /* Constants */,
 				55437D392383CB8B007CE015 /* UI elements */,
@@ -591,6 +594,7 @@
 		5561BCD0237AD91E00073CF1 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				555020E5238BF950002BE89F /* Rating */,
 				558D95CF239A62BC00D3374C /* Protocols */,
 				5571315623977F7A00FBFB82 /* Placeholder */,
 				557933FE23507C1C00BFAA8E /* Structures */,
@@ -857,6 +861,15 @@
 			path = Structures;
 			sourceTree = "<group>";
 		};
+		557A50FB239BAE500018A769 /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				557A50FC239BAED30018A769 /* RatingView.swift */,
+				557A50FE239BB42D0018A769 /* RatingView.xib */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
 		557D2133238E4E98000A672E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -932,7 +945,7 @@
 			isa = PBXGroup;
 			children = (
 				557ED518239A701000DB595E /* TitleView */,
-				555020E5238BF950002BE89F /* Rating */,
+				557A50FB239BAE500018A769 /* RatingView */,
 				557ED521239A819A00DB595E /* DirectionsButtonView */,
 				558D95CE239A60C200D3374C /* PhotosView */,
 				557ED52A239A90F300DB595E /* ButtonsPanelView */,
@@ -1146,21 +1159,6 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		55F11DF0239944BD00278367 /* DetailCard */ = {
-			isa = PBXGroup;
-			children = (
-				55F11DF1239944E300278367 /* View */,
-			);
-			path = DetailCard;
-			sourceTree = "<group>";
-		};
-		55F11DF1239944E300278367 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		55FA2FFA237E97FF00DB4A29 /* ZoomButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1260,6 +1258,7 @@
 				555C00A4234F3E35000E2496 /* Assets.xcassets in Resources */,
 				555C00A2234F3E34000E2496 /* Main.storyboard in Resources */,
 				55F11DF62399483000278367 /* DetailCardViewController.xib in Resources */,
+				557A50FF239BB42D0018A769 /* RatingView.xib in Resources */,
 				557ED52E239A915B00DB595E /* ButtonsPanelView.xib in Resources */,
 				558D95C9239A440300D3374C /* PhotosView.xib in Resources */,
 				557ED51A239A702A00DB595E /* TitleView.xib in Resources */,
@@ -1384,6 +1383,7 @@
 				5529FC21237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift in Sources */,
 				55F11DEF23992FBB00278367 /* PlaceholderContainerType.swift in Sources */,
 				558650EC239136A900285A28 /* ObjectTitleInteractorInput.swift in Sources */,
+				557A50FD239BAED30018A769 /* RatingView.swift in Sources */,
 				55509532236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift in Sources */,
 				557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */,
 				555C009B234F3E34000E2496 /* AppDelegate.swift in Sources */,

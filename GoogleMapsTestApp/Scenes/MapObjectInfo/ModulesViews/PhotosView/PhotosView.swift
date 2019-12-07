@@ -18,28 +18,14 @@ class PhotosView: UIView, PhotosShowable {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib(nibName: "PhotosView")
-//        configureView()
         configureCollectionView()
     }
         
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadFromNib(nibName: "PhotosView")
-//        configureView()
         configureCollectionView()
     }
-        
-//    private func loadFromNib() -> UIView {
-//        guard let view = UINib(nibName: "PhotosView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
-//        return view
-//    }
-//
-//    private func configureView() {
-//        let view = loadFromNib()
-//        view.frame = bounds
-//        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        addSubview(view)
-//    }
     
     private func configureCollectionView() {
         collectionView?.register(cellType: PhotoCell.self)

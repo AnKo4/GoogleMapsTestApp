@@ -22,29 +22,15 @@ class ButtonsPanelView: UIView, ButtonsPanelProtocol {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib(nibName: "ButtonsPanelView")
-//        configureView()
         configureButtons()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         loadFromNib(nibName: "ButtonsPanelView")
-//        configureView()
         configureButtons()
     }
 
-//    private func loadFromNib() -> UIView {
-//        guard let view = UINib(nibName: "ButtonsPanelView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
-//        return view
-//    }
-//
-//    private func configureView() {
-//        let view = loadFromNib()
-//        view.frame = bounds
-//        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        addSubview(view)
-//    }
-    
     private func configureButtons() {
         guard let buttons = buttons else { return }
         for button in buttons {

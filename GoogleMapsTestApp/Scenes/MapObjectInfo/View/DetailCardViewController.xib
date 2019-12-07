@@ -13,7 +13,7 @@
                 <outlet property="buttonsPanelView" destination="1DQ-Dn-Kg1" id="heM-oH-LFD"/>
                 <outlet property="directionsButtonView" destination="zbK-01-HwD" id="3Xz-Py-cSV"/>
                 <outlet property="photosView" destination="c4r-eB-JRG" id="Eba-3N-DSK"/>
-                <outlet property="ratingView" destination="Wj3-wM-zdu" id="jh1-Ei-r4y"/>
+                <outlet property="ratingView" destination="DUR-jX-u32" id="b7P-vY-Yrx"/>
                 <outlet property="titleView" destination="RFL-y3-eIc" id="Dwv-cu-AL2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,7 +30,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="2192"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-9I-UGC">
-                                    <rect key="frame" x="374" y="16" width="24" height="24"/>
+                                    <rect key="frame" x="374" y="61" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="5IB-Te-PgP"/>
                                         <constraint firstAttribute="height" constant="24" id="UuX-2X-JmT"/>
@@ -46,20 +46,10 @@
                                                 <constraint firstAttribute="height" priority="250" constant="72" id="D5x-Td-CyW"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-jX-u32" userLabel="RatingView">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-jX-u32" userLabel="RatingView" customClass="RatingView" customModule="GoogleMapsTestApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="72" width="414" height="128"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj3-wM-zdu" userLabel="RatingViewComponent" customClass="Rating" customModule="GoogleMapsTestApp" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="0.0" width="398" height="128"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
-                                            </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Wj3-wM-zdu" secondAttribute="trailing" id="9oP-E6-SDc"/>
-                                                <constraint firstItem="Wj3-wM-zdu" firstAttribute="leading" secondItem="DUR-jX-u32" secondAttribute="leading" constant="16" id="Ntr-U0-OBX"/>
                                                 <constraint firstAttribute="height" constant="18" id="WNJ-nR-tVu"/>
-                                                <constraint firstItem="Wj3-wM-zdu" firstAttribute="top" secondItem="DUR-jX-u32" secondAttribute="top" id="cHJ-Jg-dcU"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wj3-wM-zdu" secondAttribute="bottom" id="u4w-Rs-4yL"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-01-HwD" userLabel="DirectionsButtonView" customClass="DirectionsButtonView" customModule="GoogleMapsTestApp" customModuleProvider="target">
@@ -107,7 +97,7 @@
                             <constraints>
                                 <constraint firstItem="Vhb-Kf-zg8" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="45" id="3gs-JS-lBw"/>
                                 <constraint firstAttribute="trailing" secondItem="Vhb-Kf-zg8" secondAttribute="trailing" id="XoB-AZ-wdK"/>
-                                <constraint firstItem="udR-9I-UGC" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="16" id="fdW-IP-jGb"/>
+                                <constraint firstItem="udR-9I-UGC" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="61" id="fdW-IP-jGb"/>
                                 <constraint firstItem="Vhb-Kf-zg8" firstAttribute="leading" secondItem="q5j-NV-bED" secondAttribute="leading" id="iDJ-f8-U3V"/>
                                 <constraint firstAttribute="bottom" secondItem="Vhb-Kf-zg8" secondAttribute="bottom" id="mnH-Zj-Lh8"/>
                                 <constraint firstAttribute="trailing" secondItem="udR-9I-UGC" secondAttribute="trailing" constant="16" id="rfs-gk-SOo"/>

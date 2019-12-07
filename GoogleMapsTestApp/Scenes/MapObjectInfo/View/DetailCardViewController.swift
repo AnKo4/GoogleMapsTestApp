@@ -10,7 +10,7 @@ import UIKit
 
 @objc protocol DetailCardProtocol: class {
     var titleView: (UIView & TitleShowable)? { get }
-    var ratingView: Rating? { get }
+    var ratingView: ? { get }
     var directionsButtonView: (UIView & DirectionsShowable)? { get }
     var photosView: (UIView & PhotosShowable)? { get }
     var buttonsPanelView: (UIView & ButtonsPanelProtocol)? { get }
@@ -19,7 +19,7 @@ import UIKit
 class DetailCardViewController: UIViewController, MapObjectInfoProtocol {
     
     @IBOutlet weak var titleView: (UIView & TitleShowable)?
-    @IBOutlet weak var ratingView: Rating?
+    @IBOutlet weak var ratingView: (UIViev & )?
     @IBOutlet weak var directionsButtonView: (UIView & DirectionsShowable)?
     @IBOutlet weak var photosView: PhotosView?
     @IBOutlet weak var buttonsPanelView: (UIView & ButtonsPanelProtocol)?
@@ -35,8 +35,8 @@ class DetailCardViewController: UIViewController, MapObjectInfoProtocol {
         setButtonsPanelDelegate(self)
         
         titleView?.showTitle(title: "Andrey", description: "Kochetkov")
-        let ratingData = RatingData(stars: 4, voicesCount: 23, agency: "Tagline")
-        ratingView?.showRating(with: ratingData)
+//        let ratingData = RatingData(stars: 4, voicesCount: 23, agency: "Tagline")
+//        ratingView?.showRating(with: ratingData)
     }
 }
 
