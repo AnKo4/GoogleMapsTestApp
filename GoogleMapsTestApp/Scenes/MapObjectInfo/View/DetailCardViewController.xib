@@ -32,10 +32,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="892"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5j-NV-bED" userLabel="ScrollViewContainer">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="2192"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2147"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Vhb-Kf-zg8" userLabel="ModulesStack">
-                                    <rect key="frame" x="0.0" y="45" width="414" height="2147"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="2147"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-y3-eIc" userLabel="TitleView" customClass="TitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
@@ -101,7 +101,7 @@
                                 </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="Vhb-Kf-zg8" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="45" id="3gs-JS-lBw"/>
+                                <constraint firstItem="Vhb-Kf-zg8" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" id="3gs-JS-lBw"/>
                                 <constraint firstAttribute="trailing" secondItem="Vhb-Kf-zg8" secondAttribute="trailing" id="XoB-AZ-wdK"/>
                                 <constraint firstItem="Vhb-Kf-zg8" firstAttribute="leading" secondItem="q5j-NV-bED" secondAttribute="leading" id="iDJ-f8-U3V"/>
                                 <constraint firstAttribute="bottom" secondItem="Vhb-Kf-zg8" secondAttribute="bottom" id="mnH-Zj-Lh8"/>
@@ -119,7 +119,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="zuh-pX-hwg"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-9I-UGC" userLabel="CloseButton">
-                    <rect key="frame" x="374" y="61" width="24" height="24"/>
+                    <rect key="frame" x="374" y="16" width="24" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="24" id="5IB-Te-PgP"/>
                         <constraint firstAttribute="height" constant="24" id="UuX-2X-JmT"/>
@@ -137,7 +137,7 @@
                 <constraint firstAttribute="trailing" secondItem="udR-9I-UGC" secondAttribute="trailing" constant="16" id="fCM-cd-v9x"/>
                 <constraint firstAttribute="bottom" secondItem="B7I-g3-sd9" secondAttribute="bottom" id="fYq-ly-JAa"/>
                 <constraint firstItem="B7I-g3-sd9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kCb-u2-Q8G"/>
-                <constraint firstItem="udR-9I-UGC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="61" id="uT6-nr-IqO"/>
+                <constraint firstItem="udR-9I-UGC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="uT6-nr-IqO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

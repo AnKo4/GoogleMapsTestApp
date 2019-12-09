@@ -59,7 +59,7 @@ class DetailCardViewController: UIViewController, MapObjectInfoProtocol, DetailC
     }
     
     
-    // Function for testing
+    // MARK: - Function for testing
     private func showData() {
         titleView?.showTitle(title: "Andrey", description: "Kochetkov")
         ratingView?.showRating(stars: 4, voices: 23, agency: "Tagline")
