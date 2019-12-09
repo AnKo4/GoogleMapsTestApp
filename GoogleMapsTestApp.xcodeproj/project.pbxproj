@@ -111,6 +111,16 @@
 		558650EE23913E2F00285A28 /* ObjectTitleFakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650ED23913E2F00285A28 /* ObjectTitleFakeService.swift */; };
 		558650F02391459800285A28 /* ObjectTitleServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650EF2391459800285A28 /* ObjectTitleServiceInput.swift */; };
 		558650F2239145C800285A28 /* ObjectTitleServiceOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650F1239145C800285A28 /* ObjectTitleServiceOutput.swift */; };
+		55872935239E0BCD00CCD276 /* RatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872934239E0BCD00CCD276 /* RatingProtocol.swift */; };
+		55872938239E0D7D00CCD276 /* UIViewNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872937239E0D7D00CCD276 /* UIViewNibLoadable.swift */; };
+		5587293C239E12C700CCD276 /* RatingOutletProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587293B239E12C700CCD276 /* RatingOutletProtocol.swift */; };
+		55872940239E2DCC00CCD276 /* SectionViewWithButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5587293F239E2DCC00CCD276 /* SectionViewWithButton.xib */; };
+		55872942239E2EBC00CCD276 /* SectionViewWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872941239E2EBC00CCD276 /* SectionViewWithButton.swift */; };
+		55872945239E3C9100CCD276 /* WorkingTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872944239E3C9100CCD276 /* WorkingTimeView.swift */; };
+		55872948239E45EF00CCD276 /* SectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55872947239E45EF00CCD276 /* SectionView.xib */; };
+		5587294B239E47E100CCD276 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587294A239E47E100CCD276 /* SectionView.swift */; };
+		5587294D239E480900CCD276 /* SectionViewWithButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587294C239E480900CCD276 /* SectionViewWithButtonProtocol.swift */; };
+		5587294F239E48AD00CCD276 /* SectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587294E239E48AD00CCD276 /* SectionViewProtocol.swift */; };
 		558D95C7239A43CC00D3374C /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D95C6239A43CC00D3374C /* PhotosView.swift */; };
 		558D95C9239A440300D3374C /* PhotosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 558D95C8239A440300D3374C /* PhotosView.xib */; };
 		558D95CC239A4E7C00D3374C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558D95CA239A4E7C00D3374C /* PhotoCell.swift */; };
@@ -122,6 +132,7 @@
 		559507D02382A1F900F34AD9 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507CF2382A1F900F34AD9 /* AlertShowable.swift */; };
 		559507D22382A24300F34AD9 /* AlertPresenterHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */; };
 		559507D42382A26D00F34AD9 /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */; };
+		5598A876239E635C003FEFD0 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598A875239E635C003FEFD0 /* ReviewsView.swift */; };
 		559E42A92383D3D500C3BC00 /* MapPointCategoryContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */; };
 		55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB6D2356F7B40011273F /* GMUClusterManager.m */; };
 		55AFFBB72356F7B40011273F /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB712356F7B40011273F /* GMUGridBasedClusterAlgorithm.m */; };
@@ -164,6 +175,8 @@
 		55F11DEF23992FBB00278367 /* PlaceholderContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F11DEE23992FBB00278367 /* PlaceholderContainerType.swift */; };
 		55F11DF52399483000278367 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F11DF32399483000278367 /* DetailCardViewController.swift */; };
 		55F11DF62399483000278367 /* DetailCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F11DF42399483000278367 /* DetailCardViewController.xib */; };
+		55F48354239E5DE3003A013D /* SectionViewWithButtonOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F48353239E5DE3003A013D /* SectionViewWithButtonOutput.swift */; };
+		55F48356239E5EF4003A013D /* SectionViewWithButtonOutputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F48355239E5EF4003A013D /* SectionViewWithButtonOutputable.swift */; };
 		55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFB237E984900DB4A29 /* ZoomButton.swift */; };
 		55FA2FFE237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */; };
 		55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */; };
@@ -284,6 +297,16 @@
 		558650ED23913E2F00285A28 /* ObjectTitleFakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleFakeService.swift; sourceTree = "<group>"; };
 		558650EF2391459800285A28 /* ObjectTitleServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleServiceInput.swift; sourceTree = "<group>"; };
 		558650F1239145C800285A28 /* ObjectTitleServiceOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleServiceOutput.swift; sourceTree = "<group>"; };
+		55872934239E0BCD00CCD276 /* RatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingProtocol.swift; sourceTree = "<group>"; };
+		55872937239E0D7D00CCD276 /* UIViewNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNibLoadable.swift; sourceTree = "<group>"; };
+		5587293B239E12C700CCD276 /* RatingOutletProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingOutletProtocol.swift; sourceTree = "<group>"; };
+		5587293F239E2DCC00CCD276 /* SectionViewWithButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViewWithButton.xib; sourceTree = "<group>"; };
+		55872941239E2EBC00CCD276 /* SectionViewWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewWithButton.swift; sourceTree = "<group>"; };
+		55872944239E3C9100CCD276 /* WorkingTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingTimeView.swift; sourceTree = "<group>"; };
+		55872947239E45EF00CCD276 /* SectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionView.xib; sourceTree = "<group>"; };
+		5587294A239E47E100CCD276 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		5587294C239E480900CCD276 /* SectionViewWithButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewWithButtonProtocol.swift; sourceTree = "<group>"; };
+		5587294E239E48AD00CCD276 /* SectionViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewProtocol.swift; sourceTree = "<group>"; };
 		558D95C6239A43CC00D3374C /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 		558D95C8239A440300D3374C /* PhotosView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosView.xib; sourceTree = "<group>"; };
 		558D95CA239A4E7C00D3374C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -295,6 +318,7 @@
 		559507CF2382A1F900F34AD9 /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
 		559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterHolder.swift; sourceTree = "<group>"; };
 		559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
+		5598A875239E635C003FEFD0 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointCategoryContainerType.swift; sourceTree = "<group>"; };
 		55AFFB6D2356F7B40011273F /* GMUClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUClusterManager.m; sourceTree = "<group>"; };
 		55AFFB6E2356F7B40011273F /* GMUStaticCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStaticCluster.h; sourceTree = "<group>"; };
@@ -377,6 +401,8 @@
 		55F11DEE23992FBB00278367 /* PlaceholderContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderContainerType.swift; sourceTree = "<group>"; };
 		55F11DF32399483000278367 /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
 		55F11DF42399483000278367 /* DetailCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCardViewController.xib; sourceTree = "<group>"; };
+		55F48353239E5DE3003A013D /* SectionViewWithButtonOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewWithButtonOutput.swift; sourceTree = "<group>"; };
+		55F48355239E5EF4003A013D /* SectionViewWithButtonOutputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewWithButtonOutputable.swift; sourceTree = "<group>"; };
 		55FA2FFB237E984900DB4A29 /* ZoomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButton.swift; sourceTree = "<group>"; };
 		55FA2FFD237EDDCD00DB4A29 /* GMUComponentFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMUComponentFactoryProtocol.swift; sourceTree = "<group>"; };
 		55FA2FFF237EDEFD00DB4A29 /* GMUComponentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMUComponentFactory.swift; sourceTree = "<group>"; };
@@ -517,6 +543,7 @@
 		555020E5238BF950002BE89F /* Rating */ = {
 			isa = PBXGroup;
 			children = (
+				55872936239E0D4600CCD276 /* Extensions */,
 				557510D7238D144E00FF4AEA /* Typealiases */,
 				557510D0238D0E3300FF4AEA /* Protocols */,
 				557510CF238D0E2800FF4AEA /* Structures */,
@@ -594,6 +621,8 @@
 		5561BCD0237AD91E00073CF1 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
+				5587293E239E2AC000CCD276 /* SectionViewWithButton */,
+				5587293D239E2A3200CCD276 /* SectionView */,
 				555020E5238BF950002BE89F /* Rating */,
 				558D95CF239A62BC00D3374C /* Protocols */,
 				5571315623977F7A00FBFB82 /* Placeholder */,
@@ -739,6 +768,7 @@
 			children = (
 				557510D1238D0E6A00FF4AEA /* RatingInfo.swift */,
 				557510D5238D117D00FF4AEA /* RatingShowable.swift */,
+				55872934239E0BCD00CCD276 /* RatingProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -866,6 +896,7 @@
 			children = (
 				557A50FC239BAED30018A769 /* RatingView.swift */,
 				557A50FE239BB42D0018A769 /* RatingView.xib */,
+				5587293B239E12C700CCD276 /* RatingOutletProtocol.swift */,
 			);
 			path = RatingView;
 			sourceTree = "<group>";
@@ -941,6 +972,44 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		55872936239E0D4600CCD276 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55872937239E0D7D00CCD276 /* UIViewNibLoadable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5587293D239E2A3200CCD276 /* SectionView */ = {
+			isa = PBXGroup;
+			children = (
+				55872947239E45EF00CCD276 /* SectionView.xib */,
+				5587294A239E47E100CCD276 /* SectionView.swift */,
+				5587294E239E48AD00CCD276 /* SectionViewProtocol.swift */,
+			);
+			path = SectionView;
+			sourceTree = "<group>";
+		};
+		5587293E239E2AC000CCD276 /* SectionViewWithButton */ = {
+			isa = PBXGroup;
+			children = (
+				5587293F239E2DCC00CCD276 /* SectionViewWithButton.xib */,
+				55872941239E2EBC00CCD276 /* SectionViewWithButton.swift */,
+				5587294C239E480900CCD276 /* SectionViewWithButtonProtocol.swift */,
+				55F48353239E5DE3003A013D /* SectionViewWithButtonOutput.swift */,
+				55F48355239E5EF4003A013D /* SectionViewWithButtonOutputable.swift */,
+			);
+			path = SectionViewWithButton;
+			sourceTree = "<group>";
+		};
+		55872943239E3C6300CCD276 /* WorkingTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				55872944239E3C9100CCD276 /* WorkingTimeView.swift */,
+			);
+			path = WorkingTimeView;
+			sourceTree = "<group>";
+		};
 		558D95C5239A439900D3374C /* ModulesViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -949,6 +1018,8 @@
 				557ED521239A819A00DB595E /* DirectionsButtonView */,
 				558D95CE239A60C200D3374C /* PhotosView */,
 				557ED52A239A90F300DB595E /* ButtonsPanelView */,
+				55872943239E3C6300CCD276 /* WorkingTimeView */,
+				5598A874239E6319003FEFD0 /* ReviewsView */,
 			);
 			path = ModulesViews;
 			sourceTree = "<group>";
@@ -973,6 +1044,14 @@
 				558D95D2239A62DC00D3374C /* UICollectionView+Reusable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5598A874239E6319003FEFD0 /* ReviewsView */ = {
+			isa = PBXGroup;
+			children = (
+				5598A875239E635C003FEFD0 /* ReviewsView.swift */,
+			);
+			path = ReviewsView;
 			sourceTree = "<group>";
 		};
 		559E42AB2383D6A600C3BC00 /* Common */ = {
@@ -1249,6 +1328,7 @@
 			files = (
 				555020E7238BF967002BE89F /* Rating.xib in Resources */,
 				554CBF64238BE77200773795 /* ObjectTitleView.xib in Resources */,
+				55872940239E2DCC00CCD276 /* SectionViewWithButton.xib in Resources */,
 				557ED523239A81C400DB595E /* DirectionsButtonView.xib in Resources */,
 				555020E4238BF37C002BE89F /* Roboto-Regular.ttf in Resources */,
 				558D95CD239A4E7C00D3374C /* PhotoCell.xib in Resources */,
@@ -1259,6 +1339,7 @@
 				555C00A2234F3E34000E2496 /* Main.storyboard in Resources */,
 				55F11DF62399483000278367 /* DetailCardViewController.xib in Resources */,
 				557A50FF239BB42D0018A769 /* RatingView.xib in Resources */,
+				55872948239E45EF00CCD276 /* SectionView.xib in Resources */,
 				557ED52E239A915B00DB595E /* ButtonsPanelView.xib in Resources */,
 				558D95C9239A440300D3374C /* PhotosView.xib in Resources */,
 				557ED51A239A702A00DB595E /* TitleView.xib in Resources */,
@@ -1359,6 +1440,7 @@
 				55AFFBC12356F7B40011273F /* GMUKMLParser.m in Sources */,
 				551C086F238EBB68009F50C5 /* MapObjectInfoRouterOutput.swift in Sources */,
 				551C0873238EBC9B009F50C5 /* MapObjectInfoPresenter.swift in Sources */,
+				5587294D239E480900CCD276 /* SectionViewWithButtonProtocol.swift in Sources */,
 				55AFFBCC2356F7B40011273F /* GMULineString.m in Sources */,
 				555A9CF92383CE5C005BE304 /* ButtonViewControllerProtocol.swift in Sources */,
 				556B9CA8235DCB9500AB713B /* GoogleMapsNetworkManager.swift in Sources */,
@@ -1370,7 +1452,9 @@
 				551C0869238EB518009F50C5 /* MapObjectInfoRouter.swift in Sources */,
 				55B617D12372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift in Sources */,
 				55F11DF52399483000278367 /* DetailCardViewController.swift in Sources */,
+				55872945239E3C9100CCD276 /* WorkingTimeView.swift in Sources */,
 				557ED51C239A76B700DB595E /* TitleView.swift in Sources */,
+				5587294B239E47E100CCD276 /* SectionView.swift in Sources */,
 				55AFFBC52356F7B40011273F /* GMUPolygon.m in Sources */,
 				55AFFBC82356F7B40011273F /* GMUGroundOverlay.m in Sources */,
 				5551093023575218000B8AE1 /* MarkerCategory.swift in Sources */,
@@ -1382,18 +1466,22 @@
 				551C0855238E834E009F50C5 /* ObjectTitleModule.swift in Sources */,
 				5529FC21237D718A00144605 /* GoogleMapsNetworkDataProviderProtocol.swift in Sources */,
 				55F11DEF23992FBB00278367 /* PlaceholderContainerType.swift in Sources */,
+				5587293C239E12C700CCD276 /* RatingOutletProtocol.swift in Sources */,
 				558650EC239136A900285A28 /* ObjectTitleInteractorInput.swift in Sources */,
 				557A50FD239BAED30018A769 /* RatingView.swift in Sources */,
 				55509532236B075F009EB330 /* GoogleMapsViewControllerProtocol.swift in Sources */,
 				557766D723758DEB004592F1 /* ButtonSceneModule.swift in Sources */,
 				555C009B234F3E34000E2496 /* AppDelegate.swift in Sources */,
+				55F48356239E5EF4003A013D /* SectionViewWithButtonOutputable.swift in Sources */,
 				55AFFBBD2356F7B40011273F /* GMUStaticCluster.m in Sources */,
 				556A4DD4238FEB0F00341BDF /* MapObjectInfoInteractorOutput.swift in Sources */,
 				556A4DD8238FED5C00341BDF /* MapObjectinfoPresenterInput.swift in Sources */,
+				5587294F239E48AD00CCD276 /* SectionViewProtocol.swift in Sources */,
 				557ED517239A686100DB595E /* PhotosShowable.swift in Sources */,
 				5532F8F6238D619C00028D86 /* ObjectTitlePresenterOutput.swift in Sources */,
 				55AFFBCF2356F7B40011273F /* GQTPointQuadTreeChild.m in Sources */,
 				558D95C7239A43CC00D3374C /* PhotosView.swift in Sources */,
+				55872938239E0D7D00CCD276 /* UIViewNibLoadable.swift in Sources */,
 				554CC8B7234F702B00E95117 /* POIItem.swift in Sources */,
 				558650F02391459800285A28 /* ObjectTitleServiceInput.swift in Sources */,
 				551C085D238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift in Sources */,
@@ -1433,6 +1521,7 @@
 				55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */,
 				55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */,
 				55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */,
+				55872935239E0BCD00CCD276 /* RatingProtocol.swift in Sources */,
 				556FE7FC2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift in Sources */,
 				55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */,
 				556FE7F323868B3300CF0D1C /* MapObjectInfoViewController.swift in Sources */,
@@ -1447,6 +1536,7 @@
 				555C009D234F3E34000E2496 /* SceneDelegate.swift in Sources */,
 				555A9CF72383CDC1005BE304 /* ButtonSceneViewModelProtocol.swift in Sources */,
 				556A4DD0238FC91E00341BDF /* MapObjectInfoSubmodulesFactory.swift in Sources */,
+				55872942239E2EBC00CCD276 /* SectionViewWithButton.swift in Sources */,
 				559507D42382A26D00F34AD9 /* AlertPresenterProtocol.swift in Sources */,
 				5579340023507C3500BFAA8E /* MapPoint.swift in Sources */,
 				55AFFBCB2356F7B40011273F /* GMUPair.m in Sources */,
@@ -1471,6 +1561,7 @@
 				557766D0237579AF004592F1 /* GoogleMapsSceneModule.swift in Sources */,
 				557766CC23755ECF004592F1 /* ButtonRouterPorotocol.swift in Sources */,
 				557934022350A6EE00BFAA8E /* GoogleMapsStartPointConstants.swift in Sources */,
+				55F48354239E5DE3003A013D /* SectionViewWithButtonOutput.swift in Sources */,
 				559E42A92383D3D500C3BC00 /* MapPointCategoryContainerType.swift in Sources */,
 				55FA2FFC237E984900DB4A29 /* ZoomButton.swift in Sources */,
 				5529FC23237D72F000144605 /* GoogleMapsNetworkDataProvider.swift in Sources */,
@@ -1488,6 +1579,7 @@
 				55E0EB59237D8C6200B93676 /* GoogleMapsRouterProtocol.swift in Sources */,
 				55AFFBBC2356F7B40011273F /* GMUDefaultClusterIconGenerator.m in Sources */,
 				551C0871238EBBB2009F50C5 /* MapObjectInfoProtocol.swift in Sources */,
+				5598A876239E635C003FEFD0 /* ReviewsView.swift in Sources */,
 				558650EA2391347800285A28 /* ObjectTitleInteractorOutput.swift in Sources */,
 				557ED527239A882D00DB595E /* DirectionsShowable.swift in Sources */,
 				556B9CAB235DCCEF00AB713B /* Geodata.swift in Sources */,

@@ -84,8 +84,8 @@
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="vPc-Tv-fhQ" secondAttribute="bottom" constant="14" id="HMl-pm-o9b"/>
-                <constraint firstItem="vPc-Tv-fhQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" constant="14" id="Je5-bG-Nz0"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vPc-Tv-fhQ" secondAttribute="bottom" constant="14" id="HMl-pm-o9b"/>
+                <constraint firstItem="vPc-Tv-fhQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="Je5-bG-Nz0"/>
                 <constraint firstAttribute="trailing" secondItem="vPc-Tv-fhQ" secondAttribute="trailing" constant="16" id="rc6-vr-FuN"/>
                 <constraint firstItem="vPc-Tv-fhQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="xhN-ya-lbd"/>
             </constraints>

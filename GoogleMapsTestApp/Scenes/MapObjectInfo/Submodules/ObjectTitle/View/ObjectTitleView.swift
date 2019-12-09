@@ -72,7 +72,7 @@ extension ObjectTitleView: ObjectTitlePresenterOutput {
     }
     
     func showObjectRarting(_ rating: RatingInfo) {
-        objectRating.showRating(with: rating)
+        objectRating.showRating(stars: rating.stars, voices: rating.voicesCount, agency: rating.agency)
     }
     
     func showDistanceButtonTitle(_ title: String) {

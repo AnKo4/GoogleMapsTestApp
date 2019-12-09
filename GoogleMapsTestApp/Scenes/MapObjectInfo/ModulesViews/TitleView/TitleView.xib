@@ -25,16 +25,16 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3ui-HK-Byd">
-                    <rect key="frame" x="16" y="16" width="342" height="154"/>
+                    <rect key="frame" x="16" y="16" width="342" height="4"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-oB-fCh" userLabel="TitleLabel">
-                            <rect key="frame" x="0.0" y="0.0" width="342" height="75"/>
+                            <rect key="frame" x="0.0" y="0.0" width="342" height="0.0"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrO-gZ-Kwg" userLabel="DescriptionLabel">
-                            <rect key="frame" x="0.0" y="79" width="342" height="75"/>
+                            <rect key="frame" x="0.0" y="4" width="342" height="0.0"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="3ui-HK-Byd" secondAttribute="trailing" constant="56" id="FcM-Oh-T0P"/>
                 <constraint firstItem="3ui-HK-Byd" firstAttribute="top" secondItem="uxy-vj-58M" secondAttribute="top" constant="16" id="Qch-Xe-a0h"/>
-                <constraint firstAttribute="bottom" secondItem="3ui-HK-Byd" secondAttribute="bottom" constant="3" id="RqU-ya-eNK"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3ui-HK-Byd" secondAttribute="bottom" constant="3" id="RqU-ya-eNK"/>
                 <constraint firstItem="3ui-HK-Byd" firstAttribute="leading" secondItem="uxy-vj-58M" secondAttribute="leading" constant="16" id="grR-dS-dYo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

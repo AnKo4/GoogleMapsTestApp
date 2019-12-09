@@ -9,21 +9,12 @@
 import Foundation
 
 protocol RatingShowable {
-    func showRating(with data: RatingInfo)
-    func showRatingStars(_ count: Int)
-    func showRatingText(voices: Int, on agency: String)
+    func showRating(stars: Int, voices: Int, agency: String)
 }
 
-extension RatingShowable {
-    internal func makeStar(for condition: Bool) -> UIImage? {
-        switch condition {
-        case true: return UIImage(named: "ic_star_orange")
-        case false: return UIImage(named: "ic_star_gray")
-        }
-    }
-    
-    func showRating(with data: RatingInfo) {
-        showRatingStars(data.stars)
-        showRatingText(voices: data.voicesCount, on: data.agency)
+extension RatingShowable where Self: RatingProtocol {
+    func showRating(stars: Int, voices: Int, agency: String) {
+        showRatingStars(stars)
+        showRatingText(voices: voices, on: agency)
     }
 }

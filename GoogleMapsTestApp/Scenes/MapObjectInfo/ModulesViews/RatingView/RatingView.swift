@@ -23,3 +23,9 @@ class RatingView: UIView {
     }
 
 }
+
+extension RatingView: RatingOutletProtocol {
+    func showRating(stars: Int, voices: Int, agency: String) {
+        rating?.showRating(stars: stars, voices: voices, agency: agency)
+    }
+}

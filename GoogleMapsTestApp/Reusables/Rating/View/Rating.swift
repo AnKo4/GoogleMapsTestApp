@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class Rating: UIView {
+@IBDesignable class Rating: UIView, RatingShowable {
     
     @IBOutlet private weak var ratingStarsStack: UIStackView!
     @IBOutlet private weak var ratingTextLabel: UILabel!
@@ -17,29 +17,15 @@ import UIKit
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib(nibName: "Rating")
-//        configureView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadFromNib(nibName: "Rating")
-//        configureView()
     }
-    
-//    private func loadFromNib() -> UIView {
-//        guard let view = UINib(nibName: "Rating", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
-//        return view
-//    }
-//
-//    private func configureView() {
-//        let view = loadFromNib()
-//        view.frame = bounds
-//        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        addSubview(view)
-//    }
 }
  
-extension Rating: RatingShowable {
+extension Rating: RatingProtocol {
     internal func showRatingStars(_ count: Int) {
         guard let stars = ratingStarsStack.subviews as? [UIImageView] else { return }
         for i in 1...5 {
