@@ -38,8 +38,6 @@ extension PlaceholderContainerType {
     
     func hidePlaceholder() {
         guard let placeholder = placeholder else { return }
-        
-        self.container?.sendSubviewToBack(placeholder)
         placeholder.removeFromSuperview()
     }
 }

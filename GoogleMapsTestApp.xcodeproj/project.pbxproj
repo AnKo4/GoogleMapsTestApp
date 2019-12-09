@@ -111,7 +111,6 @@
 		558650EE23913E2F00285A28 /* ObjectTitleFakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650ED23913E2F00285A28 /* ObjectTitleFakeService.swift */; };
 		558650F02391459800285A28 /* ObjectTitleServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650EF2391459800285A28 /* ObjectTitleServiceInput.swift */; };
 		558650F2239145C800285A28 /* ObjectTitleServiceOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558650F1239145C800285A28 /* ObjectTitleServiceOutput.swift */; };
-		55872935239E0BCD00CCD276 /* RatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872934239E0BCD00CCD276 /* RatingProtocol.swift */; };
 		55872938239E0D7D00CCD276 /* UIViewNibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55872937239E0D7D00CCD276 /* UIViewNibLoadable.swift */; };
 		5587293C239E12C700CCD276 /* RatingOutletProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5587293B239E12C700CCD276 /* RatingOutletProtocol.swift */; };
 		55872940239E2DCC00CCD276 /* SectionViewWithButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5587293F239E2DCC00CCD276 /* SectionViewWithButton.xib */; };
@@ -133,6 +132,7 @@
 		559507D22382A24300F34AD9 /* AlertPresenterHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */; };
 		559507D42382A26D00F34AD9 /* AlertPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */; };
 		5598A876239E635C003FEFD0 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598A875239E635C003FEFD0 /* ReviewsView.swift */; };
+		5598A878239E70A3003FEFD0 /* RatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5598A877239E70A3003FEFD0 /* RatingProtocol.swift */; };
 		559E42A92383D3D500C3BC00 /* MapPointCategoryContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */; };
 		55AFFBB62356F7B40011273F /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB6D2356F7B40011273F /* GMUClusterManager.m */; };
 		55AFFBB72356F7B40011273F /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AFFB712356F7B40011273F /* GMUGridBasedClusterAlgorithm.m */; };
@@ -297,7 +297,6 @@
 		558650ED23913E2F00285A28 /* ObjectTitleFakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleFakeService.swift; sourceTree = "<group>"; };
 		558650EF2391459800285A28 /* ObjectTitleServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleServiceInput.swift; sourceTree = "<group>"; };
 		558650F1239145C800285A28 /* ObjectTitleServiceOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleServiceOutput.swift; sourceTree = "<group>"; };
-		55872934239E0BCD00CCD276 /* RatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingProtocol.swift; sourceTree = "<group>"; };
 		55872937239E0D7D00CCD276 /* UIViewNibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNibLoadable.swift; sourceTree = "<group>"; };
 		5587293B239E12C700CCD276 /* RatingOutletProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingOutletProtocol.swift; sourceTree = "<group>"; };
 		5587293F239E2DCC00CCD276 /* SectionViewWithButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionViewWithButton.xib; sourceTree = "<group>"; };
@@ -319,6 +318,7 @@
 		559507D12382A24300F34AD9 /* AlertPresenterHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterHolder.swift; sourceTree = "<group>"; };
 		559507D32382A26D00F34AD9 /* AlertPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterProtocol.swift; sourceTree = "<group>"; };
 		5598A875239E635C003FEFD0 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		5598A877239E70A3003FEFD0 /* RatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingProtocol.swift; sourceTree = "<group>"; };
 		559E42A82383D3D500C3BC00 /* MapPointCategoryContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointCategoryContainerType.swift; sourceTree = "<group>"; };
 		55AFFB6D2356F7B40011273F /* GMUClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUClusterManager.m; sourceTree = "<group>"; };
 		55AFFB6E2356F7B40011273F /* GMUStaticCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStaticCluster.h; sourceTree = "<group>"; };
@@ -768,7 +768,7 @@
 			children = (
 				557510D1238D0E6A00FF4AEA /* RatingInfo.swift */,
 				557510D5238D117D00FF4AEA /* RatingShowable.swift */,
-				55872934239E0BCD00CCD276 /* RatingProtocol.swift */,
+				5598A877239E70A3003FEFD0 /* RatingProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1448,6 +1448,7 @@
 				557ED52C239A911B00DB595E /* ButtonsPanelView.swift in Sources */,
 				55509534236B07F0009EB330 /* GoogleMapsSceneViewModelProtocol.swift in Sources */,
 				55509537236B0923009EB330 /* GoogleMapsViewControllerType.swift in Sources */,
+				5598A878239E70A3003FEFD0 /* RatingProtocol.swift in Sources */,
 				557ED530239A99E600DB595E /* ButtonsPanelProtocol.swift in Sources */,
 				551C0869238EB518009F50C5 /* MapObjectInfoRouter.swift in Sources */,
 				55B617D12372BCAD00AAC6BA /* ClusterConfiguratorParametersConstants.swift in Sources */,
@@ -1521,7 +1522,6 @@
 				55FA3000237EDEFD00DB4A29 /* GMUComponentFactory.swift in Sources */,
 				55E63EA82350B6A2001882F8 /* MapZoom.swift in Sources */,
 				55C389B62384289B000F9FCB /* IconGeneratorParameters.swift in Sources */,
-				55872935239E0BCD00CCD276 /* RatingProtocol.swift in Sources */,
 				556FE7FC2386CA4C00CF0D1C /* ViewControllerPresenterHolder.swift in Sources */,
 				55AFFBB82356F7B40011273F /* GMUWrappingDictionaryKey.m in Sources */,
 				556FE7F323868B3300CF0D1C /* MapObjectInfoViewController.swift in Sources */,
