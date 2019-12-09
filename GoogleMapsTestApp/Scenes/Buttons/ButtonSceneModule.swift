@@ -14,7 +14,8 @@ struct ButtonSceneModule: BaseModuleProtocol {
 
     init(buttonTitle: String, navController: UINavigationController) {
 
-        self.view = ButtonViewController.makeSelfFrom(storyboard: "Main")
+//        self.view = ButtonViewController.makeSelfFrom(storyboard: "Main")
+        self.view = ButtonViewController(nibName: ButtonViewController.id, bundle: nil)
 
         guard self.view != nil else { return }
         let router = ButtonRouter(navigationController: navController)

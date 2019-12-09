@@ -1,0 +1,90 @@
+//
+//  ObjectTitleView.swift
+//  GoogleMapsTestApp
+//
+//  Created by Andrey on 25.11.2019.
+//  Copyright © 2019 Andrey. All rights reserved.
+//
+
+import UIKit
+
+@IBDesignable class ObjectTitleView: UIView, ObjectTitleViewProtocol {
+
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var placeholderView: UIView!
+    
+    @IBOutlet weak var placeholderLabel: UILabel!
+    
+    @IBOutlet private weak var objectTitleLabel: UILabel!
+    @IBOutlet private weak var objectDescriptionLabel: UILabel!
+    @IBOutlet private weak var objectRating: Rating!
+    @IBOutlet private weak var distanceButton: UIButton!
+    
+    weak var presenter: ObjectTitlePresenterInput?
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configureView()
+    }
+    
+    private func loadFromNib() -> UIView {
+        guard let view = UINib(nibName: "ObjectTitleView", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
+        return view
+    }
+    
+    private func configureView() {
+        let view = loadFromNib()
+        view.frame = bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(view)
+        configureViews()
+        configureDistanceButton()
+    }
+    
+    private func configureViews() {
+        placeholderView.isHidden = true
+        contentView.isHidden = false
+    }
+    
+    private func configureDistanceButton() {
+        distanceButton.layer.cornerRadius = 5
+        distanceButton.titleLabel?.numberOfLines = 0
+        distanceButton.titleLabel?.textAlignment = .center
+    }
+    
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        presenter?.viewCompletedConfiguration()
+    }
+}
+
+extension ObjectTitleView: ObjectTitlePresenterOutput {
+    func showPlaceholder(with message: String) {
+        contentView.isHidden = true
+        placeholderView.isHidden = false
+        placeholderLabel.text = message
+    }
+    
+    func showObjectTitle(_ title: String) {
+        objectTitleLabel.text = title
+    }
+    
+    func showObjectDescription(_ description: String) {
+        objectDescriptionLabel.text = description
+    }
+    
+    func showObjectRarting(_ rating: RatingInfo) {
+        objectRating.showRating(with: rating)
+    }
+    
+    func showDistanceButtonTitle(_ title: String) {
+        distanceButton.setTitle("Directions" + "\n" + "\(title)", for: .normal)
+    }
+    
+}

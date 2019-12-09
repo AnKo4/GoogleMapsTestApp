@@ -10,10 +10,19 @@ import Foundation
 
 class GoogleMapsRouter: GoogleMapsRouterProtocol {
     
+    weak var controllerPresenter: HasAbilityToPresent?
     weak var alertPresenter: AlertPresenterProtocol?
     
-    init(presenter: AlertPresenterProtocol) {
+    init(presenter: AlertPresenterProtocol & HasAbilityToPresent) {
         self.alertPresenter = presenter
+        self.controllerPresenter = presenter
+    }
+    
+    func showObjectInfo(objectId: Int) {
+        let submodulesFactory = MapObjectInfoSubmodulesFactory()
+        let module = MapObjectInfoModule(submodulesFactory: submodulesFactory, objectId: objectId)
+        guard let view = module.view else { return }
+        controllerPresenter?.show(viewController: view, animated: true)
     }
 
 }

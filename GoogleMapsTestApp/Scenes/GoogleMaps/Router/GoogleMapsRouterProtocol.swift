@@ -9,6 +9,6 @@
 import Foundation
 
 
-protocol GoogleMapsRouterProtocol: class, AlertPresentable {
+protocol GoogleMapsRouterProtocol: AlertPresentable, ViewControllerPresenterHolder, ViewControllerPresentable {
 
 }

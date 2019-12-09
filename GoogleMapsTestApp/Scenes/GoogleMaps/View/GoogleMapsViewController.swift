@@ -106,6 +106,8 @@ extension GoogleMapsViewController: GMSMapViewDelegate {
         selectedMarker = marker
         markerIsSelected = true
         
+        viewModel.markerDidSelected(objectId: markerInfo.category.markerId)
+        
         return false
     }
 
@@ -142,13 +144,6 @@ extension GoogleMapsViewController: GoogleMapsViewModelOutput {
             clusterConfigurator.configureClusterManager(for: mapView, parameters: data)
         rendererFromNetwork.delegate = self
         clusterManagerFromNetwork.setDelegate(self, mapDelegate: self)
-    }
-    
-}
-
-extension UIViewController: AlertPresenterProtocol {
-    func present(alert viewController: UIAlertController, animated: Bool) {
-        present(viewController, animated: animated)
     }
     
 }

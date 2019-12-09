@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapObjectInfoViewController" customModule="GoogleMapsTestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="modulesStack" destination="oju-us-pjz" id="TMh-th-H7W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDZ-Jd-dYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oju-us-pjz">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="oju-us-pjz" secondAttribute="bottom" priority="250" id="QTx-yg-CDU"/>
+                        <constraint firstItem="oju-us-pjz" firstAttribute="top" secondItem="WDZ-Jd-dYQ" secondAttribute="top" id="Rv9-eI-8AX"/>
+                        <constraint firstItem="oju-us-pjz" firstAttribute="height" secondItem="WDZ-Jd-dYQ" secondAttribute="height" priority="250" id="e7O-2x-fns"/>
+                        <constraint firstItem="oju-us-pjz" firstAttribute="leading" secondItem="WDZ-Jd-dYQ" secondAttribute="leading" id="iN0-Qg-eGd"/>
+                        <constraint firstAttribute="trailing" secondItem="oju-us-pjz" secondAttribute="trailing" id="yzS-5M-Men"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Quu-lz-NXf"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Bwa-z4-fzi"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwG-zv-wzu">
+                    <rect key="frame" x="350.66666666666669" y="16.333333333333329" width="48" height="48"/>
+                    <state key="normal" image="btn_close"/>
+                    <connections>
+                        <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="Wbg-43-jZ2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.79611504079999995" green="0.79599207640000003" blue="0.80000168090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="WDZ-Jd-dYQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="O0H-EJ-HYf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XwG-zv-wzu" secondAttribute="trailing" constant="15.25" id="R8K-JC-2Ne"/>
+                <constraint firstItem="WDZ-Jd-dYQ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="a33-lo-N6W"/>
+                <constraint firstItem="XwG-zv-wzu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16.25" id="mPn-1Y-ECf"/>
+                <constraint firstItem="WDZ-Jd-dYQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mx7-hI-fKL"/>
+                <constraint firstItem="WDZ-Jd-dYQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vTl-vj-AZP"/>
+                <constraint firstItem="oju-us-pjz" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="wVv-0r-jdC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="115.7608695652174"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_close" width="24" height="24"/>
+    </resources>
+</document>

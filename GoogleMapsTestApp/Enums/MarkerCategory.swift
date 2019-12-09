@@ -27,4 +27,13 @@ extension MarkerCategory {
         case .ufo: return UIImage(named: "Reproductive_selected")
         }
     }
+    
+    var markerId: Int {
+        switch self {
+        case .human:
+            return Int.random(in: 0...4)
+        case .ufo:
+            return Int.random(in: 5...7)
+        }
+    }
 }
