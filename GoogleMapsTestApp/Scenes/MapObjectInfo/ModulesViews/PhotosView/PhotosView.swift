@@ -29,6 +29,8 @@ class PhotosView: UIView, PhotosShowable {
     
     private func configureCollectionView() {
         collectionView?.register(cellType: PhotoCell.self)
+        collectionView?.dataSource = self
+        collectionView?.delegate = self
     }
     
     func showPhotos(using data: [String], on photosProvider: String?) {

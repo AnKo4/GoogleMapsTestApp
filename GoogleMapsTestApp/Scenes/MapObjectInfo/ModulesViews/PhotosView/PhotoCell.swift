@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoCell: UICollectionViewCell, Reusable {
+class PhotoCell: UICollectionViewCell, NibReusable {
 
     @IBOutlet weak private var photo: UIImageView!
     

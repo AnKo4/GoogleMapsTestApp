@@ -19,10 +19,9 @@ import UIKit
     var phoneView: SectionViewProtocol? { get }
     var websiteView: SectionViewProtocol? { get }
     var reviewsView: (SectionViewWithButtonProtocol & SectionViewWithButtonOutputable)? { get }
-    
 }
 
-class DetailCardViewController: UIViewController, MapObjectInfoProtocol, DetailCardProtocol {
+class DetailCardViewController: UIViewController, MapObjectInfoProtocol, DetailCardProtocol, PlaceholderContainerType {
 
     @IBOutlet weak var titleView: TitleShowable?
     @IBOutlet weak var ratingView: RatingOutletProtocol?
@@ -35,26 +34,47 @@ class DetailCardViewController: UIViewController, MapObjectInfoProtocol, DetailC
     @IBOutlet weak var websiteView: SectionViewProtocol?
     @IBOutlet weak var reviewsView: (SectionViewWithButtonProtocol & SectionViewWithButtonOutputable)?
     
-    
+    var placeholder: UIView?
     var presenter: MapObjectInfoPresenterInput?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
+        setDelegates()
+        showData()
+    }
+    
+    private func configureView() {
         view.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8).cgColor
+        workingTimeView?.setButtonTitle("Show All")
+        reviewsView?.setButtonTitle("Open TripAdvisor")
+    }
+    
+    private func setDelegates() {
         setDirectionButtonDelegate(self)
         setButtonsPanelDelegate(self)
         setSectionViewWithButtonDelegate(self)
-        
-        titleView?.showTitle(title: "Andrey", description: "Kochetkov")
-        ratingView?.showRating(stars: 4, voices: 23, agency: "Tagline")
-        workingTimeView?.setButtonTitle("Show All")
-        workingTimeView?.show(title: "Hours", content: "09:00 - 21:00, Open Now")
     }
     
-    @IBAction func closeButtonDidTap(_ sender: UIButton) {
-        print("close!")
+    
+    // Function for testing
+    private func showData() {
+        titleView?.showTitle(title: "Andrey", description: "Kochetkov")
+        ratingView?.showRating(stars: 4, voices: 23, agency: "Tagline")
+        directionsButtonView?.setTitle("5 min drive")
+        let images: [String] = ["image1", "image2", "image3", "image4", "image5", "image6"]
+        photosView?.showPhotos(using: images, on: "TripAdvisor")
+        workingTimeView?.show(title: "Hours", content: "09:00 - 21:00, Open Now")
+        addressView?.show(title: "Address", content: "Moscow, Red Square")
+//        phoneView?.show(title: nil, content: nil)
+        phoneView?.show(title: "Phone", content: "+7 (800) 777-77-77")
+        websiteView?.show(title: "Website", content: "apple.com")
+        reviewsView?.show(title: "What people say", content: nil)
+    }
+    
+    @IBAction private func closeButtonDidTap(_ sender: UIButton) {
         presenter?.closeButtonDidTap()
     }
 }

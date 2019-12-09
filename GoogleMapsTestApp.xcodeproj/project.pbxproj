@@ -10,7 +10,6 @@
 		5502F73C23794DF6001003C9 /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73B23794DF6001003C9 /* Launcher.swift */; };
 		5502F73E23797FC9001003C9 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */; };
 		5511A50A2397D78300C13D74 /* PlaceholderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511A5092397D78300C13D74 /* PlaceholderType.swift */; };
-		5511A50C2397D7D800C13D74 /* PlaceholderShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */; };
 		551C0855238E834E009F50C5 /* ObjectTitleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C0854238E834E009F50C5 /* ObjectTitleModule.swift */; };
 		551C0858238E8CE8009F50C5 /* ObjectTitleInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C0857238E8CE8009F50C5 /* ObjectTitleInteractorProtocol.swift */; };
 		551C085D238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C085C238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift */; };
@@ -190,7 +189,6 @@
 		5502F73B23794DF6001003C9 /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		5502F73D23797FC9001003C9 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = GoogleMapsTestApp/UIViewControllerExtensions.swift; sourceTree = SOURCE_ROOT; };
 		5511A5092397D78300C13D74 /* PlaceholderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderType.swift; sourceTree = "<group>"; };
-		5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderShowable.swift; sourceTree = "<group>"; };
 		551C0854238E834E009F50C5 /* ObjectTitleModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleModule.swift; sourceTree = "<group>"; };
 		551C0857238E8CE8009F50C5 /* ObjectTitleInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitleInteractorProtocol.swift; sourceTree = "<group>"; };
 		551C085C238E9393009F50C5 /* ObjectTitlePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectTitlePresenterProtocol.swift; sourceTree = "<group>"; };
@@ -430,7 +428,6 @@
 			isa = PBXGroup;
 			children = (
 				5511A5092397D78300C13D74 /* PlaceholderType.swift */,
-				5511A50B2397D7D800C13D74 /* PlaceholderShowable.swift */,
 				55F11DEE23992FBB00278367 /* PlaceholderContainerType.swift */,
 			);
 			path = Protocols;
@@ -1573,7 +1570,6 @@
 				558650E82391315C00285A28 /* ObjectTitleServiceProtocol.swift in Sources */,
 				5553427623719629004558A4 /* ClusterConfiguratorProtocol.swift in Sources */,
 				55E0EB5B237D9B3A00B93676 /* GoogleMapsRouter.swift in Sources */,
-				5511A50C2397D7D800C13D74 /* PlaceholderShowable.swift in Sources */,
 				559507D02382A1F900F34AD9 /* AlertShowable.swift in Sources */,
 				55E80737236C1D5700EFBA3D /* NetworkDataProviderProtocol.swift in Sources */,
 				55E0EB59237D8C6200B93676 /* GoogleMapsRouterProtocol.swift in Sources */,
