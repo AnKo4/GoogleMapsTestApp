@@ -9,7 +9,7 @@
 import Foundation
 
 struct GoogleMapsStartPointConstants {
-    static let lat = 56.863556800505016
-    static let long = 53.20596625984351
-    static let zoom = Float(5)
+    static let lat = 54.3143937208559
+    static let long = 48.39280074899831
+    static let zoom = Float(10)
 }

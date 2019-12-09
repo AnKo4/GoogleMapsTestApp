@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailCardViewController" customModule="GoogleMapsTestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="addressView" destination="3my-F2-pQt" id="gDx-1y-76n"/>
+                <outlet property="buttonsPanelView" destination="1DQ-Dn-Kg1" id="heM-oH-LFD"/>
+                <outlet property="directionsButtonView" destination="zbK-01-HwD" id="3Xz-Py-cSV"/>
+                <outlet property="phoneView" destination="ef0-Jg-Rnn" id="CsW-Oz-jjp"/>
+                <outlet property="photosView" destination="c4r-eB-JRG" id="Eba-3N-DSK"/>
+                <outlet property="ratingView" destination="DUR-jX-u32" id="b7P-vY-Yrx"/>
+                <outlet property="reviewsView" destination="J3z-hI-gIx" id="07G-nZ-fZQ"/>
+                <outlet property="titleView" destination="RFL-y3-eIc" id="Dwv-cu-AL2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="websiteView" destination="CgL-pw-1Y4" id="yC7-Wd-Fp3"/>
+                <outlet property="workingTimeView" destination="aoA-xa-ind" id="uSG-1n-XeD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="892"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7I-g3-sd9">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="892"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5j-NV-bED" userLabel="ScrollViewContainer">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="2192"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Vhb-Kf-zg8" userLabel="ModulesStack">
+                                    <rect key="frame" x="0.0" y="45" width="414" height="2147"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-y3-eIc" userLabel="TitleView" customClass="TitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="250" constant="72" id="D5x-Td-CyW"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-jX-u32" userLabel="RatingView" customClass="RatingView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="72" width="414" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="WNJ-nR-tVu"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbK-01-HwD" userLabel="DirectionsButtonView" customClass="DirectionsButtonView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="200" width="414" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="L4w-F8-wQb"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4r-eB-JRG" userLabel="PhotosView" customClass="PhotosView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="280" width="414" height="165"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="165" id="aXz-pE-CZh"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1DQ-Dn-Kg1" userLabel="ButtonsPanelView" customClass="ButtonsPanelView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="445" width="414" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="tfs-0V-bpU"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-xa-ind" userLabel="WorkingTimeView" customClass="WorkingTimeView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="573" width="414" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="63" id="1Xh-Vz-E7T"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3my-F2-pQt" userLabel="AddressView" customClass="SectionView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="701" width="414" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="63" id="L2K-Wc-2as"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ef0-Jg-Rnn" userLabel="PhoneView" customClass="SectionView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="829" width="414" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="63" id="VkV-o2-QiY"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgL-pw-1Y4" userLabel="WebsiteView" customClass="SectionView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="957" width="414" height="925"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="63" id="u7d-Kt-ld2"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3z-hI-gIx" userLabel="ReviewsView" customClass="ReviewsView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="1882" width="414" height="265"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="63" id="zMm-Fq-rrS"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Vhb-Kf-zg8" firstAttribute="top" secondItem="q5j-NV-bED" secondAttribute="top" constant="45" id="3gs-JS-lBw"/>
+                                <constraint firstAttribute="trailing" secondItem="Vhb-Kf-zg8" secondAttribute="trailing" id="XoB-AZ-wdK"/>
+                                <constraint firstItem="Vhb-Kf-zg8" firstAttribute="leading" secondItem="q5j-NV-bED" secondAttribute="leading" id="iDJ-f8-U3V"/>
+                                <constraint firstAttribute="bottom" secondItem="Vhb-Kf-zg8" secondAttribute="bottom" id="mnH-Zj-Lh8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="q5j-NV-bED" firstAttribute="top" secondItem="B7I-g3-sd9" secondAttribute="top" id="Ctq-uW-Cuo"/>
+                        <constraint firstItem="q5j-NV-bED" firstAttribute="width" secondItem="B7I-g3-sd9" secondAttribute="width" id="Sd9-hh-Bmo"/>
+                        <constraint firstAttribute="bottom" secondItem="q5j-NV-bED" secondAttribute="bottom" id="ax2-k1-vyn"/>
+                        <constraint firstAttribute="trailing" secondItem="q5j-NV-bED" secondAttribute="trailing" id="fv9-Yd-aeN"/>
+                        <constraint firstItem="q5j-NV-bED" firstAttribute="leading" secondItem="B7I-g3-sd9" secondAttribute="leading" id="vpA-rU-96M"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="Q4g-PK-LHZ"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="zuh-pX-hwg"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udR-9I-UGC" userLabel="CloseButton">
+                    <rect key="frame" x="374" y="61" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="5IB-Te-PgP"/>
+                        <constraint firstAttribute="height" constant="24" id="UuX-2X-JmT"/>
+                    </constraints>
+                    <state key="normal" image="btn_close"/>
+                    <connections>
+                        <action selector="closeButtonDidTap:" destination="-1" eventType="touchUpInside" id="Nqu-gi-V4v"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="B7I-g3-sd9" secondAttribute="trailing" id="CtL-DY-nIG"/>
+                <constraint firstItem="B7I-g3-sd9" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="b3S-PY-h35"/>
+                <constraint firstItem="B7I-g3-sd9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bRj-b6-HX7"/>
+                <constraint firstAttribute="trailing" secondItem="udR-9I-UGC" secondAttribute="trailing" constant="16" id="fCM-cd-v9x"/>
+                <constraint firstAttribute="bottom" secondItem="B7I-g3-sd9" secondAttribute="bottom" id="fYq-ly-JAa"/>
+                <constraint firstItem="B7I-g3-sd9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kCb-u2-Q8G"/>
+                <constraint firstItem="udR-9I-UGC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="61" id="uT6-nr-IqO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="178.53260869565219"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_close" width="24" height="24"/>
+    </resources>
+</document>

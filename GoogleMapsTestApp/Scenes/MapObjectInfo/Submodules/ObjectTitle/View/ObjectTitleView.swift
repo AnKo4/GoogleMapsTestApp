@@ -8,20 +8,17 @@
 
 import UIKit
 
-@IBDesignable class ObjectTitleView: UIView, ObjectTitleViewProtocol {
+@IBDesignable
+class ObjectTitleView: UIView, ObjectTitleViewProtocol, PlaceholderContainerType {
 
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var placeholderView: UIView!
-    
-    @IBOutlet weak var placeholderLabel: UILabel!
-    
     @IBOutlet private weak var objectTitleLabel: UILabel!
     @IBOutlet private weak var objectDescriptionLabel: UILabel!
     @IBOutlet private weak var objectRating: Rating!
     @IBOutlet private weak var distanceButton: UIButton!
     
-    weak var presenter: ObjectTitlePresenterInput?
+    var placeholder: UIView?
     
+    weak var presenter: ObjectTitlePresenterInput?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,13 +40,7 @@ import UIKit
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
-        configureViews()
         configureDistanceButton()
-    }
-    
-    private func configureViews() {
-        placeholderView.isHidden = true
-        contentView.isHidden = false
     }
     
     private func configureDistanceButton() {
@@ -64,11 +55,12 @@ import UIKit
     }
 }
 
+
 extension ObjectTitleView: ObjectTitlePresenterOutput {
     func showPlaceholder(with message: String) {
-        contentView.isHidden = true
-        placeholderView.isHidden = false
-        placeholderLabel.text = message
+        let placeholder = PlaceholderView()
+        placeholder.label?.text = "bla bla bla"
+        showPlaceholder(placeholder)
     }
     
     func showObjectTitle(_ title: String) {
@@ -80,7 +72,7 @@ extension ObjectTitleView: ObjectTitlePresenterOutput {
     }
     
     func showObjectRarting(_ rating: RatingInfo) {
-        objectRating.showRating(with: rating)
+        objectRating.showRating(stars: rating.stars, voices: rating.voicesCount, agency: rating.agency)
     }
     
     func showDistanceButtonTitle(_ title: String) {
