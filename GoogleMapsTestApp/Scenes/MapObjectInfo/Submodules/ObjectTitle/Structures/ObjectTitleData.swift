@@ -17,7 +17,7 @@ struct ObjectTitleData: ObjectTitleDataProtocol, Codable {
 }
 
 struct RatingInfoData: RatingInfo, Codable {
-    var value: Int
+    var stars: Int
     var voicesCount: Int
     var agency: String
 }

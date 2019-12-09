@@ -9,7 +9,7 @@
 import Foundation
 
 struct RatingData: RatingInfo {
-    var value: Int
+    var stars: Int
     var voicesCount: Int
     var agency: String
 }

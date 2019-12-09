@@ -8,79 +8,61 @@
 
 import UIKit
 
-class PlaceholderView: UIView {
-
-    @IBOutlet private weak var label: UILabel!
+class PlaceholderView: UIView, PlaceholderType {
+    
+    var label: UILabel?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         configureView()
-//        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func loadFromNib() -> UIView {
-        guard let view = UINib(nibName: "Rating", bundle: Bundle(for: type(of: self))).instantiate(withOwner: self, options: nil).first as? UIView else { return UIView() }
-        return view
     }
     
     private func configureView() {
-        let view = loadFromNib()
-        view.frame = bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        view.isHidden = true
-        addSubview(view)
+        frame = bounds
+        autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        configureLabel()
+        addButton()
     }
     
-    func setBackground(_ color: UIColor) {
+    private func addButton() {
+        let  button = UIButton(frame: CGRect(x: 10, y: 10, width: 100, height: 50))
+        button.backgroundColor = .white
+        button.setTitle("CLICK!", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self.superview, action: #selector(closePlaceholder), for: .touchUpInside)
+        addSubview(button)
+    }
+    
+    @objc func closePlaceholder() {
+        guard let superView = superview as? (UIView & PlaceholderContainerType) else { return }
+        superView.hidePlaceholder()
+    }
+    
+    private func configureLabel() {
+        label = UILabel()
+        guard let label = label else { return }
+        label.frame = self.bounds
+        label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.backgroundColor = .white
+        addSubview(label)
+    }
+    
+    func setBackground(_ color: UIColor?) {
         self.backgroundColor = color
     }
     
-    func setTextColor(_ color: UIColor) {
-        label.textColor = color
+    func setTextColor(_ color: UIColor?) {
+        label?.textColor = color
     }
     
     func showMessage(_ message: String) {
-        label.text = message
-    }
-}
-
-protocol PlaceholderShowable {
-    var placeholder: PlaceholderView? { get set }
-    func showPlaceholder(message: String, backgroundColor: UIColor, textColor: UIColor)
-    func hidePlaceholder()
-}
-
-extension PlaceholderShowable where Self: UIView {
-    mutating func showPlaceholder(message: String, backgroundColor: UIColor = .white, textColor: UIColor = .black) {
-        placeholder = PlaceholderView()
-        guard let placeholder = placeholder else { return }
-        placeholder.setBackground(backgroundColor)
-        placeholder.setTextColor(textColor)
-        placeholder.showMessage(message)
-        addSubview(placeholder)
-    }
-    
-    func hidePlaceholder() {
-        placeholder?.removeFromSuperview()
-    }
-}
-
-extension PlaceholderShowable where Self: UIViewController {
-    mutating func showPlaceholder(message: String, backgroundColor: UIColor = .white, textColor: UIColor = .black) {
-        placeholder = PlaceholderView()
-        guard let placeholder = placeholder else { return }
-        placeholder.setBackground(backgroundColor)
-        placeholder.setTextColor(textColor)
-        placeholder.showMessage(message)
-        view.addSubview(placeholder)
-    }
-    
-    func hidePlaceholder() {
-        placeholder?.removeFromSuperview()
+        label?.text = message
     }
 }

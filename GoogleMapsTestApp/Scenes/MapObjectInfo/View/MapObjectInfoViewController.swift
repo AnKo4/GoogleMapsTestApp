@@ -31,7 +31,6 @@ class MapObjectInfoViewController: UIViewController, ModulesHolderProtocol, MapO
         for module in modules {
             modulesStack.addArrangedSubview(module)
         }
-        print("modules: \(modules.debugDescription)")
     }
 
     @IBAction private func closeButtonTapped(_ sender: UIButton) {
