@@ -19,7 +19,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" ambiguous="YES" id="Vg7-Oe-Cly">
+        <view contentMode="scaleToFill" id="Vg7-Oe-Cly">
             <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -42,7 +42,7 @@
                 <constraint firstItem="ZAm-Sf-IY8" firstAttribute="leading" secondItem="Vg7-Oe-Cly" secondAttribute="leading" constant="16" id="3d1-i2-srt"/>
                 <constraint firstItem="ZAm-Sf-IY8" firstAttribute="top" secondItem="Vg7-Oe-Cly" secondAttribute="top" constant="21" id="B4Q-9Q-Xtf"/>
                 <constraint firstAttribute="trailing" secondItem="ZAm-Sf-IY8" secondAttribute="trailing" constant="16" id="FtW-y6-E8M"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZAm-Sf-IY8" secondAttribute="bottom" constant="9" id="UTt-2P-Lde"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZAm-Sf-IY8" secondAttribute="bottom" priority="250" constant="9" id="UTt-2P-Lde"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="cfD-0z-LpB"/>
