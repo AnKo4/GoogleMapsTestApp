@@ -16,7 +16,7 @@ class MapObjectInfoModule: BaseModuleProtocol {
     init(submodulesFactory: MapObjectInfoSubmodulesFactoryProtocol, objectId: Int) {
         self.submodulesFactory = submodulesFactory
 //        let view = MapObjectInfoViewController(nibName: MapObjectInfoViewController.id, bundle: nil)
-        let view = DetailCardViewController(nibName: DetailCardViewController.id, bundle: nil)
+        let view = DetailCardVC(nibName: DetailCardVC.id, bundle: nil)
 
         let interactor = MapObjectInfoInteractor()
         let router = MapObjectInfoRouter(view: view)

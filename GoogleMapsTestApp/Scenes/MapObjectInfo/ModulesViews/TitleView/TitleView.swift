@@ -8,20 +8,20 @@
 
 import UIKit
 
-class TitleView: UIView, TitleShowable {
+class TitleView: UIView {
     
-    @IBOutlet weak internal var titleLabel: UILabel?
-    @IBOutlet weak internal var descriptionLabel: UILabel?
+    @IBOutlet weak private var titleLabel: UILabel?
+    @IBOutlet weak private var descriptionLabel: UILabel?
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        loadFromNib(nibName: "TitleView")
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        loadFromNib(nibName: "TitleView")
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        loadFromNib(nibName: "TitleView")
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        loadFromNib(nibName: "TitleView")
+//    }
         
     func showTitle(title: String?, description: String?) {
         guard (title == nil) && (description == nil) else {
