@@ -34,6 +34,9 @@ class DetailCardViewController: UIViewController, MapObjectInfoProtocol, DetailC
     @IBOutlet weak var websiteView: SectionViewProtocol?
     @IBOutlet weak var reviewsView: (SectionViewWithButtonProtocol & SectionViewWithButtonOutputable)?
     
+    
+    @IBOutlet weak var closeButton: UIButton?
+    
     var placeholder: UIView?
     var presenter: MapObjectInfoPresenterInput?
     
@@ -47,7 +50,9 @@ class DetailCardViewController: UIViewController, MapObjectInfoProtocol, DetailC
     }
     
     private func configureView() {
-        view.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8).cgColor
+        if #available(iOS 13.0, *) {
+            closeButton?.isHidden = true
+        }
         workingTimeView?.setButtonTitle("Show All")
         reviewsView?.setButtonTitle("Open TripAdvisor")
     }
