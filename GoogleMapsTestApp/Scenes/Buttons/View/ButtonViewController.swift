@@ -11,20 +11,22 @@ import UIKit
 class ButtonViewController: UIViewController, ButtonViewControllerProtocol {
 
     @IBOutlet weak var button: UIButton!
+    
+    var viewModel: ButtonSceneViewModelProtocol?
 
-    var viewModel: ButtonSceneViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureButton()
     }
-
+    
     private func configureButton() {
-        button.setTitle(viewModel.buttonTitle, for: .normal)
+        button.titleLabel?.numberOfLines = 0
+        button.setTitle(viewModel?.buttonTitle, for: .normal)
     }
 
     @IBAction func buttonDidTap(_ sender: UIButton) {
-        viewModel.route()
+        viewModel?.route()
     }
 }

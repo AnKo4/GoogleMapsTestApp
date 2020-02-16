@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ObjectTitleView" customModule="GoogleMapsTestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="distanceButton" destination="2dJ-cP-RZb" id="pgD-6q-ZAh"/>
+                <outlet property="objectDescriptionLabel" destination="6PG-Lx-uIN" id="lxz-ot-mBr"/>
+                <outlet property="objectRating" destination="FPs-3P-2D9" id="0cB-hn-Qfh"/>
+                <outlet property="objectTitleLabel" destination="d5l-oy-vSc" id="fVO-pB-Vo7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="579" height="178"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQc-f5-IqN" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="579" height="178"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ox0-Da-6Up">
+                            <rect key="frame" x="17.333333333333343" y="15.333333333333332" width="501.66666666666663" height="61.666666666666671"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5l-oy-vSc" userLabel="Title label">
+                                    <rect key="frame" x="0.0" y="0.0" width="501.66666666666669" height="32"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PG-Lx-uIN" userLabel="Description label">
+                                    <rect key="frame" x="0.0" y="36" width="501.66666666666669" height="25.666666666666671"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPs-3P-2D9" customClass="Rating" customModule="GoogleMapsTestApp" customModuleProvider="target">
+                            <rect key="frame" x="17.333333333333343" y="80" width="240.00000000000003" height="18"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="As5-BI-L46"/>
+                                <constraint firstAttribute="height" constant="18" id="vjA-JF-Tac"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-cP-RZb">
+                            <rect key="frame" x="16.333333333333314" y="119" width="548.33333333333348" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="OvF-1u-Z6P"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                            <state key="normal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ox0-Da-6Up" firstAttribute="top" secondItem="UQc-f5-IqN" secondAttribute="top" constant="15.25" id="0Qc-GJ-VbM"/>
+                        <constraint firstItem="2dJ-cP-RZb" firstAttribute="top" secondItem="FPs-3P-2D9" secondAttribute="bottom" constant="21" id="Hm7-UO-bkJ"/>
+                        <constraint firstItem="FPs-3P-2D9" firstAttribute="top" secondItem="Ox0-Da-6Up" secondAttribute="bottom" constant="3" id="NXg-SG-pQW"/>
+                        <constraint firstItem="Ox0-Da-6Up" firstAttribute="leading" secondItem="UQc-f5-IqN" secondAttribute="leading" constant="17.25" id="S8P-O9-YTY"/>
+                        <constraint firstItem="2dJ-cP-RZb" firstAttribute="leading" secondItem="UQc-f5-IqN" secondAttribute="leading" constant="16.25" id="XYj-Dg-J0I"/>
+                        <constraint firstItem="FPs-3P-2D9" firstAttribute="leading" secondItem="UQc-f5-IqN" secondAttribute="leading" constant="17.25" id="jtu-W1-4uJ"/>
+                        <constraint firstAttribute="trailing" secondItem="2dJ-cP-RZb" secondAttribute="trailing" constant="14.25" id="kZH-i9-dl8"/>
+                        <constraint firstAttribute="trailing" secondItem="Ox0-Da-6Up" secondAttribute="trailing" constant="60" id="oVQ-Bl-EJt"/>
+                        <constraint firstAttribute="bottom" secondItem="2dJ-cP-RZb" secondAttribute="bottom" constant="9" id="pea-dr-3fa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UQc-f5-IqN" secondAttribute="trailing" id="RF5-XK-f24"/>
+                <constraint firstItem="UQc-f5-IqN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TPF-D7-5Ug"/>
+                <constraint firstAttribute="bottom" secondItem="UQc-f5-IqN" secondAttribute="bottom" id="dvy-7X-S0U"/>
+                <constraint firstItem="UQc-f5-IqN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="o2w-aP-rbp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="70.28985507246378" y="70.923913043478265"/>
+        </view>
+    </objects>
+</document>
